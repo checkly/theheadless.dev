@@ -1,0 +1,16 @@
+{
+  "name": "guides.checklyhq.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev blog",
+    "build": "vuepress build blog"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/theme-blog": "^2.2.0",
+    "vuepress": "^1.5.2"
+  }
+}
