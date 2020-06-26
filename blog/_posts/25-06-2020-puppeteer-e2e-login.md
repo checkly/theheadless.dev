@@ -64,7 +64,7 @@ const puppeteer = require('puppeteer');
 
     await navigationPromise
     await page.waitForSelector('input[type="email"]')
-    await page.type('input[type="email"]', 'user@email.com)
+    await page.type('input[type="email"]', 'user@email.com')
     await page.click('#identifierNext')
 
     await page.waitForSelector('input[type="password"]', { visible: true })
