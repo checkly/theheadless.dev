@@ -32,7 +32,7 @@ Run this example as follows. Replace the username and password placeholder with 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
 ```shell script
-MSLIVE_USER=username MSLIVE_PWD=password node google-login.js
+MSLIVE_USER=username MSLIVE_PWD=password node mslive-login.js
 ```
 :::
 ::: tab Windows
