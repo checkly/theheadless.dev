@@ -1,5 +1,5 @@
 ---
-title: Login with Google
+title: Microsoft Live login
 date: 2020-06-22
 author: Tim Nolet
 tags: 
@@ -8,23 +8,21 @@ tags:
   - Login
 ---
 
-Social login using your personal Google or Google Gsuite account is an extremely common use case for many login scenarios.
+Log in to your Microsoft Live account
 
 # Steps
 
-1. We start at a site that offers Google as an authentication provider. In this case we use https://stackoverflow.com/
-2. We fetch the login page and click the "Login with Google" button.
-3. We are redirect to Google.
+1. We start at https://login.live.com/
 4. We provide the username and password, injected by using environment variables.
-5. We are redirected back to the starting
+5. We are redirected to the main account page
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-<<< @/blog/snippets/puppeteer/google-login.js
+<<< @/blog/snippets/puppeteer/mslive-login.js
 :::
 
 ::: tab Playwright
-<<< @/blog/snippets/playwright/google-login.js
+<<< @/blog/snippets/playwright/mslive-login.js
 :::
 
 ::::
@@ -34,14 +32,14 @@ Run this example as follows. Replace the username and password placeholder with 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
 ```shell script
-GOOGLE_USER=username GOOGLE_PWD=password node mslive-login.js
+MSLIVE_USER=username MSLIVE_PWD=password node google-login.js
 ```
 :::
 ::: tab Windows
 ```shell script
-SET GOOGLE_USER=username
-SET GOOGLE_PWD=password
-node google-login.js
+SET MSLIVE_USER=username
+SET MSLIVE_PWD=password
+node mslive-login.js
 ```
 :::
 ::::
