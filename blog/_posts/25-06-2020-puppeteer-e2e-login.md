@@ -64,11 +64,11 @@ const puppeteer = require('puppeteer');
 
     await navigationPromise
     await page.waitForSelector('input[type="email"]')
-    await page.type('input[type="email"]', process.env.GOOGLE_USER)
+    await page.type('input[type="email"]', 'user@email.com)
     await page.click('#identifierNext')
 
     await page.waitForSelector('input[type="password"]', { visible: true })
-    await page.type('input[type="password"]',process.env.GOOGLE_PWD)
+    await page.type('input[type="password"]','password')
 
     await page.waitForSelector('#passwordNext', { visible: true })
     await page.click('#passwordNext')
