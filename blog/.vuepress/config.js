@@ -1,4 +1,5 @@
 module.exports = {
+  plugins: [ 'tabs' ],
   title: 'Checkly Guides',
   theme: '@vuepress/blog',
   markdown: {
