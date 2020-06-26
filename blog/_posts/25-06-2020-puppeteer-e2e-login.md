@@ -10,6 +10,7 @@ tags:
 When automating key site transactions, we inevitably stumble into login scenarios. In most cases, users need to be able to access accounts on a platform to get any value out of it. If they suddenly become unable to do so, we need to be informed as quickly as possible.
 
 In its simplest form, a login procedure requires the user to:
+
 0. Navigate to the login form
 1. Fill in a username/email field
 2. Fill in a password field
