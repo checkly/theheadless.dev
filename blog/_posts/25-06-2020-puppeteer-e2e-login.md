@@ -1,5 +1,5 @@
 ---
-title: E2E: Login scenarios
+title: E2E Login scenarios
 date: 2020-06-25
 author: Giovanni
 tags: 
