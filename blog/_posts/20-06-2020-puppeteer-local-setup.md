@@ -1,7 +1,7 @@
 ---
 title: Setting up Puppeteer locally
 date: 2020-06-20
-author: Giovanni
+author: Giovanni Rago
 tags: 
   - Puppeteer
 ---

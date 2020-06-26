@@ -1,7 +1,7 @@
 ---
 title: Working with selectors
 date: 2020-06-22
-author: Giovanni
+author: Giovanni Rago
 tags: 
   - Puppeteer
 ---

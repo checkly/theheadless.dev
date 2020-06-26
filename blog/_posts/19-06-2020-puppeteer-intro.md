@@ -1,7 +1,7 @@
 ---
 title: What is Puppeteer?
 date: 2020-06-19
-author: Giovanni
+author: Giovanni Rago
 tags: 
   - Puppeteer
 ---

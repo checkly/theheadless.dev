@@ -1,7 +1,7 @@
 ---
 title: Basic page interactions
 date: 2020-06-21
-author: Giovanni
+author: Giovanni Rago
 tags: 
   - Puppeteer
   - JavaScript
