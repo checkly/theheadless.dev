@@ -11,6 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "@vuepress/theme-blog": "^2.2.0",
+    "playwright": "^1.1.1",
+    "prettier": "^2.0.5",
+    "puppeteer": "^4.0.1",
     "vuepress": "^1.5.2"
+  },
+  "dependencies": {
+    "vue-tabs-component": "^1.5.0",
+    "vuepress-plugin-tabs": "^0.3.0"
   }
 }
