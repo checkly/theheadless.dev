@@ -5,6 +5,7 @@ author: Giovanni Rago
 tags: 
   - Puppeteer
   - JavaScript
+  - Playwright
 ---
 
 We normally access most website functionality through clicks, taps, typing etc. Puppeteer allows us to replicate these events by finding elements on the page using CSS selectors. Let's expand our hello-world script by clicking a couple of links:

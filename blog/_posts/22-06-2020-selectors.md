@@ -4,6 +4,8 @@ date: 2020-06-22
 author: Giovanni Rago
 tags: 
   - Puppeteer
+  - Playwright
+  - Best Practices
 ---
 
 The way you reference a UI element of your target web application for Puppeteer to interact with is through CSS selectors.
