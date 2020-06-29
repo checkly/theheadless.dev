@@ -10,7 +10,7 @@ tags:
 
 Log in to your Microsoft Live account
 
-## Steps
+# Steps
 
 1. We start at https://login.live.com/
 4. We provide the username and password, injected by using environment variables.
@@ -50,7 +50,7 @@ node mslive-login.js
 > Note: you might trigger a recaptcha check.
 
 
-## Takeaways
+# Takeaways
 
 - Use environment variables to inject secrets.
 - Wait for the navigation as your are redirected to Google.

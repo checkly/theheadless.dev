@@ -11,9 +11,12 @@
   "license": "ISC",
   "devDependencies": {
     "@vuepress/theme-blog": "^2.2.0",
+    "node-sass": "^4.14.1",
     "playwright": "^1.1.1",
     "prettier": "^2.0.5",
     "puppeteer": "^4.0.1",
+    "sass-loader": "^8.0.2",
+    "vue-feather-icons": "^5.0.0",
     "vuepress": "^1.5.2"
   },
   "dependencies": {
