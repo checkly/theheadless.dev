@@ -23,7 +23,7 @@
               itemtype="http://schema.org/Person"
               itemscope
           >
-            <NavigationIcon />
+            <UserIcon />
             <span itemprop="name">{{ page.frontmatter.author }}</span>
             <span v-if="page.frontmatter.location" itemprop="address">
               &nbsp; in {{ page.frontmatter.location }}
@@ -87,14 +87,14 @@
 
 import Vue from 'vue'
 import dayjs from 'dayjs'
-import { NavigationIcon, ClockIcon, TagIcon, ArrowRightIcon } from 'vue-feather-icons'
+import { UserIcon, ClockIcon, TagIcon, ArrowRightIcon } from 'vue-feather-icons'
 import {
   Pagination,
   SimplePagination,
 } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
-  components: { NavigationIcon, ClockIcon, TagIcon, ArrowRightIcon },
+  components: { UserIcon, ClockIcon, TagIcon, ArrowRightIcon },
 
   data() {
     return {

@@ -1,11 +1,11 @@
 <template>
   <section id="header-wrapper">
-    <header id="header">
-      <div class="header-wrapper">
+    <header id="navbar">
+      <div class="navbar-wrapper">
         <div class="title">
           <NavLink link="/" class="home-link">{{ $site.title }} </NavLink>
         </div>
-        <div class="header-right-wrap">
+        <div class="navbar-right-wrap">
           <ul v-if="$themeConfig.nav" class="nav">
             <li
               v-for="item in $themeConfig.nav"
@@ -35,7 +35,7 @@ export default {
 <style lang="stylus">
 @import '~@app/style/config'
 
-#header
+#navbar
   z-index 12
   position fixed
   top 0
@@ -52,8 +52,8 @@ export default {
     margin 0
     padding 0
 
-// border-bottom 5px solid lighten(#3eaf7c, 50%)
-.header-wrapper
+
+.navbar-wrapper
   display flex
   line-height 40px
   height 40px
@@ -71,7 +71,7 @@ export default {
       font-weight bold
       text-decoration none
 
-  .header-right-wrap
+  .navbar-right-wrap
     flex 1
     display flex
     justify-content flex-end
@@ -114,12 +114,12 @@ export default {
             color $accentColor
 
 @media (max-width: $MQMobile)
-  #header
+  #navbar
     display none
 
-  .header-wrapper
+  .navbar-wrapper
     flex-direction column
 
-    .header-right-wrap
+    .navbar-right-wrap
       display none
 </style>

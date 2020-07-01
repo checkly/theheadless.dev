@@ -1,5 +1,6 @@
 //@require './font.styl'
 //@require './config.styl'
+@require './custom-block.styl'
 @require './code.styl'
 @require './wrapper.styl'
 //@require './sw-popup.styl'
@@ -62,10 +63,10 @@ kbd
   padding 0 0.15em
 
 blockquote
-  font-size .9rem
-  color darken($accentColor, 50%)
-  border-left: 3px solid $accentColor;
-  margin 0.5rem 0
+  font-size 1rem
+  color $blackLighter
+  border-left .2rem solid $blue
+  margin 1rem 0
   padding .25rem 0 .25rem 1rem
 
   & > p

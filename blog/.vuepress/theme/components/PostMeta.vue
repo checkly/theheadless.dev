@@ -1,5 +1,5 @@
 <template>
-  <div class="post-meta">
+  <div class="post-meta-wrapper">
     <div
         v-if="author"
         class="post-meta post-author"
@@ -7,7 +7,7 @@
         itemtype="http://schema.org/Person"
         itemscope
     >
-      <NavigationIcon />
+      <UserIcon />
       <span itemprop="name">{{ author }}</span>
     </div>
 
@@ -41,12 +41,12 @@
 
 <script>
 import dayjs from 'dayjs'
-import { NavigationIcon, ClockIcon, TagIcon } from 'vue-feather-icons'
+import { UserIcon, ClockIcon, TagIcon } from 'vue-feather-icons'
 import PostTag from './PostTag.vue'
 
 export default {
   name: 'PostMeta',
-  components: { NavigationIcon, ClockIcon, PostTag, TagIcon },
+  components: { UserIcon, ClockIcon, PostTag, TagIcon },
   props: {
     tags: {
       type: [Array, String],
@@ -76,6 +76,9 @@ export default {
 </script>
 
 <style lang="stylus">
+  .post-meta-wrapper
+    display block
+
   .post-meta
     display inline-flex
     align-items center
@@ -92,7 +95,7 @@ export default {
       height 14px
 
     @media (max-width: $MQMobile)
-      display flex
+      display block
 
       &:not(:last-child)
         margin-bottom 10px

@@ -102,6 +102,27 @@ module.exports = (themeConfig) => {
     ],
     ["@vuepress/blog", blogPluginOptions],
     ["smooth-scroll", enableSmoothScroll],
+    [
+      "container",
+      {
+        type: "tip",
+        defaultTitle: "TIP",
+      },
+    ],
+    [
+      "container",
+      {
+        type: "warning",
+        defaultTitle: "WARNING",
+      },
+    ],
+    [
+      "container",
+      {
+        type: "danger",
+        defaultTitle: "DANGER",
+      },
+    ],
   ];
 
   /**
