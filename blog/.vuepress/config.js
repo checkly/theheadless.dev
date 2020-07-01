@@ -5,7 +5,9 @@ module.exports = {
     lineNumbers: true,
   },
   themeConfig: {
-    hostname: "https://guides.checklyhq.com",
+    sitemap: {
+      hostname: "https://guides.checklyhq.com",
+    },
     footer: {
       contact: [
         {
