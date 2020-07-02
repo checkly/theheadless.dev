@@ -73,6 +73,7 @@ module.exports = (themeConfig) => {
     "sitemap",
     "comment",
     "newsletter",
+    "sidebar",
   ];
   const themeConfigPluginOptions = {
     ...pick(themeConfig, properties),

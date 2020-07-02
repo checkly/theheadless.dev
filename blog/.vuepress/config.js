@@ -1,10 +1,24 @@
 module.exports = {
   plugins: ["tabs"],
-  title: "Checkly Guides",
+  title: "Headless Guides",
   markdown: {
     lineNumbers: true,
   },
   themeConfig: {
+    logo: "logo_racoon.svg",
+    sidebar: [
+      {
+        title: "Group 1", // required
+        path: "/foo/", // optional, link of the title, which should be an absolute path and must exist
+        collapsable: false, // optional, defaults to true
+        sidebarDepth: 1, // optional, defaults to 1
+        children: ["/"],
+      },
+      {
+        title: "Group 2",
+        children: [],
+      },
+    ],
     sitemap: {
       hostname: "https://guides.checklyhq.com",
     },
@@ -43,6 +57,10 @@ module.exports = {
         },
       },
       posts_directories: ["/_posts/"],
+    },
+    algolia: {
+      apiKey: "b2b616fdea14b860ff00c72fa72bf267",
+      indexName: "checkly_docs",
     },
   },
 };

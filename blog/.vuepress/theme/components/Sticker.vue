@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { findContainerInVm } from './util'
+import { findContainerInVm } from '../util'
 export default {
   props: ['stick', 'tag'],
 

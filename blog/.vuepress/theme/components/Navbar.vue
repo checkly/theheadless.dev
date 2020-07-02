@@ -1,125 +1,133 @@
 <template>
-  <section id="header-wrapper">
-    <header id="navbar">
-      <div class="navbar-wrapper">
-        <div class="title">
-          <NavLink link="/" class="home-link">{{ $site.title }} </NavLink>
-        </div>
-        <div class="navbar-right-wrap">
-          <ul v-if="$themeConfig.nav" class="nav">
-            <li
-              v-for="item in $themeConfig.nav"
-              :key="item.text"
-              class="nav-item"
-            >
-              <NavLink :link="item.link">{{ item.text }}</NavLink>
-            </li>
-          </ul>
-          <SearchBox />
-          <Feed />
-        </div>
-      </div>
-    </header>
-  </section>
+  <header class="navbar">
+    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+
+    <router-link
+      :to="$localePath"
+      class="home-link"
+    >
+      <img
+        class="logo"
+        v-if="$site.themeConfig.logo"
+        :src="$withBase($site.themeConfig.logo)"
+        :alt="$siteTitle"
+      >
+      <span
+        ref="siteName"
+        class="site-name"
+        v-if="$siteTitle"
+        :class="{ 'can-hide': $site.themeConfig.logo }"
+      >{{ $siteTitle }}</span>
+    </router-link>
+
+    <div
+      class="links"
+      :style="linksWrapMaxWidth ? {
+        'max-width': linksWrapMaxWidth + 'px'
+      } : {}"
+    >
+      <AlgoliaSearchBox
+        v-if="isAlgoliaSearch"
+        :options="algolia"
+      />
+      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
+      <NavLinks class="can-hide"/>
+    </div>
+  </header>
 </template>
 
 <script>
+import AlgoliaSearchBox from './AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
-import Feed from './Feed'
+import SidebarButton from './SidebarButton.vue'
+import NavLinks from './NavLinks.vue'
 
 export default {
-  components: { SearchBox, Feed },
+  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
+
+  data () {
+    return {
+      linksWrapMaxWidth: null
+    }
+  },
+
+  mounted () {
+    const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
+    const NAVBAR_VERTICAL_PADDING = parseInt(css(this.$el, 'paddingLeft')) + parseInt(css(this.$el, 'paddingRight'))
+    const handleLinksWrapWidth = () => {
+      if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
+        this.linksWrapMaxWidth = null
+      } else {
+        this.linksWrapMaxWidth = this.$el.offsetWidth - NAVBAR_VERTICAL_PADDING
+          - (this.$refs.siteName && this.$refs.siteName.offsetWidth || 0)
+      }
+    }
+    handleLinksWrapWidth()
+    window.addEventListener('resize', handleLinksWrapWidth, false)
+  },
+
+  computed: {
+    algolia () {
+      return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
+    },
+
+    isAlgoliaSearch () {
+      return this.algolia && this.algolia.apiKey && this.algolia.indexName
+    }
+  }
+}
+
+function css (el, property) {
+  // NOTE: Known bug, will return 'auto' if style value is 'auto'
+  const win = el.ownerDocument.defaultView
+  // null means not to return pseudo styles
+  return win.getComputedStyle(el, null)[property]
 }
 </script>
 
 <style lang="stylus">
-@import '~@app/style/config'
+$navbar-vertical-padding = 0.7rem
+$navbar-horizontal-padding = 1.5rem
 
-#navbar
-  z-index 12
-  position fixed
-  top 0
-  width 100vw
-  height $headerHeight
-  box-sizing border-box
-  background-color $headerBgColor
-  padding 20px 32px 20px
-  margin auto
-  transition all 1s cubic-bezier(0.25, 0.8, 0.25, 1)
-
-  ol, ul
-    list-style none
-    margin 0
-    padding 0
-
-
-.navbar-wrapper
-  display flex
-  line-height 40px
-  height 40px
-
-  .title
-    /* flex 0 0 200px */
-    font-size 30px
-    margin 0
-    letter-spacing 2px
-    display block
-    text-transform uppercase
-
-    a
-      color $darkTextColor
-      font-weight bold
-      text-decoration none
-
-  .navbar-right-wrap
-    flex 1
+.navbar
+  padding $navbar-vertical-padding $navbar-horizontal-padding
+  line-height $navbarHeight - 1.4rem
+  a, span, img
+    display inline-block
+  .logo
+    height $navbarHeight - 1.4rem
+    min-width $navbarHeight - 1.4rem
+    margin-right 0.8rem
+    vertical-align top
+  .site-name
+    font-size 1.3rem
+    font-weight 600
+    color $textColor
+    position relative
+  .links
+    padding-left 1.5rem
+    box-sizing border-box
+    background-color white
+    white-space nowrap
+    font-size 0.9rem
+    position absolute
+    right $navbar-horizontal-padding
+    top $navbar-vertical-padding
     display flex
-    justify-content flex-end
-    align-items center
-
-    .nav
-      flex 0 0 auto
-      display flex
-      margin 0
-
-      .nav-item
-        margin-left 20px
-
-        a
-          font-size 20px
-          // color lighten(#3eaf7c, 30%)
-          text-decoration none
-          transition color 0.3s
-
     .search-box
-      margin-left 20px
-
-      input
-        border-radius 3px
-        transition all 0.5s
-        border 1px solid $queenLight
-        background-color $queenLightest
-        color $blackLighter
-
-      .suggestions
-        border 1px solid $darkBorderColor
-        top 40px
-        right 0
-
-        a
-          color $darkTextColor
-          text-decoration none
-
-          &.focused
-            color $accentColor
+      flex: 0 0 auto
+      vertical-align top
 
 @media (max-width: $MQMobile)
-  #navbar
-    display none
-
-  .navbar-wrapper
-    flex-direction column
-
-    .navbar-right-wrap
+  .navbar
+    padding-left 4rem
+    .can-hide
       display none
+    .links
+      padding-left 1.5rem
+    .site-name
+      width calc(100vw - 9.4rem)
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
 </style>

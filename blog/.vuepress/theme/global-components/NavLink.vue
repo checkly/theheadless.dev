@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from '../components/util'
+import { isExternal, isMailto, isTel, ensureExt } from '../util'
 
 export default {
   props: {
@@ -56,6 +56,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-</style>

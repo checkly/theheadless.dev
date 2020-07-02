@@ -1,7 +1,6 @@
 <template>
-  <div id="vuepress-theme-blog__post-layout">
+  <div class="post">
     <article
-      class="vuepress-blog-theme-content"
       itemscope
       itemtype="https://schema.org/BlogPosting"
     >
@@ -45,20 +44,14 @@ export default {
 <style lang="stylus">
 @require '../styles/wrapper.styl'
 
-.vuepress-blog-theme-content
+.post
   @extend $wrapper
   font-size 16px
   letter-spacing 0
   color $textColor
   position relative
 
-  .post-title
-    padding-top 0
-
 @media (max-width: $MQMobile)
-  .vuepress-blog-theme-content
-    padding-top 0
-
   .post-title
     margin-top 0
 </style>
