@@ -66,6 +66,6 @@ module.exports = {
     docsDir: "blog",
     docsBranch: "master",
     editLinks: true,
-    editLinkText: "Help us improve this page!",
+    editLinkText: "Edit this guide",
   },
 };

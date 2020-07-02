@@ -20,7 +20,7 @@
       <footer>
         <Newsletter v-if="$service.email.enabled" />
         <PostEdit></PostEdit>
-        <PostNav v-bind="{ sidebarItems }" />
+<!--        <PostNav v-bind="{ sidebarItems }" />-->
       </footer>
     </article>
     <Toc />
@@ -41,6 +41,7 @@ export default {
     PostNav,
     Newsletter: () => import('@theme/components/Newsletter.vue'),
   },
+  props: ['sidebarItems']
 }
 </script>
 

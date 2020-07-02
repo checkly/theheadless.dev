@@ -28,7 +28,9 @@
     </Sidebar>
 
     <main class="main">
-      <DefaultGlobalLayout />
+      <DefaultGlobalLayout
+          :sidebar-items="sidebarItems"
+      />
     </main>
 <!--    <Footer />-->
   </div>

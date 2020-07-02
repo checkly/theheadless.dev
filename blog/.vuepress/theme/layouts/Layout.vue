@@ -96,6 +96,8 @@
   export default {
     components: { UserIcon, ClockIcon, TagIcon, ArrowRightIcon },
 
+    props: ['sidebarItems'],
+
     data() {
       return {
         paginationComponent: null,

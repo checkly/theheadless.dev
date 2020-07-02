@@ -1,13 +1,12 @@
 <template>
   <footer class="post-edit">
-    <div class="edit-link" v-if="editLink">
-      <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
-      <OutboundLink />
-    </div>
-
     <div class="last-updated" v-if="lastUpdated">
       <span class="prefix">{{ lastUpdatedText }}:</span>
       <span class="time">{{ lastUpdated }}</span>
+    </div>
+    <div class="edit-link" v-if="editLink">
+      <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
+      <OutboundLink />
     </div>
   </footer>
 </template>
@@ -103,17 +102,13 @@ export default {
   .edit-link
     display inline-block
     a
-      color lighten($textColor, 25%)
+      color $textColor
       margin-right 0.25rem
+      font-weight normal
+
   .last-updated
     float right
     font-size 0.9em
-    .prefix
-      font-weight 500
-      color lighten($textColor, 25%)
-    .time
-      font-weight 400
-      color #aaa
 
 @media (max-width: $MQMobile)
   .post-edit
