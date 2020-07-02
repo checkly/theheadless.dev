@@ -6,7 +6,23 @@ module.exports = {
   },
   themeConfig: {
     logo: "/logo_racoon.svg",
-    sidebar: ["/"],
+    sidebar: [
+      {
+        title: "The Basics", // required
+        collapsable: false, // optional, defaults to true
+        sidebarDepth: 1, // optional, defaults to 1
+        children: [
+          ["/_posts/basics", "Basics"],
+          ["/_posts/more-basics", "More basics"],
+        ],
+      },
+      {
+        title: "Advanced topics",
+        children: [
+          /* ... */
+        ],
+      },
+    ],
     nav: [],
     sitemap: {
       hostname: "https://guides.checklyhq.com",

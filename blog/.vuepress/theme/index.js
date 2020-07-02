@@ -34,6 +34,7 @@ module.exports = (themeConfig) => {
         id: "post",
         dirname: "_posts",
         path: "/",
+        itemPermalink: "/posts/:slug", // Permalink for matched pages.
       },
     ],
     frontmatters: [
