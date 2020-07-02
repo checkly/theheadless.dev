@@ -146,22 +146,20 @@ export default {
   top 0
   right 10px
   box-sizing border-box
-  /* background: #fff; */
   z-index 0
 
   .vuepress-toc-item
     position relative
     padding 0.1rem 0.6rem 0.1rem 1.5rem
     line-height 1.5rem
-    border-left 1px solid rgba(0, 0, 0, 0.08)
     overflow hidden
 
     a
       display block
-      color $textColor
+      color $blackLight
       width 100%
       box-sizing border-box
-      font-size 12px
+      font-size 14px
       font-weight 400
       text-decoration none
       transition color 0.3s
@@ -170,8 +168,6 @@ export default {
       white-space nowrap
 
     &.active
-      border-left-color $accentColor
-
       a
         color $accentColor
 
