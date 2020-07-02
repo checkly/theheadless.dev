@@ -37,7 +37,7 @@ export default {
 .feed
   display flex
   align-items center
-  color inherit
+  color $blackLighter
 
   &:hover
     color $accentColor

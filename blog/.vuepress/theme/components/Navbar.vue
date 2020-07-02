@@ -30,8 +30,8 @@
         v-if="isAlgoliaSearch"
         :options="algolia"
       />
-      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
       <NavLinks class="can-hide"/>
+      <Feed></Feed>
     </div>
   </header>
 </template>
@@ -41,9 +41,10 @@ import AlgoliaSearchBox from './AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
 import SidebarButton from './SidebarButton.vue'
 import NavLinks from './NavLinks.vue'
+import Feed from './Feed.vue'
 
 export default {
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
+  components: { SidebarButton, NavLinks, AlgoliaSearchBox, SearchBox, Feed },
 
   data () {
     return {
@@ -93,7 +94,8 @@ $navbar-horizontal-padding = 1.5rem
   padding $navbar-vertical-padding $navbar-horizontal-padding
   line-height $navbarHeight - 1.4rem
   a, span, img
-    display inline-block
+    display flex
+    align-items center
   .logo
     height $navbarHeight - 1.4rem
     min-width $navbarHeight - 1.4rem
@@ -117,6 +119,10 @@ $navbar-horizontal-padding = 1.5rem
     .search-box
       flex: 0 0 auto
       vertical-align top
+      padding-right 1rem
+      input
+        background-color $queenLightest
+        border-radius 3px
 
 @media (max-width: $MQMobile)
   .navbar
@@ -125,9 +131,14 @@ $navbar-horizontal-padding = 1.5rem
       display none
     .links
       padding-left 1.5rem
+      .search-box
+        input
+          background-color transparent
+
     .site-name
       width calc(100vw - 9.4rem)
       overflow hidden
       white-space nowrap
       text-overflow ellipsis
+
 </style>

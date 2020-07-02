@@ -6,19 +6,8 @@ module.exports = {
   },
   themeConfig: {
     logo: "/logo_racoon.svg",
-    sidebar: [
-      {
-        title: "Group 1", // required
-        path: "/foo/", // optional, link of the title, which should be an absolute path and must exist
-        collapsable: false, // optional, defaults to true
-        sidebarDepth: 1, // optional, defaults to 1
-        children: ["/"],
-      },
-      {
-        title: "Group 2",
-        children: [],
-      },
-    ],
+    sidebar: ["/"],
+    nav: [],
     sitemap: {
       hostname: "https://guides.checklyhq.com",
     },
@@ -39,7 +28,7 @@ module.exports = {
           link: "https://policies.google.com/privacy?hl=en-US",
         },
         {
-          text: "MIT Licensed | Copyright © 2018-present Checkly inc.",
+          text: "MIT Licensed | Copyright © 2020-present Checkly inc.",
           link: "cdcd",
         },
       ],
