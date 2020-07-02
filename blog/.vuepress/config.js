@@ -5,7 +5,7 @@ module.exports = {
     lineNumbers: true,
   },
   themeConfig: {
-    logo: "logo_racoon.svg",
+    logo: "/logo_racoon.svg",
     sidebar: [
       {
         title: "Group 1", // required
@@ -39,8 +39,8 @@ module.exports = {
           link: "https://policies.google.com/privacy?hl=en-US",
         },
         {
-          text: "MIT Licensed | Copyright © 2018-present Vue.js",
-          link: "",
+          text: "MIT Licensed | Copyright © 2018-present Checkly inc.",
+          link: "cdcd",
         },
       ],
     },
@@ -62,5 +62,10 @@ module.exports = {
       apiKey: "b2b616fdea14b860ff00c72fa72bf267",
       indexName: "checkly_docs",
     },
+    docsRepo: "checkly/guides.checklyhq.com",
+    docsDir: "blog",
+    docsBranch: "master",
+    editLinks: true,
+    editLinkText: "Help us improve this page!",
   },
 };

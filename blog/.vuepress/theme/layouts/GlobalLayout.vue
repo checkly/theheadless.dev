@@ -30,7 +30,7 @@
     <main class="main">
       <DefaultGlobalLayout />
     </main>
-    <Footer />
+<!--    <Footer />-->
   </div>
 </template>
 
@@ -148,7 +148,6 @@ export default {
 
 .main
   padding-left $sidebarWidth
-  padding-bottom 2rem
   max-width $contentWidth
 
 </style>

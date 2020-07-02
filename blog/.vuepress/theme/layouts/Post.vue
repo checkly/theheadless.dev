@@ -16,10 +16,11 @@
         />
       </header>
       <Content itemprop="articleBody" />
+      <hr />
       <footer>
         <Newsletter v-if="$service.email.enabled" />
-        <hr />
-        <Comment />
+        <PostEdit></PostEdit>
+        <PostNav v-bind="{ sidebarItems }" />
       </footer>
     </article>
     <Toc />
@@ -29,13 +30,15 @@
 <script>
 import Toc from '@theme/components/Toc.vue'
 import PostMeta from '@theme/components/PostMeta.vue'
-import { Comment } from '@vuepress/plugin-blog/lib/client/components'
+import PostEdit from '@theme/components/PostEdit.vue'
+import PostNav from '@theme/components/PostNav.vue'
 
 export default {
   components: {
     Toc,
     PostMeta,
-    Comment,
+    PostEdit,
+    PostNav,
     Newsletter: () => import('@theme/components/Newsletter.vue'),
   },
 }
