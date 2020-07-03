@@ -5,7 +5,10 @@
       itemtype="https://schema.org/BlogPosting"
     >
       <header>
-        <h1 class="post-title" itemprop="name headline">
+        <h1
+          class="post-title"
+          itemprop="name headline"
+        >
           {{ $frontmatter.title }}
         </h1>
         <PostMeta
@@ -16,11 +19,11 @@
         />
       </header>
       <Content itemprop="articleBody" />
-      <hr />
+      <hr>
       <footer>
         <Newsletter v-if="$service.email.enabled" />
-        <PostEdit></PostEdit>
-<!--        <PostNav v-bind="{ sidebarItems }" />-->
+        <PostEdit />
+        <!--        <PostNav v-bind="{ sidebarItems }" />-->
       </footer>
     </article>
     <Toc />
@@ -39,7 +42,7 @@ export default {
     PostMeta,
     PostEdit,
     PostNav,
-    Newsletter: () => import('@theme/components/Newsletter.vue'),
+    Newsletter: () => import('@theme/components/Newsletter.vue')
   },
   props: ['sidebarItems']
 }

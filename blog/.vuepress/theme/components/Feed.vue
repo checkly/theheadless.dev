@@ -14,22 +14,22 @@ import { RssIcon } from 'vue-feather-icons'
 export default {
   components: { RssIcon },
   filters: {
-    getFeedFilePath(feed) {
+    getFeedFilePath (feed) {
       if (feed === 'rss') return '/rss.xml'
       if (feed === 'atom') return '/feed.atom'
       if (feed === 'json') return '/feed.json'
       return ''
-    },
+    }
   },
   computed: {
-    getFirstEnabledFeed() {
+    getFirstEnabledFeed () {
       for (const feed in this.$service.feed) {
         const isEnabled = this.$service.feed[feed]
         if (isEnabled) return feed
       }
       return false
-    },
-  },
+    }
+  }
 }
 </script>
 

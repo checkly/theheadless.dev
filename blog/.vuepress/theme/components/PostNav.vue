@@ -1,13 +1,29 @@
 <template>
-  <div class="post-nav" v-if="prev || next">
+  <div
+    class="post-nav"
+    v-if="prev || next"
+  >
     <p class="inner">
-      <span v-if="prev" class="prev">
+      <span
+        v-if="prev"
+        class="prev"
+      >
         ←
-        <router-link v-if="prev" class="prev" :to="prev.path">{{ prev.title || prev.path }}</router-link>
+        <router-link
+          v-if="prev"
+          class="prev"
+          :to="prev.path"
+        >{{ prev.title || prev.path }}</router-link>
       </span>
 
-      <span v-if="next" class="next">
-        <router-link v-if="next" :to="next.path">{{ next.title || next.path }}</router-link>
+      <span
+        v-if="next"
+        class="next"
+      >
+        <router-link
+          v-if="next"
+          :to="next.path"
+        >{{ next.title || next.path }}</router-link>
         →
       </span>
     </p>
@@ -69,7 +85,7 @@ function resolvePageLink (
   const link = isNil(pageLinkConfig) ? themeLinkConfig : pageLinkConfig
 
   if (link === false) {
-    return
+
   } else if (isString(link)) {
     return resolvePage($site.pages, link, $route.path)
   } else {

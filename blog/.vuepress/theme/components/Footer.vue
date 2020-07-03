@@ -1,14 +1,17 @@
 <template>
   <footer class="footer">
     <div class="footer-left-wrap">
-      <ul v-if="contact" class="contact">
+      <ul
+        v-if="contact"
+        class="contact"
+      >
         <li
           v-for="item in contact"
           :key="item.iconComponent"
           class="contact-item"
         >
           <NavLink :link="item.link">
-            <component :is="item.iconComponent"></component>
+            <component :is="item.iconComponent" />
             {{ item.text }}
           </NavLink>
         </li>
@@ -16,9 +19,18 @@
     </div>
 
     <div class="footer-right-wrap">
-      <ul v-if="copyright" class="copyright">
-        <li v-for="item in copyright" :key="item.text" class="copyright-item">
-          <NavLink :link="item.link">{{ item.text }}</NavLink>
+      <ul
+        v-if="copyright"
+        class="copyright"
+      >
+        <li
+          v-for="item in copyright"
+          :key="item.text"
+          class="copyright-item"
+        >
+          <NavLink :link="item.link">
+            {{ item.text }}
+          </NavLink>
         </li>
       </ul>
     </div>
@@ -41,7 +53,7 @@ import {
   PhoneIcon,
   TwitterIcon,
   VideoIcon,
-  YoutubeIcon,
+  YoutubeIcon
 } from 'vue-feather-icons'
 
 export default {
@@ -60,11 +72,11 @@ export default {
     PhoneIcon,
     TwitterIcon,
     VideoIcon,
-    YoutubeIcon,
+    YoutubeIcon
   },
 
   computed: {
-    contact() {
+    contact () {
       return (
         (this.$themeConfig.footer && this.$themeConfig.footer.contact) ||
         []
@@ -72,21 +84,21 @@ export default {
         .map(({ type, link }) => {
           return {
             iconComponent: this.getIconComponentName(type),
-            link,
+            link
           }
         })
         .filter(({ iconComponent }) => iconComponent)
     },
 
-    copyright() {
+    copyright () {
       return (
         (this.$themeConfig.footer && this.$themeConfig.footer.copyright) || []
       )
-    },
+    }
   },
 
   methods: {
-    getIconComponentName(contactType) {
+    getIconComponentName (contactType) {
       switch (contactType) {
         case 'codepen':
           return 'CodepenIcon'
@@ -121,8 +133,8 @@ export default {
         default:
           return ''
       }
-    },
-  },
+    }
+  }
 }
 </script>
 

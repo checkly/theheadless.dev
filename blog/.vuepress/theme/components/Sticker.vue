@@ -5,7 +5,7 @@
     :class="needFloat ? ['stick-float'] : undefined"
     :style="needFloat ? { bottom: `${stickBottom}px` } : undefined"
   >
-    <slot></slot>
+    <slot />
   </component>
 </template>
 
@@ -14,30 +14,30 @@ import { findContainerInVm } from '../util'
 export default {
   props: ['stick', 'tag'],
 
-  data() {
+  data () {
     return {
       needFloat: false,
-      stickBottom: 0,
+      stickBottom: 0
     }
   },
 
   watch: {
-    stick() {
+    stick () {
       this.unStick()
       this.stickHandle()
-    },
+    }
   },
 
-  mounted() {
+  mounted () {
     this.stickHandle()
   },
 
-  beforeDestroy() {
+  beforeDestroy () {
     this.unStick()
   },
 
   methods: {
-    stickHandle() {
+    stickHandle () {
       if (!this.stick) return
       const stickElement = findContainerInVm(this.stick, this)
       if (!stickElement) return
@@ -56,12 +56,12 @@ export default {
       window.addEventListener('scroll', this._stickerScroll)
     },
 
-    unStick() {
+    unStick () {
       this.needFloat = false
       this.stickBottom = 0
       window.removeEventListener('scroll', this._stickerScroll)
-    },
-  },
+    }
+  }
 }
 </script>
 
