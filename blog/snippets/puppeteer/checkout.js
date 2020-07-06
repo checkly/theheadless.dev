@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const productsNumber = process.env.PRODUCTS_NUMBER;
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false, slowMo: 15 });
+  const browser = await puppeteer.launch();
 
   const page = await browser.newPage();
 
@@ -31,8 +31,24 @@ const productsNumber = process.env.PRODUCTS_NUMBER;
   await page.waitForSelector(".cart > .call-to-action");
   await page.click(".cart > .call-to-action");
 
-  await page.waitForSelector(".checkout > .call-to-action");
-  await page.click(".checkout > .call-to-action");
+  await page.waitForSelector('#s-name')
+  await page.click('#s-name')
+  
+  await page.type('#s-name', 'Max')
+  await page.type('#s-surname', 'Mustermann')
+  await page.type('#s-address', 'Charlottenstr. 57')
+  await page.type('#s-zipcode', '10117')
+  await page.type('#s-city', 'Berlin')
+  await page.type('#s-company', 'Firma GmbH')
+  
+  await page.waitForSelector('.checkout > form')
+  await page.click('.checkout > form')
+  
+  await page.waitForSelector('#asap')
+  await page.click('#asap')
+  
+  await page.waitForSelector('.checkout > .call-to-action')
+  await page.click('.checkout > .call-to-action')
 
   await page.waitForSelector('#order-confirmation', { visible: true });
 
