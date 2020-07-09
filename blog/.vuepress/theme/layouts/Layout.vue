@@ -255,6 +255,8 @@ export default {
   .ui-post-author
     color $gray
     font-weight 600
+    display flex
+    align-items center
 
   .ui-post-date
     color $gray

@@ -91,6 +91,7 @@ export default {
   .post-meta-wrapper
     display flex
     align-items center
+    flex-wrap wrap
 
   .post-meta
     display inline-flex
@@ -116,6 +117,8 @@ export default {
   .post-author
     color $gray
     font-weight 600
+    display flex
+    align-items center
 
   .post-date
     color $gray
