@@ -1,37 +1,40 @@
 <template>
   <div class="post-meta-wrapper">
     <div
-        v-if="author"
-        class="post-meta post-author"
-        itemprop="publisher author"
-        itemtype="http://schema.org/Person"
-        itemscope
+      v-if="author"
+      class="post-meta post-author"
+      itemprop="publisher author"
+      itemtype="http://schema.org/Person"
+      itemscope
     >
       <UserIcon />
       <span itemprop="name">{{ author }}</span>
     </div>
 
-    <div v-if="date" class="post-meta post-date">
+    <div
+      v-if="date"
+      class="post-meta post-date"
+    >
       <ClockIcon />
       <time
-          pubdate
-          itemprop="datePublished"
-          :datetime="date"
+        pubdate
+        itemprop="datePublished"
+        :datetime="date"
       >
         {{ resolvedDate }}
       </time>
     </div>
 
     <div
-        v-if="tags"
-        class="post-meta post-tag"
-        itemprop="keywords"
+      v-if="tags"
+      class="post-meta post-tag"
+      itemprop="keywords"
     >
       <TagIcon />
       <router-link
-          v-for="tag in tags"
-          :key="tag"
-          :to="'/tag/' + tag"
+        v-for="tag in tags"
+        :key="tag"
+        :to="'/tag/' + tag"
       >
         {{ tag }}
       </router-link>
@@ -49,29 +52,29 @@ export default {
   components: { UserIcon, ClockIcon, PostTag, TagIcon },
   props: {
     tags: {
-      type: [Array, String],
+      type: [Array, String]
     },
     author: {
-      type: String,
+      type: String
     },
     date: {
-      type: String,
+      type: String
     },
     location: {
-      type: String,
-    },
+      type: String
+    }
   },
   computed: {
-    resolvedDate() {
+    resolvedDate () {
       return dayjs(this.date).format(
         this.$themeConfig.dateFormat || 'ddd MMM DD YYYY'
       )
     },
-    resolvedTags() {
+    resolvedTags () {
       if (!this.tags || Array.isArray(this.tags)) return this.tags
       return [this.tags]
-    },
-  },
+    }
+  }
 }
 </script>
 

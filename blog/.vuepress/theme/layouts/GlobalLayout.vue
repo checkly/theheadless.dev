@@ -1,23 +1,23 @@
 <template>
   <div
-      class="theme-container"
-      :class="pageClasses"
-      @touchstart="onTouchStart"
-      @touchend="onTouchEnd"
+    class="theme-container"
+    :class="pageClasses"
+    @touchstart="onTouchStart"
+    @touchend="onTouchEnd"
   >
     <Navbar
-        v-if="shouldShowNavbar"
-        @toggle-sidebar="toggleSidebar"
+      v-if="shouldShowNavbar"
+      @toggle-sidebar="toggleSidebar"
     />
 
     <div
-        class="sidebar-mask"
-        @click="toggleSidebar(false)"
-    ></div>
+      class="sidebar-mask"
+      @click="toggleSidebar(false)"
+    />
 
     <Sidebar
-        :items="sidebarItems"
-        @toggle-sidebar="toggleSidebar"
+      :items="sidebarItems"
+      @toggle-sidebar="toggleSidebar"
     >
       <template #top>
         <slot name="sidebar-top" />
@@ -29,10 +29,10 @@
 
     <main class="main">
       <DefaultGlobalLayout
-          :sidebar-items="sidebarItems"
+        :sidebar-items="sidebarItems"
       />
     </main>
-<!--    <Footer />-->
+    <!--    <Footer />-->
   </div>
 </template>
 
@@ -50,16 +50,16 @@ export default {
     Navbar,
     Sidebar,
     MobileHeader,
-    Footer,
+    Footer
   },
 
-  data() {
+  data () {
     return {
       isSidebarOpen: false
     }
   },
 
-  mounted() {
+  mounted () {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
     })
@@ -70,25 +70,25 @@ export default {
       const { themeConfig } = this.$site
       const { frontmatter } = this.$page
       if (
-        frontmatter.navbar === false
-        || themeConfig.navbar === false) {
+        frontmatter.navbar === false ||
+        themeConfig.navbar === false) {
         return false
       }
       return (
-        this.$title
-        || themeConfig.logo
-        || themeConfig.repo
-        || themeConfig.nav
-        || this.$themeLocaleConfig.nav
+        this.$title ||
+        themeConfig.logo ||
+        themeConfig.repo ||
+        themeConfig.nav ||
+        this.$themeLocaleConfig.nav
       )
     },
 
     shouldShowSidebar () {
       const { frontmatter } = this.$page
       return (
-        !frontmatter.home
-        && frontmatter.sidebar !== false
-        && this.sidebarItems.length
+        !frontmatter.home &&
+        frontmatter.sidebar !== false &&
+        this.sidebarItems.length
       )
     },
 
@@ -113,7 +113,6 @@ export default {
       ]
     }
   },
-
 
   methods: {
     toggleSidebar (to) {

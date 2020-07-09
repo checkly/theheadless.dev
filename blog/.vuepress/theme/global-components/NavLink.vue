@@ -30,29 +30,29 @@ import { isExternal, isMailto, isTel, ensureExt } from '../util'
 export default {
   props: {
     link: {
-      required: true,
-    },
+      required: true
+    }
   },
 
   computed: {
-    normalizedlink() {
+    normalizedlink () {
       return ensureExt(this.link)
     },
 
-    exact() {
+    exact () {
       if (this.$site.locales) {
         return Object.keys(this.$site.locales).some(
           rootLink => rootLink === this.normalizedlink
         )
       }
       return this.normalizedlink === '/'
-    },
+    }
   },
 
   methods: {
     isExternal,
     isMailto,
-    isTel,
-  },
+    isTel
+  }
 }
 </script>

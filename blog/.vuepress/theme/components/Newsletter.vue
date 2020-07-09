@@ -1,8 +1,12 @@
 <template>
   <SimpleNewsletter v-slot="{ slotProps }">
     <div class="newsletter__wrap">
-      <div class="newsletter__title">{{ slotProps.title }}</div>
-      <div class="newsletter__content">{{ slotProps.content }}</div>
+      <div class="newsletter__title">
+        {{ slotProps.title }}
+      </div>
+      <div class="newsletter__content">
+        {{ slotProps.content }}
+      </div>
       <div class="newsletter__fields">
         <input
           v-model="slotProps.mail"
@@ -15,8 +19,12 @@
           autocapitalize="off"
           autocorrect="off"
           data-cy="email"
-        />
-        <button type="submit" class="newsletter__button" data-cy="submit">
+        >
+        <button
+          type="submit"
+          class="newsletter__button"
+          data-cy="submit"
+        >
           {{ slotProps.submitText }}
         </button>
       </div>
@@ -27,7 +35,7 @@
 <script>
 import SimpleNewsletter from 'vuepress-plugin-mailchimp/src/components/SimpleNewsletter'
 export default {
-  components: { SimpleNewsletter },
+  components: { SimpleNewsletter }
 }
 </script>
 

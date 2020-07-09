@@ -1,76 +1,76 @@
 module.exports = {
-  plugins: ["tabs"],
-  title: "Headless Guides",
+  plugins: ['tabs'],
+  title: 'Headless Guides',
   markdown: {
-    lineNumbers: true,
+    lineNumbers: true
   },
   themeConfig: {
-    logo: "/logo_racoon.svg",
+    logo: '/logo_racoon.svg',
     sidebar: [
       {
-        title: "The Basics", // required
+        title: 'The Basics', // required
         collapsable: false, // optional, defaults to true
         sidebarDepth: 1, // optional, defaults to 1
         children: [
-          ["/_posts/basics", "Basics"],
-          ["/_posts/more-basics", "More basics"],
-        ],
+          ['/_posts/basics', 'Basics'],
+          ['/_posts/more-basics', 'More basics']
+        ]
       },
       {
-        title: "Advanced topics",
+        title: 'Advanced topics',
         children: [
           /* ... */
-        ],
-      },
+        ]
+      }
     ],
     nav: [],
     sitemap: {
-      hostname: "https://guides.checklyhq.com",
+      hostname: 'https://guides.checklyhq.com'
     },
     footer: {
       contact: [
         {
-          type: "github",
-          link: "https://github.com/vuejs/vuepress",
+          type: 'github',
+          link: 'https://github.com/vuejs/vuepress'
         },
         {
-          type: "twitter",
-          link: "https://github.com/vuejs/vuepress",
-        },
+          type: 'twitter',
+          link: 'https://github.com/vuejs/vuepress'
+        }
       ],
       copyright: [
         {
-          text: "Privacy Policy",
-          link: "https://policies.google.com/privacy?hl=en-US",
+          text: 'Privacy Policy',
+          link: 'https://policies.google.com/privacy?hl=en-US'
         },
         {
-          text: "MIT Licensed | Copyright © 2020-present Checkly inc.",
-          link: "cdcd",
-        },
-      ],
+          text: 'MIT Licensed | Copyright © 2020-present Checkly inc.',
+          link: 'cdcd'
+        }
+      ]
     },
     smoothScroll: true,
     feed: {
-      canonical_base: "https://guides.checklyhq.com",
+      canonical_base: 'https://guides.checklyhq.com',
       rss2: {
         enable: true,
-        file_name: "rss.xml",
+        file_name: 'rss.xml',
         head_link: {
           enable: true,
-          type: "application/rss+xml",
-          title: "%%site_title%% RSS Feed",
-        },
+          type: 'application/rss+xml',
+          title: '%%site_title%% RSS Feed'
+        }
       },
-      posts_directories: ["/_posts/"],
+      posts_directories: ['/_posts/']
     },
     algolia: {
-      apiKey: "b2b616fdea14b860ff00c72fa72bf267",
-      indexName: "checkly_docs",
+      apiKey: 'b2b616fdea14b860ff00c72fa72bf267',
+      indexName: 'checkly_docs'
     },
-    docsRepo: "checkly/guides.checklyhq.com",
-    docsDir: "blog",
-    docsBranch: "master",
+    docsRepo: 'checkly/guides.checklyhq.com',
+    docsDir: 'blog',
+    docsBranch: 'master',
     editLinks: true,
-    editLinkText: "Edit this guide",
-  },
-};
+    editLinkText: 'Edit this guide'
+  }
+}

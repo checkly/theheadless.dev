@@ -28,7 +28,7 @@
       rel="noopener noreferrer"
     >
       {{ repoLabel }}
-      <OutboundLink/>
+      <OutboundLink />
     </a>
   </nav>
 </template>
