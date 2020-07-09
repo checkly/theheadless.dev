@@ -151,7 +151,7 @@ export default {
   overflow-y auto
   padding-top 5rem
   top 0
-  right 10px
+  right 2rem
   box-sizing border-box
   z-index 0
 
