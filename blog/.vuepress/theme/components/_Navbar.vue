@@ -3,16 +3,26 @@
     <header id="navbar">
       <div class="navbar-wrapper">
         <div class="title">
-          <NavLink link="/" class="home-link">{{ $site.title }} </NavLink>
+          <NavLink
+            link="/"
+            class="home-link"
+          >
+            {{ $site.title }}
+          </NavLink>
         </div>
         <div class="navbar-right-wrap">
-          <ul v-if="$themeConfig.nav" class="nav">
+          <ul
+            v-if="$themeConfig.nav"
+            class="nav"
+          >
             <li
               v-for="item in $themeConfig.nav"
               :key="item.text"
               class="nav-item"
             >
-              <NavLink :link="item.link">{{ item.text }}</NavLink>
+              <NavLink :link="item.link">
+                {{ item.text }}
+              </NavLink>
             </li>
           </ul>
           <SearchBox />
@@ -28,7 +38,7 @@ import SearchBox from '@SearchBox'
 import Feed from './Feed'
 
 export default {
-  components: { SearchBox, Feed },
+  components: { SearchBox, Feed }
 }
 </script>
 
@@ -50,7 +60,6 @@ export default {
     list-style none
     margin 0
     padding 0
-
 
 .navbar-wrapper
   display flex

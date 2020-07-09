@@ -40,8 +40,8 @@ export default {
       1
     ].find(depth => depth !== undefined)
 
-    const displayAllHeaders = $themeLocaleConfig.displayAllHeaders
-      || $themeConfig.displayAllHeaders
+    const displayAllHeaders = $themeLocaleConfig.displayAllHeaders ||
+      $themeConfig.displayAllHeaders
 
     if (item.type === 'auto') {
       return [link, renderChildren(h, item.children, item.basePath, $route, maxDepth)]

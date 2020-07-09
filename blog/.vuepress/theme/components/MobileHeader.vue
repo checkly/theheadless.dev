@@ -2,21 +2,34 @@
   <div id="mobile-header">
     <div class="mobile-header-bar">
       <div class="mobile-header-title">
-        <NavLink link="/" class="mobile-home-link">{{ $site.title }} </NavLink>
+        <NavLink
+          link="/"
+          class="mobile-home-link"
+        >
+          {{ $site.title }}
+        </NavLink>
         <component
           :is="isOpen ? 'XIcon' : 'MenuIcon'"
           @click="$emit('toggle-sidebar')"
         />
       </div>
-      <div class="mobile-menu-wrapper" :class="{ open: isOpen }">
-        <hr class="menu-divider" />
-        <ul v-if="$themeConfig.nav" class="mobile-nav">
+      <div
+        class="mobile-menu-wrapper"
+        :class="{ open: isOpen }"
+      >
+        <hr class="menu-divider">
+        <ul
+          v-if="$themeConfig.nav"
+          class="mobile-nav"
+        >
           <li
             v-for="item in $themeConfig.nav"
             :key="item.text"
             class="mobile-nav-item"
           >
-            <NavLink :link="item.link">{{ item.text }}</NavLink>
+            <NavLink :link="item.link">
+              {{ item.text }}
+            </NavLink>
           </li>
           <li class="mobile-nav-item">
             <Feed />
@@ -34,14 +47,14 @@ export default {
   components: {
     MenuIcon,
     XIcon,
-    Feed,
+    Feed
   },
   props: {
     isOpen: {
       type: Boolean,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 }
 </script>
 

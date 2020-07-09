@@ -3,7 +3,10 @@
     class="sidebar-links"
     v-if="items.length"
   >
-    <li v-for="(item, i) in items" :key="i">
+    <li
+      v-for="(item, i) in items"
+      :key="i"
+    >
       <SidebarGroup
         v-if="item.type === 'group'"
         :item="item"
@@ -14,7 +17,7 @@
       />
       <SidebarLink
         v-else
-        :sidebarDepth="sidebarDepth"
+        :sidebar-depth="sidebarDepth"
         :item="item"
       />
     </li>
@@ -33,7 +36,7 @@ export default {
 
   props: [
     'items',
-    'depth',  // depth of current sidebar links
+    'depth', // depth of current sidebar links
     'sidebarDepth' // depth of headers to be extracted
   ],
 

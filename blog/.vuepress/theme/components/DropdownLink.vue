@@ -13,7 +13,7 @@
       <span
         class="arrow"
         :class="open ? 'down' : 'right'"
-      ></span>
+      />
     </button>
 
     <DropdownTransition>
@@ -26,7 +26,9 @@
           :key="subItem.link || index"
           v-for="(subItem, index) in item.items"
         >
-          <h4 v-if="subItem.type === 'links'">{{ subItem.text }}</h4>
+          <h4 v-if="subItem.type === 'links'">
+            {{ subItem.text }}
+          </h4>
 
           <ul
             class="dropdown-subitem-wrapper"
@@ -40,10 +42,11 @@
               <NavLink
                 @focusout="
                   isLastItemOfArray(childSubItem, subItem.items) &&
-                  isLastItemOfArray(subItem, item.items) &&
-                  toggle()
+                    isLastItemOfArray(subItem, item.items) &&
+                    toggle()
                 "
-                :item="childSubItem"/>
+                :item="childSubItem"
+              />
             </li>
           </ul>
 

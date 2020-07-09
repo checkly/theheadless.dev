@@ -23,8 +23,8 @@
       <span
         class="arrow"
         v-if="collapsable"
-        :class="open ? 'down' : 'right'">
-      </span>
+        :class="open ? 'down' : 'right'"
+      />
     </router-link>
 
     <p
@@ -37,8 +37,8 @@
       <span
         class="arrow"
         v-if="collapsable"
-        :class="open ? 'down' : 'right'">
-      </span>
+        :class="open ? 'down' : 'right'"
+      />
     </p>
 
     <DropdownTransition>
@@ -46,7 +46,7 @@
         class="sidebar-group-items"
         :items="item.children"
         v-if="open || !collapsable"
-        :sidebarDepth="item.sidebarDepth"
+        :sidebar-depth="item.sidebarDepth"
         :depth="depth + 1"
       />
     </DropdownTransition>
