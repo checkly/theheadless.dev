@@ -27,7 +27,7 @@
           </NavLink>
         </header>
 
-        <div>
+        <div class="ui-post-meta-wrapper">
           <div
             v-if="page.frontmatter.author"
             class="ui-post-meta ui-post-author"
@@ -35,7 +35,13 @@
             itemtype="http://schema.org/Person"
             itemscope
           >
-            <UserIcon />
+            <img
+              class="ui-post-githubUser"
+              :src="'https://github.com/' + page.frontmatter.githubUser + '.png?size=100'"
+              :alt="page.frontmatter.githubUser"
+              v-if="page.frontmatter.githubUser"
+            >
+            <UserIcon v-else />
             <span itemprop="name">{{ page.frontmatter.author }}</span>
             <span
               v-if="page.frontmatter.location"
@@ -220,6 +226,11 @@ export default {
       width 16px
       height 16px
 
+  .ui-post-meta-wrapper
+    display flex
+    align-items center
+    flex-wrap wrap
+
   .ui-post-meta
     display inline-flex
     align-items center
@@ -261,4 +272,8 @@ export default {
 
       &:hover
         color $accentColor
+  .ui-post-githubUser
+    border-radius 9999px
+    width 25px
+    margin-right .5rem
 </style>

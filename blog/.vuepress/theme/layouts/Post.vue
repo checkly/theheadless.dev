@@ -16,6 +16,7 @@
           :author="$frontmatter.author"
           :date="$frontmatter.date"
           :location="$frontmatter.location"
+          :github-user="$frontmatter.githubUser"
         />
       </header>
       <Content itemprop="articleBody" />

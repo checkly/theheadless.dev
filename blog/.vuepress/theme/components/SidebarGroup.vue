@@ -100,8 +100,8 @@ export default {
   color $darkTextColor
   transition color .15s ease
   cursor pointer
-  font-weight 500
-  font-size 14px
+  font-weight 600
+  font-size 12px
   text-transform uppercase
   padding 0.35rem 1.5rem 0.35rem 1.25rem
   width 100%

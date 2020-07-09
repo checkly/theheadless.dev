@@ -7,7 +7,13 @@
       itemtype="http://schema.org/Person"
       itemscope
     >
-      <UserIcon />
+      <img
+        class="post-githubUser"
+        :src="'https://github.com/' + this.githubUser + '.png?size=100'"
+        :alt="this.githubUser"
+        v-if="this.githubUser"
+      >
+      <UserIcon v-else />
       <span itemprop="name">{{ author }}</span>
     </div>
 
@@ -62,6 +68,9 @@ export default {
     },
     location: {
       type: String
+    },
+    githubUser: {
+      type: String
     }
   },
   computed: {
@@ -80,7 +89,8 @@ export default {
 
 <style lang="stylus">
   .post-meta-wrapper
-    display block
+    display flex
+    align-items center
 
   .post-meta
     display inline-flex
@@ -123,4 +133,8 @@ export default {
 
       &:hover
         color $accentColor
+  .post-githubUser
+    border-radius 9999px
+    width 30px
+    margin-right .5rem
 </style>
