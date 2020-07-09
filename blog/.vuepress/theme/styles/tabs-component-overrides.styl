@@ -1,0 +1,27 @@
+.tabs-component
+  margin-top 1rem
+  .tabs-component-tabs
+    margin-bottom 0
+    border-bottom 1px solid $queenLighter
+    border-radius 0
+    .tabs-component-tab
+      border none
+      font-size 14px
+      a
+        padding .5rem
+        color $gray
+      a:hover
+        text-decoration none
+
+
+      &.is-active
+        border-bottom 2px solid $blue
+        margin-bottom -1px
+
+        a
+          color $blue
+
+  .tabs-component-panels
+    box-shadow none
+    border none
+    padding .5rem 0
