@@ -15,12 +15,6 @@ module.exports = {
           ['/_posts/basics', 'Basics'],
           ['/_posts/more-basics', 'More basics']
         ]
-      },
-      {
-        title: 'Advanced topics',
-        children: [
-          /* ... */
-        ]
       }
     ],
     nav: [],
