@@ -27,13 +27,15 @@
       </template>
     </Sidebar>
 
-    <main class="main">
-      <Home
-        v-if="$page.frontmatter.home"
-        :sidebar-items="sidebarItems"
-      />
+    <Home
+      v-if="$page.frontmatter.home"
+    />
+
+    <main
+      class="main"
+      v-else
+    >
       <DefaultGlobalLayout
-        v-else
         :sidebar-items="sidebarItems"
       />
     </main>
@@ -93,6 +95,7 @@ export default {
     shouldShowSidebar () {
       const { frontmatter } = this.$page
       return (
+        !frontmatter.home &&
         frontmatter.sidebar !== false &&
         this.sidebarItems.length
       )
