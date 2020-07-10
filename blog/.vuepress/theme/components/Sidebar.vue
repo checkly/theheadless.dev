@@ -40,6 +40,9 @@ export default {
             type: 'page'
           }
         })
+          .sort((a, b) => {
+            return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
+          })
       }]
     }
   }
