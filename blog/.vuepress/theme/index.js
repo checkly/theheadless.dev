@@ -1,6 +1,7 @@
 const removeMd = require('remove-markdown')
 const path = require('path')
 const pick = require('lodash/pick')
+const { addMetaTags } = require('./util/meta')
 
 module.exports = (themeConfig) => {
   /**
@@ -158,6 +159,7 @@ module.exports = (themeConfig) => {
       if (!strippedContent) {
         return
       }
+
       if (themeConfig.summary) {
         pageCtx.summary =
           removeMd(
@@ -168,9 +170,13 @@ module.exports = (themeConfig) => {
           ) + ' ...'
         pageCtx.frontmatter.description = pageCtx.summary
       }
+
       if (pageCtx.frontmatter.summary) {
         pageCtx.frontmatter.description = pageCtx.frontmatter.summary
       }
+
+      // META
+      addMetaTags(pageCtx)
     }
   }
 
