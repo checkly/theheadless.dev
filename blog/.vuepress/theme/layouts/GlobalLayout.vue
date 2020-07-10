@@ -28,7 +28,12 @@
     </Sidebar>
 
     <main class="main">
+      <Home
+        v-if="$page.frontmatter.home"
+        :sidebar-items="sidebarItems"
+      />
       <DefaultGlobalLayout
+        v-else
         :sidebar-items="sidebarItems"
       />
     </main>
@@ -42,6 +47,7 @@ import Navbar from '@theme/components/Navbar.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import MobileHeader from '@theme/components/MobileHeader.vue'
 import Footer from '@theme/components/Footer.vue'
+import Home from '@theme/components/Home.vue'
 import { resolveSidebarItems } from '../util'
 
 export default {
@@ -50,7 +56,8 @@ export default {
     Navbar,
     Sidebar,
     MobileHeader,
-    Footer
+    Footer,
+    Home
   },
 
   data () {
@@ -86,7 +93,6 @@ export default {
     shouldShowSidebar () {
       const { frontmatter } = this.$page
       return (
-        !frontmatter.home &&
         frontmatter.sidebar !== false &&
         this.sidebarItems.length
       )

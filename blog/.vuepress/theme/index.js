@@ -33,8 +33,8 @@ module.exports = (themeConfig) => {
     directories: [
       {
         id: 'post',
-        dirname: '_posts',
-        path: '/',
+        dirname: 'posts',
+        path: '/posts/',
         itemPermalink: '/posts/:slug' // Permalink for matched pages.
       }
     ],
@@ -51,7 +51,7 @@ module.exports = (themeConfig) => {
   }
 
   let resolvedFeedOptions
-  const isFeedEnabled = themeConfig.feed && themeConfig.feed.canonical_base
+  const isFeedEnabled = themeConfig.feed && themeConfig.feed.canonicalBase
   if (isFeedEnabled) {
     const {
       rss = true,
@@ -176,7 +176,12 @@ module.exports = (themeConfig) => {
       }
 
       // META
-      addMetaTags(pageCtx)
+      const metaTagOptions = {
+        canonicalBase: 'https://guides.checklyhq.com'
+
+      }
+
+      addMetaTags(pageCtx, metaTagOptions)
     }
   }
 

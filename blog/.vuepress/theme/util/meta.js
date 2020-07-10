@@ -102,7 +102,10 @@ const getOptionDefaults = () => {
 }
 
 const getOptions = ($page, pluginOptions) => {
-  return _.defaultsDeep(pluginOptions, getOptionDefaults())
+  return _.defaultsDeep(
+    pluginOptions,
+    getOptionDefaults()
+  )
 }
 
 const stripMarkup = (str) =>
@@ -353,10 +356,10 @@ defaultMetas.twitter = ($page, defaultValues) => {
     })
   }
 
-  if (defaultValues.canonicalUr) {
+  if (defaultValues.canonicalUrl) {
     out.push({
       name: 'twitter:url',
-      content: defaultValues.canonicalUr
+      content: defaultValues.canonicalUrl
     })
   }
 
@@ -408,10 +411,10 @@ defaultMetas.og = ($page, defaultValues) => {
     })
   }
 
-  if (defaultValues.canonicalUr) {
+  if (defaultValues.canonicalUrl) {
     out.push({
       property: 'og:url',
-      content: defaultValues.canonicalUr
+      content: defaultValues.canonicalUrl
     })
   }
 
@@ -511,13 +514,13 @@ function addMetaTags ($page, pluginOptions) {
     date: getDefaultDate($page, options),
     description: frontmatter.description,
     imageUrl: getDefaultImageUrl($page, options),
-    canonicalUr: getCanonicalUrl($page, options),
+    canonicalUrl: getCanonicalUrl($page, options),
     author: getDefaultAuthor($page, options),
     site: getDefaultSite($page, options)
   }
 
   defaultValues.image = defaultValues.imageUrl
-  defaultValues.canonical = defaultValues.canonicalUr
+  defaultValues.canonical = defaultValues.canonicalUrl
 
   const defaultMetas = defaultMetaTags($page, defaultValues, options)
 

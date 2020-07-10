@@ -12,8 +12,8 @@ module.exports = {
         collapsable: false, // optional, defaults to true
         sidebarDepth: 1, // optional, defaults to 1
         children: [
-          ['/_posts/basics', 'Basics'],
-          ['/_posts/more-basics', 'More basics']
+          ['/posts/basics', 'Basics'],
+          ['/posts/more-basics', 'More basics']
         ]
       }
     ],
@@ -55,7 +55,7 @@ module.exports = {
           title: '%%site_title%% RSS Feed'
         }
       },
-      posts_directories: ['/_posts/']
+      posts_directories: ['/posts/']
     },
     algolia: {
       apiKey: 'b2b616fdea14b860ff00c72fa72bf267',
