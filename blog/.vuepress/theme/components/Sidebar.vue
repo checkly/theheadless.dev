@@ -34,12 +34,10 @@ export default {
         type: 'group',
         children: Object.keys(this.$tag._metaMap).map(key => {
           return {
-            path: this.$tag._metaMap[key].path,
+            path: this.$tag._metaMap[key].path.toLowerCase(),
             title: key,
             id: 'post',
-            type: 'page',
-            regularPath: '/_posts/basics.html',
-            relativePath: '_posts/basics.md'
+            type: 'page'
           }
         })
       }]
