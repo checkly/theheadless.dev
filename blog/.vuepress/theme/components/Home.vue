@@ -80,6 +80,7 @@ export default {
 .home
   padding $navbarHeight 2rem 0
   max-width $contentWidth
+  min-height "calc(100vh - %s)" % ($footerHeight + $navbarHeight + 2rem)
   margin 0 auto
   display block
   .hero

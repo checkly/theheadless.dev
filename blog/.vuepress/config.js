@@ -33,12 +33,8 @@ const themeConfig = {
     ],
     copyright: [
       {
-        text: 'Privacy Policy',
-        link: 'https://policies.google.com/privacy?hl=en-US'
-      },
-      {
         text: 'MIT Licensed | Copyright © 2020-present Checkly inc.',
-        link: 'cdcd'
+        link: 'https://opensource.org/licenses/MIT'
       }
     ]
   },

@@ -39,7 +39,7 @@
         :sidebar-items="sidebarItems"
       />
     </main>
-    <!--    <Footer />-->
+    <Footer />
   </div>
 </template>
 
@@ -159,5 +159,6 @@ export default {
 .main
   padding-left $sidebarWidth
   max-width $contentWidth
+  min-height "calc(100vh - %s)" % ($footerHeight + $navbarHeight / 2)
 
 </style>
