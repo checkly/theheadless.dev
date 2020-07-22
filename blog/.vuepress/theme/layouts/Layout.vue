@@ -5,6 +5,18 @@
       itemscope
       itemtype="http://schema.org/Blog"
     >
+      <div
+        v-if="isTagsListPage"
+        class="ui-posts-count-summary"
+      >
+        <div class="ui-posts-count-summary-number">
+          {{ $currentTag.pages.length }}
+        </div>
+        posts in
+        <div class="ui-posts-count-summary-tag">
+          {{ $currentTag.key }}
+        </div>
+      </div>
       <article
         v-for="page in pages"
         :key="page.key"
@@ -135,6 +147,10 @@ export default {
   computed: {
     pages () {
       return this.$pagination.pages
+    },
+
+    isTagsListPage () {
+      return this.$currentTag
     }
   },
 
@@ -158,6 +174,19 @@ export default {
   .list
     @extend $wrapper
     padding-top $navbarHeight + 2rem
+  .ui-posts-count-summary
+    margin-bottom 25px
+    color $gray
+    font-size 22px
+    display flex
+    flex-direction row
+    .ui-posts-count-summary-number
+      color $darkTextColor
+      margin-right 5px
+    .ui-posts-count-summary-tag
+      color $darkTextColor
+      margin-left 5px
+
   .ui-post
     padding-bottom 25px
     margin-bottom 25px
