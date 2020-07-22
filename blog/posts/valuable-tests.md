@@ -44,7 +44,7 @@ Oftentimes this is impeded by the tendency to have tests do too much. We can dra
 We can avoid this pitfall by making sure our tests are verifying only one feature each. 
 
 ::: tip
- An easy way to determine if your test is doing too much is to look at your assertions and ask yourself how many features they are spanning. If the answer is more than one, you are likely doing too much, and would be better off splitting your test into multiple different ones.
+Always check the assertions in your test: if they are spanning more than one feature, you would likely be better off splitting your test into multiple different ones.
 :::
 
 ## Keep tests independent
