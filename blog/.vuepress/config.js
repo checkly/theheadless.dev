@@ -12,8 +12,7 @@ const themeConfig = {
     }
   ],
   nav: [
-    { text: 'Posts', link: '/posts/' },
-    { text: 'GitHub', link: 'https://github.com/checkly/guides.checklyhq.com' }
+    { text: 'Posts', link: '/posts/' }
   ],
   sitemap: {
     hostname: 'https://guides.checklyhq.com'
@@ -21,16 +20,6 @@ const themeConfig = {
   summary: true,
   summaryLength: 200,
   footer: {
-    contact: [
-      {
-        type: 'github',
-        link: 'https://github.com/vuejs/vuepress'
-      },
-      {
-        type: 'twitter',
-        link: 'https://github.com/vuejs/vuepress'
-      }
-    ],
     copyright: [
       {
         text: 'MIT Licensed | Copyright © 2020-present Checkly inc.',

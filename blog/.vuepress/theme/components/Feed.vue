@@ -4,7 +4,7 @@
     class="feed"
     :href="getFirstEnabledFeed | getFeedFilePath"
   >
-    <RssIcon />
+    <RssIcon size="22" />
   </a>
 </template>
 

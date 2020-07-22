@@ -31,7 +31,8 @@
         :options="algolia"
       />
       <NavLinks class="can-hide" />
-      <Feed />
+      <GitHub class="icon-link can-hide" />
+      <Feed class="icon-link can-hide" />
     </div>
   </header>
 </template>
@@ -42,9 +43,10 @@ import SearchBox from '@SearchBox'
 import SidebarButton from './SidebarButton.vue'
 import NavLinks from './NavLinks.vue'
 import Feed from './Feed.vue'
+import GitHub from './GitHub.vue'
 
 export default {
-  components: { SidebarButton, NavLinks, AlgoliaSearchBox, SearchBox, Feed },
+  components: { SidebarButton, NavLinks, AlgoliaSearchBox, SearchBox, Feed, GitHub },
 
   data () {
     return {
@@ -123,6 +125,8 @@ $navbar-horizontal-padding = 1.5rem
       input
         background-color $queenLightest
         border-radius 3px
+    .icon-link
+      margin-left 1.5rem
 
 @media (max-width: $MQMobile)
   .navbar
