@@ -4,7 +4,7 @@ actionText: Get Started →
 actionLink: /posts/
 meta:
   - name: description
-    content: hello
+    content: "Tips, tricks and in-depth guides from the trenches"
   - name: keywords
     content: super duper SEO
 ---

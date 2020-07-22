@@ -8,7 +8,7 @@
     />
     <SidebarLinks
       :depth="0"
-      :items="categoriesGroup"
+      :items="topics"
     />
     <slot name="bottom" />
   </aside>
@@ -26,9 +26,9 @@ export default {
   props: ['items'],
 
   computed: {
-    categoriesGroup () {
+    topics () {
       return [{
-        title: 'Categories',
+        title: 'Topics',
         collapsable: false,
         sidebarDepth: 2,
         type: 'group',

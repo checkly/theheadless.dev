@@ -11,7 +11,7 @@
       </h1>
 
       <p class="description">
-        {{ data.tagline || $description || 'Welcome to your VuePress site' }}
+        {{ data.tagline || $description }}
       </p>
 
       <p
@@ -25,22 +25,8 @@
       </p>
     </header>
 
-    <div
-      class="features"
-      v-if="data.features && data.features.length"
-    >
-      <div
-        class="feature"
-        v-for="(feature, index) in data.features"
-        :key="index"
-      >
-        <h2>{{ feature.title }}</h2>
-        <p>{{ feature.details }}</p>
-      </div>
-    </div>
-
-    <div class="theme-default-content custom">
-      <h3>Recent activity</h3>
+    <div class="recent-activity">
+      <h2>Recent activity</h2>
       <ul>
         <li
           v-for="page in recentPosts"
@@ -124,40 +110,20 @@ export default {
       border-bottom 1px solid darken($accentColor, 10%)
       &:hover
         background-color lighten($accentColor, 10%)
-  .features
-    border-top 1px solid $borderColor
-    padding 1.2rem 0
-    margin-top 2.5rem
-    display flex
-    flex-wrap wrap
-    align-items flex-start
-    align-content stretch
-    justify-content space-between
-  .feature
-    flex-grow 1
-    flex-basis 30%
-    max-width 30%
+
+  .recent-activity
     h2
-      font-size 1.4rem
-      font-weight 500
-      border-bottom none
-      padding-bottom 0
-      color lighten($textColor, 10%)
-    p
-      color lighten($textColor, 25%)
+      padding-top 1rem
+    ul
+      list-style none
+      padding-left 0
+      li
+        margin-bottom .25rem
   .footer
     padding 2.5rem
     border-top 1px solid $borderColor
     text-align center
     color lighten($textColor, 25%)
-
-@media (max-width: $MQMobile)
-  .home
-    .features
-      flex-direction column
-    .feature
-      max-width 100%
-      padding 0 2.5rem
 
 @media (max-width: $MQMobileNarrow)
   .home
@@ -176,7 +142,4 @@ export default {
       .action-button
         font-size 1rem
         padding 0.6rem 1.2rem
-    .feature
-      h2
-        font-size 1.25rem
 </style>
