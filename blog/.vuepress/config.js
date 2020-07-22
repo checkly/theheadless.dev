@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ['tabs'],
-  title: 'Headless Guides',
+  title: 'Headless.dev',
   markdown: {
     lineNumbers: true
   },
@@ -17,7 +17,10 @@ module.exports = {
         ]
       }
     ],
-    nav: [],
+    nav: [
+      { text: 'Guides', link: '/posts/' },
+      { text: 'GitHub', link: 'https://github.com/checkly/guides.checklyhq.com' }
+    ],
     sitemap: {
       hostname: 'https://guides.checklyhq.com'
     },
