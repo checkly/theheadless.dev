@@ -12,7 +12,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/theme-blog": "^2.2.0",
+    "@vuepress/plugin-blog": "^1.9.2",
+    "@vuepress/plugin-medium-zoom": "1.0.0",
+    "@vuepress/plugin-nprogress": "1.0.0",
+    "@vuepress/plugin-pwa": "1.0.0",
+    "@vuepress/plugin-search": "1.0.0",
+    "dayjs": "^1.8.30",
     "eslint": "^7.3.1",
     "eslint-config-checkly": "0.0.4",
     "husky": "^4.2.5",

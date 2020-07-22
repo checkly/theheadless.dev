@@ -107,26 +107,22 @@
       </article>
     </div>
 
-    <component
-      :is="paginationComponent"
-      v-if="$pagination.length > 1 && paginationComponent"
+    <Pagination
+      v-if="$pagination.length > 1"
     />
   </div>
 </template>
 
 <script>
-/* global THEME_BLOG_PAGINATION_COMPONENT */
 
-import Vue from 'vue'
 import dayjs from 'dayjs'
 import { UserIcon, ClockIcon, TagIcon, ArrowRightIcon } from 'vue-feather-icons'
 import {
-  Pagination,
-  SimplePagination
+  Pagination
 } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
-  components: { UserIcon, ClockIcon, TagIcon, ArrowRightIcon },
+  components: { UserIcon, ClockIcon, TagIcon, ArrowRightIcon, Pagination },
 
   props: ['sidebarItems'],
 
@@ -142,24 +138,7 @@ export default {
     }
   },
 
-  created () {
-    this.paginationComponent = this.getPaginationComponent()
-  },
-
   methods: {
-    getPaginationComponent () {
-      const n = THEME_BLOG_PAGINATION_COMPONENT
-      if (n === 'Pagination') {
-        return Pagination
-      }
-
-      if (n === 'SimplePagination') {
-        return SimplePagination
-      }
-
-      return Vue.component(n) || Pagination
-    },
-
     resolvePostDate (date) {
       return dayjs(date).format(
         this.$themeConfig.dateFormat || 'ddd MMM DD YYYY'
