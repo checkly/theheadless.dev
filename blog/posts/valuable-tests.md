@@ -2,10 +2,9 @@
 title: Keeping tests valuable
 date: 2020-07-16
 author: Giovanni Rago
+githubUser: ragog
 tags: 
-  - Puppeteer
-  - Playwright
-  - Best Practices
+  - Basics
 ---
 
 Headless browsers can be leveraged for testing in a variety of ways, and different scenarios do command different approaches. That being said, there are some general pointers most should follow in order to keep their tests _valuable_.
@@ -16,14 +15,14 @@ A test that does not reliably fulfill these criteria should be fixed, if possibl
 ## Keep tests short
 
 If they run against a real-world product with a UI that is evolving over time, scripts will need to be regularly updated. This brings up two important points:
-* most scripts are not write-and-forget, so each script we write is one more script we will have to maintain
-* like all cases where code and refactoring are involved, _how_ we write scripts can have a significant influence on how long this maintenance effort takes
+1. Most scripts are not write-and-forget, so each script we write is one more script we will have to maintain
+2. Like all cases where code and refactoring are involved, _how_ we write scripts can have a significant influence on how long this maintenance effort takes
 
 Taking example from good software engineering practices, our scripts should strive for *simplicity, conciseness and readability*: 
 
-* simplicity: keep in mind the goal of the script, and keep away from overly complex solutions whenever possible
-* conciseness: simply put, do not be overly verbose and keep scripts as short as they can be
-* readability: follow general [best practices](https://blog.pragmaticengineer.com/readable-code/) around writing code that is easy to read
+1. Simplicity: keep in mind the goal of the script, and keep away from overly complex solutions whenever possible
+2. Conciseness: simply put, do not be overly verbose and keep scripts as short as they can be
+3. Readability: follow general [best practices](https://blog.pragmaticengineer.com/readable-code/) around writing code that is easy to read
 
 The faster we can read and understand a script we (or a teammate) wrote in the past, the quicker we can interpret its results and get to work on updating it and making it relevant again.
 
@@ -34,9 +33,9 @@ Do not underestimate the compounding effect of having messy scripts across a lar
 ## Keep tests focused
 
 Automated tests are effective if they:
-* correctly verify the status of the target functionality
-* return within a reasonable amount of time
-* produce a result that can be easily interpreted by humans
+1. Correctly verify the status of the target functionality
+2. Return within a reasonable amount of time
+3. Produce a result that can be easily interpreted by humans
 
 The last point is often overlooked. Scripts by themselves have no meaning if their results mean nothing to whoever is looking at them. Ideally, we want the opposite: interpreting a test success or failure should be close to instantaneous and give us a clear understanding of what is working and what is not.
 
@@ -67,9 +66,9 @@ test3:
 ```
 
 In this case, the success of each subsequent test depends on previous tests as much as on its own assertions. In other words, previous tests are driving a test's success criteria. This form of coupling can create headaches for us in the shape of:
-* lower test result readability: we might need to backtrack and look into previous tests when trying to understand what a subsequent one is doing
-* harder maintenance: changes might need to be applied across different scripts
-* lack of flexibility and parallelisation: tests need to run sequentially in a specific order to work
+1. Lower test result readability: we might need to backtrack and look into previous tests when trying to understand what a subsequent one is doing
+2. Harder maintenance: changes might need to be applied across different scripts
+3. Lack of flexibility and parallelisation: tests need to run sequentially in a specific order to work
 
 Having each test encapsulate all it needs to give us a meaningful answer is fundamental to avoid the above issues. In case of our example, a solution could look like:
 
@@ -91,9 +90,14 @@ test3:
 ```
 
 Where: 
-* in the interest of code quality, we would be factoring out setup phases in order to easily reuse them across tests
-* tests can be run in any order, even at the same time
+1. Tests can be run in any order, even at the same time.
+2. In the interest of code quality, we would be factoring out setup phases in order to easily reuse them across tests. [Jest](https://jestjs.io/docs/en/setup-teardown)'s `beforeEach` and `beforeAll` hooks are examples of useful helper functions that can help us achieve that.
 
 ::: tip
-If the system you are testing allows you to provision users (and similarly manipulate test data) through APIs, you might be able to run your setup and teardown phases without interacting with the UI. This could save you time and increase test reliability.
+If the system you are testing allows it, provision/deprovision your users through APIs in your setup and teardown phases to save time and increase test reliability.
 :::
+
+## Takeaways
+1. Tests should be reliable and informative in order to be useful.
+2. Keep tests short and focused on testing one feature.
+3. Keep tests independent to maximise their parallelisation potential and reduce total runtime.
