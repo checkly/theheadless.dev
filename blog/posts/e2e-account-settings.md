@@ -41,9 +41,9 @@ node file-upload.js
 :::
 ::::
 
-Here, we are simply checking for a message giving us feedback on the status of the upload. Depending on the website we are testing, it might be possible to also download the profile image afterwards to run a comparison locally.
+Here, we are simply checking for a message giving us feedback on the status of the upload. Depending on the website we are testing, it might be possible to also download the profile image afterwards to run a comparison locally for a more robust check.
 
 ## Takeaways
 1. Use environment variables to inject secrets.
 2. Use `uploadFile` (Puppeteer) or `setInputFiles` (Playwright) to upload the file.
-3. If possible, verify 
+3. If possible, download the file from the platform and compare it with the one that was just uploaded.
