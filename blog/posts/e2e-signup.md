@@ -34,13 +34,13 @@ Run this example as follows. Replace the username and password placeholder with 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
 ```shell script
-USER_EMAIL=username USER_PASSWORD=password node signup.js
+USER_EMAIL=user@email.com USER_PASSWORD=supersecure1 node signup.js
 ```
 :::
 ::: tab Windows
 ```shell script
-SET USER_EMAIL=username
-SET USER_PASSWORD=password
+SET USER_EMAIL=user@email.com
+SET USER_PASSWORD=supersecure1
 node signup.js
 ```
 :::
@@ -51,14 +51,6 @@ The normal signup flow might include asking the user to confirm their email addr
 ```js
 await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 TEST_ID/<MY_SECRET>');
 ```
-
-## Confirmation emails, bot detection and automation hardening
-Some flows are made hard to automate on purpose to defend against malicious actors. Some examples:
-1. New user signup (see example immediately above for a possible solution)
-2. Social login through providers like Google, Facebook etc.
-3. 'Forgot password' and similar reset scenarios
-
-In general, 
 
 ## Takeaways
 1. Use environment variables to inject secrets.
