@@ -34,6 +34,7 @@
     "vuepress": "^1.5.2"
   },
   "dependencies": {
+    "color-hash": "^1.0.3",
     "vue-tabs-component": "^1.5.0",
     "vuepress-plugin-container": "^2.1.4",
     "vuepress-plugin-tabs": "^0.3.0"

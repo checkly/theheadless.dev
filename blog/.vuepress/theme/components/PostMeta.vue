@@ -37,13 +37,11 @@
       itemprop="keywords"
     >
       <TagIcon />
-      <router-link
+      <PostTag
         v-for="tag in tags"
         :key="tag"
-        :to="'/tag/' + tag"
-      >
-        {{ tag }}
-      </router-link>
+        :tag="tag"
+      />
     </div>
   </div>
 </template>
@@ -128,14 +126,6 @@ export default {
     color $gray
     font-weight 600
 
-    a
-      color inherit
-      font-weight 600
-      text-decoration none
-      margin-right 5px
-
-      &:hover
-        color $accentColor
   .post-githubUser
     border-radius 9999px
     width 30px

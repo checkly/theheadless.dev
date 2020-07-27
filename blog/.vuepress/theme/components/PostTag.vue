@@ -1,12 +1,17 @@
 <template>
-  <li class="post-tag">
+  <div
+    class="post-tag"
+    :style="'background:' + color"
+  >
     <router-link :to="'/tag/' + tag">
       <span>{{ tag }}</span>
     </router-link>
-  </li>
+  </div>
 </template>
 
 <script>
+import ColorHash from 'color-hash'
+
 export default {
   name: 'PostTag',
   props: {
@@ -14,23 +19,29 @@ export default {
       type: String,
       required: true
     }
+  },
+  computed: {
+    color () {
+      return new ColorHash({ lightness: 0.8 }).hex(this.tag)
+    }
   }
 }
 </script>
 
 <style scoped lang="stylus">
 .post-tag
-
+  padding 2px 6px
+  border-radius 3px
+  margin-right 5px
   &:not(:last-child)
     margin-right 5px
 
   a
-    color $gray
-    font-weight 600
-    font-size 14px
-    line-height 14px
+    color $darkTextColor
+    font-weight 500
     text-decoration none
 
     &:hover
-      text-decoration underline
+      color $darkTextColor
+      text-decoration none
 </style>

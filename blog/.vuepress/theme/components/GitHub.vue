@@ -4,15 +4,13 @@
     :href="'https://github.com/' + $site.themeConfig.docsRepo"
     target="_blank"
   >
-    <GithubIcon size="22" />
+    GitHub
   </a>
 </template>
 
 <script>
-import { GithubIcon } from 'vue-feather-icons'
 
 export default {
-  components: { GithubIcon }
 }
 </script>
 

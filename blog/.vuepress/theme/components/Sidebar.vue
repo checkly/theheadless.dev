@@ -28,7 +28,7 @@ export default {
   computed: {
     topics () {
       return [{
-        title: 'Topics',
+        title: '📔 Topics',
         collapsable: false,
         sidebarDepth: 2,
         type: 'group',

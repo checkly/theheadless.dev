@@ -4,15 +4,13 @@
     class="feed"
     :href="getFirstEnabledFeed | getFeedFilePath"
   >
-    <RssIcon size="22" />
+    RSS
   </a>
 </template>
 
 <script>
-import { RssIcon } from 'vue-feather-icons'
 
 export default {
-  components: { RssIcon },
   filters: {
     getFeedFilePath (feed) {
       if (feed === 'rss') return '/rss.xml'

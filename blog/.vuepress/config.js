@@ -1,8 +1,8 @@
 const themeConfig = {
-  logo: '/logo_racoon.svg',
+  logo: '',
   sidebar: [
     {
-      title: 'The Basics', // required
+      title: '🚩 Headless 101', // required
       collapsable: false, // optional, defaults to true
       sidebarDepth: 1, // optional, defaults to 1
       children: [
@@ -12,7 +12,6 @@ const themeConfig = {
     }
   ],
   nav: [
-    { text: 'Posts', link: '/posts/' }
   ],
   sitemap: {
     hostname: 'https://guides.checklyhq.com'
@@ -69,7 +68,7 @@ const vuePressBlogConfig = {
 }
 
 module.exports = {
-  title: 'headless.dev',
+  title: 'the headless dev',
   markdown: {
     lineNumbers: true
   },

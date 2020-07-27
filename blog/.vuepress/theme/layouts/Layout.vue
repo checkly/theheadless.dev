@@ -83,13 +83,11 @@
             itemprop="keywords"
           >
             <TagIcon />
-            <router-link
+            <PostTag
               v-for="tag in resolvePostTags(page.frontmatter.tags)"
               :key="tag"
-              :to="'/tag/' + tag"
-            >
-              {{ tag }}
-            </router-link>
+              :tag="tag"
+            />
           </div>
         </div>
 
@@ -132,9 +130,10 @@ import { UserIcon, ClockIcon, TagIcon, ArrowRightIcon } from 'vue-feather-icons'
 import {
   Pagination
 } from '@vuepress/plugin-blog/lib/client/components'
+import PostTag from '../components/PostTag'
 
 export default {
-  components: { UserIcon, ClockIcon, TagIcon, ArrowRightIcon, Pagination },
+  components: { UserIcon, ClockIcon, TagIcon, ArrowRightIcon, Pagination, PostTag },
 
   props: ['sidebarItems'],
 
@@ -270,18 +269,6 @@ export default {
     color $gray
     font-weight 600
 
-  .ui-post-tag
-    color $gray
-    font-weight 600
-
-    a
-      color inherit
-      font-weight 600
-      text-decoration none
-      margin-right 5px
-
-      &:hover
-        color $accentColor
   .ui-post-githubUser
     border-radius 9999px
     width 25px
