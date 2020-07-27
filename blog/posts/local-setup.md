@@ -2,9 +2,9 @@
 title: Setting up Puppeteer or Playwright locally
 date: 2020-06-20
 author: Giovanni Rago
+githubUser: ragog
 tags: 
-  - Puppeteer
-  - Playwright
+  - Basics
 ---
 
 Assuming you already have [node.js](https://nodejs.org/) available in your local environment, installing Puppeteer or Playwright is achieved with just one instruction. Let's start by creating the folder where we will be storing our scripts going forward.

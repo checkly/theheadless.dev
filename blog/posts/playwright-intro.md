@@ -2,8 +2,9 @@
 title: What is Playwright?
 date: 2020-06-29
 author: Giovanni Rago
+githubUser: ragog
 tags: 
-  - Playwright
+  - Basics
 ---
 
 The [official documentation](https://playwright.dev/) for Playwright reads: 

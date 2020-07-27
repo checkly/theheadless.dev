@@ -2,10 +2,10 @@
 title: Login with Google
 date: 2020-06-22
 author: Tim Nolet
+githubUser: tnolet
 tags: 
-  - Puppeteer
-  - Playwright
   - Login
+  - E2E
 ---
 
 Social login using your personal Google or Google Gsuite account is an extremely common use case for many login scenarios.

@@ -2,8 +2,9 @@
 title: What is Puppeteer?
 date: 2020-06-19
 author: Giovanni Rago
+githubUser: ragog
 tags: 
-  - Puppeteer
+  - Basics
 ---
 
 Straight from the [official documentation](https://developers.google.com/web/tools/puppeteer): 

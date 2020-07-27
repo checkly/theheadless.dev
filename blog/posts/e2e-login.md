@@ -2,9 +2,8 @@
 title: E2E Login
 date: 2020-06-25
 author: Giovanni Rago
+githubUser: ragog
 tags: 
-  - Puppeteer
-  - Playwright
   - E2E
   - Login
 ---

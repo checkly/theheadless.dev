@@ -2,9 +2,8 @@
 title: E2E Checkout
 date: 2020-07-02
 author: Giovanni Rago
+githubUser: ragog
 tags: 
-  - Puppeteer
-  - Playwright
   - E2E
   - Checkout
 ---

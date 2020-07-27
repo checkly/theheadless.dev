@@ -2,10 +2,9 @@
 title: Basic page interactions
 date: 2020-06-21
 author: Giovanni Rago
+githubUser: ragog
 tags: 
-  - Puppeteer
-  - JavaScript
-  - Playwright
+  - Basics
 ---
 
 We normally access most website functionality through clicks, taps, typing etc. Puppeteer and Playwright allow us to replicate these events by finding elements on the page using CSS selectors:

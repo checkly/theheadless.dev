@@ -4,9 +4,8 @@ date: 2020-06-22
 author: Tim Nolet
 githubUser: tnolet
 tags: 
-  - Puppeteer
-  - Playwright
   - Login
+  - E2E
 ---
 
 Log in to your Microsoft Live account
