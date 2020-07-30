@@ -1,5 +1,5 @@
 ---
-title: Finding UI elements
+title: Clicking and typing
 date: 2020-07-30
 author: Giovanni Rago
 githubUser: ragog
@@ -25,12 +25,12 @@ Run this example as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
 ```shell script
-node basic-browser-navigation.js
+node basic-click-type.js
 ```
 :::
 ::: tab Windows
 ```shell script
-node basic-browser-navigation.js
+node basic-click-type.js
 ```
 :::
 ::::
