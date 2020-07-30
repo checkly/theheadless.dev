@@ -11,11 +11,11 @@ We normally access most website functionality through clicks, taps, typing etc. 
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-<<< @/blog/snippets/puppeteer/basic-interactions.js
+<<< @/blog/snippets/puppeteer/basic-click-type.js
 :::
 
 ::: tab Playwright
-<<< @/blog/snippets/playwright/basic-interactions.js
+<<< @/blog/snippets/playwright/basic-click-type.js
 :::
 ::::
 
