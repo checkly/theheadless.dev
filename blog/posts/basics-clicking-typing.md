@@ -19,8 +19,6 @@ We normally access most website functionality through clicks, taps, typing etc. 
 :::
 ::::
 
-You can run this example as follows:
-
 Run this example as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
