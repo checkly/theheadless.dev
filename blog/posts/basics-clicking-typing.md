@@ -1,6 +1,6 @@
 ---
 title: Clicking and typing
-date: 2020-07-30
+date: 2020-06-15
 author: Giovanni Rago
 githubUser: ragog
 tags: 

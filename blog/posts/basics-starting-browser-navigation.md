@@ -1,6 +1,6 @@
 ---
 title: Starting the browser and navigating to a webpage
-date: 2020-07-30
+date: 2020-06-15
 author: Giovanni Rago
 githubUser: ragog
 tags: 
