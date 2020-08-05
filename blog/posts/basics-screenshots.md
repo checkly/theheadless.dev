@@ -46,14 +46,14 @@ await page.screenshot({ path: 'my_screenshot.png', fullPage: true })
 
 ## Clipped screenshots
 
-Having our screenshot limited to a smaller portion of the viewport is also possible:
+Having our screenshot limited to a smaller portion of the viewport is also possible. All we need to do is specify the coordinates of the top left corner of the screenshot, plus `width` and `height`. We then pass these options to:
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-<<< @/blog/snippets/puppeteer/basic-screenshot-clipped.js
+<<< @/blog/snippets/puppeteer/basic-screenshot-clipped.js{1-10}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/basic-screenshot-clipped.js
+<<< @/blog/snippets/playwright/basic-screenshot-clipped.js{1-10}
 :::
 ::::
 
@@ -73,11 +73,10 @@ node basic-screenshot-clipped.js
 
 ## Use in visual regression testing
 
-[BackstopJS](https://github.com/garris/BackstopJS)
-[jest-puppeteer-docker](https://github.com/gidztech/jest-puppeteer-docker)
+Screenshots can be fed to image comparison libraries, such as [Resemble.js](https://github.com/rsmbl/Resemble.js), [pixelmatch](https://github.com/mapbox/pixelmatch), [Rembrandt.js](http://rembrandtjs.com/) or others in order to determine whether our latest sets of screenshots contains significant differences when measured against a baseline.
 
-[Resemble.js](https://github.com/rsmbl/Resemble.js)
-[pixelmatch](https://github.com/mapbox/pixelmatch)
-[Rembrandt.js](http://rembrandtjs.com/)
+Some libraries, like [Differencify](https://github.com/NimaSoroush/differencify) and [jest-puppeteer-docker](https://github.com/gidztech/jest-puppeteer-docker), already combine Puppeteer with visual comparison libraries while exposing higher-level config to the user. 
 
 ## Further reading
+1. Blog post from baseweb.design on the whys and hows of [visual regression testing](https://baseweb.design/blog/visual-regression-testing/)
+2. Blog post from Gideon Pyzer looking at different visual [regression testing tools](https://gideonpyzer.dev/blog/2018/06/25/visual-regression-testing/)

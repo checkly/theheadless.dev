@@ -9,10 +9,10 @@ const options = {
   },
 };
 
-const puppeteer = require("puppeteer");
+const { chromium } = require("playwright");
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 800 });
   await page.goto("https://danube-store.herokuapp.com");
