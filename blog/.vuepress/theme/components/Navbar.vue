@@ -87,6 +87,11 @@ function css (el, property) {
 $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
 
+.site-name
+  background: linear-gradient(260deg, rgba(255,0,0,1) 0%, rgba(255,97,154,1) 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
 .navbar
   max-width: 1150px;
   margin: 40px auto 0;

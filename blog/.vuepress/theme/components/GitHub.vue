@@ -4,20 +4,24 @@
     :href="'https://github.com/' + $site.themeConfig.docsRepo"
     target="_blank"
   >
-    GitHub
+    <Icon
+      name="logo-github"
+      :width="60"
+    />
   </a>
 </template>
 
 <script>
+import Icon from './Icon.vue'
 
 export default {
+  components: { Icon }
 }
 </script>
 
 <style lang="stylus">
 .github
-  display flex
-  align-items center
+  display inline-table
   color $blackLighter
 
   &:hover

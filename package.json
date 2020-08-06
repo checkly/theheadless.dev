@@ -34,6 +34,7 @@
     "vuepress": "^1.5.2"
   },
   "dependencies": {
+    "@primer/octicons": "^10.0.0",
     "color-hash": "^1.0.3",
     "vue-tabs-component": "^1.5.0",
     "vuepress-plugin-container": "^2.1.4",

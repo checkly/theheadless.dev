@@ -8,11 +8,21 @@
       <h2>{{ data.tagline || $description }}</h2>
 
       <div class="home__top__icons">
+        <div class="home__top__icons--left">
+          <span />
+          <span />
+          <span />
+        </div>
         <span><img
           src="/puppeteer.png"
           width="40"
         ></span>
         <span class="playwright">🎭</span>
+        <div class="home__top__icons--right">
+          <span />
+          <span />
+          <span />
+        </div>
       </div>
 
       <router-link
@@ -25,6 +35,12 @@
     </div>
 
     <div class="home__recent">
+      <div class="home__recent__icon">
+        <Icon
+          name="chevron-down"
+          :width="20"
+        />
+      </div>
       <h3>Recent guides</h3>
       <div class="home__posts">
         <div
@@ -48,7 +64,7 @@
       </div>
       <div class="home__recent__learn">
         <router-link to="/posts">
-          See learn all
+          See learn all <Icon name="arrow-right" />
         </router-link>
       </div>
     </div>
@@ -72,8 +88,10 @@
 
 <script>
 import NavLink from './NavLink.vue'
+import Icon from './Icon.vue'
+
 export default {
-  components: { NavLink },
+  components: { NavLink, Icon },
 
   computed: {
     data () {
@@ -109,6 +127,12 @@ export default {
       color: #161616;
       letter-spacing: 0.4px;
       line-height: 48px;
+      span {
+        background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,97,154,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
     h2 {
       border-bottom: 0;
@@ -124,6 +148,40 @@ export default {
       justify-content: center;
       align-items: center;
       margin: 25px 0;
+      &--left,
+      &--right {
+        position: relative;
+        span {
+          width: 14px;
+          height: 3px;
+          background-color: #FF4949;
+          top: 0;
+          left: 0;
+          position: absolute;
+        }
+      }
+      &--left {
+        margin-right: 50px;
+        span:first-child {
+          top: -20px;
+          transform: rotate(25deg);
+        }
+        span:last-child {
+          transform: rotate(-25deg);
+          top: 20px;
+        }
+      }
+      &--right {
+        margin-left: 30px;
+        span:first-child {
+          top: -20px;
+          transform: rotate(150deg);
+        }
+        span:last-child {
+          transform: rotate(195deg);
+          top: 20px;
+        }
+      }
       .playwright {
         font-size: 50px;
         margin-left: 20px;
@@ -143,6 +201,11 @@ export default {
       opacity: 0.5;
       letter-spacing: 5px;
       font-weight: 300;
+    }
+    &__icon {
+      text-align: center;
+      color: #FF4949;
+      margin-top: 80px;
     }
     &__learn {
       text-align: center;

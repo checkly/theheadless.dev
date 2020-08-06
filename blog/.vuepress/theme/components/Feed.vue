@@ -4,13 +4,18 @@
     class="feed"
     :href="getFirstEnabledFeed | getFeedFilePath"
   >
-    RSS
+    <Icon
+      name="rss"
+      :width="20"
+    />
   </a>
 </template>
 
 <script>
+import Icon from './Icon.vue'
 
 export default {
+  components: { Icon },
   filters: {
     getFeedFilePath (feed) {
       if (feed === 'rss') return '/rss.xml'
@@ -33,8 +38,7 @@ export default {
 
 <style lang="stylus">
 .feed
-  display flex
-  align-items center
+  display: inline-table
   color $blackLighter
 
   &:hover

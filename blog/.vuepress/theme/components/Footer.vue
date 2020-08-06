@@ -5,10 +5,13 @@
         Who's behind dis?
       </div>
       <div class="footer__text">
-        We are the folks behind <img
+        We are the folks behind <a
+          href="https://checklyhq.com"
+          target="_blank"
+        ><img
           src="/checkly.svg"
           width="80"
-        > and we see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
+        ></a> and we see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
         Feel to contribute by just creating PR on Github!
 
         <ul
