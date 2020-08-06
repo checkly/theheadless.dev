@@ -1,5 +1,8 @@
 <template>
-  <header class="navbar">
+  <header
+    class="navbar"
+    :class="{ 'home': isHomePage }"
+  >
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
     <router-link
@@ -71,6 +74,10 @@ export default {
 
     isAlgoliaSearch () {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName
+    },
+
+    isHomePage () {
+      return this.$route.path === '/'
     }
   }
 }
@@ -93,8 +100,11 @@ $navbar-horizontal-padding = 1.5rem
   -webkit-text-fill-color: transparent
 
 .navbar
-  max-width: 1150px;
-  margin: 40px auto 0;
+  padding: 10px
+  &.home
+    padding: 0
+    max-width: 1150px
+    margin: 40px auto 0
   line-height $navbarHeight - 1.4rem
   a, span, img
     display flex
