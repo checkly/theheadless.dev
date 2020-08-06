@@ -20,12 +20,7 @@
       >{{ $siteTitle }}</span>
     </router-link>
 
-    <div
-      class="links"
-      :style="linksWrapMaxWidth ? {
-        'max-width': linksWrapMaxWidth + 'px'
-      } : {}"
-    >
+    <div class="links">
       <AlgoliaSearchBox
         v-if="isAlgoliaSearch"
         :options="algolia"
@@ -93,7 +88,8 @@ $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
 
 .navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
+  max-width: 1150px;
+  margin: 40px auto 0;
   line-height $navbarHeight - 1.4rem
   a, span, img
     display flex
@@ -109,14 +105,11 @@ $navbar-horizontal-padding = 1.5rem
     color $textColor
     position relative
   .links
-    padding-left 1.5rem
+    display: flex;
+    align-items: center;
     box-sizing border-box
-    background-color white
     white-space nowrap
     font-size 0.9rem
-    position absolute
-    right $navbar-horizontal-padding
-    top $navbar-vertical-padding
     display flex
     .search-box
       flex: 0 0 auto

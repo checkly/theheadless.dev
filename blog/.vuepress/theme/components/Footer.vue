@@ -1,38 +1,31 @@
 <template>
   <footer class="footer">
-    <div class="footer-left-wrap">
-      <ul
-        v-if="contact"
-        class="contact"
-      >
-        <li
-          v-for="item in contact"
-          :key="item.iconComponent"
-          class="contact-item"
-        >
-          <NavLink :link="item.link">
-            <component :is="item.iconComponent" />
-            {{ item.text }}
-          </NavLink>
-        </li>
-      </ul>
-    </div>
+    <div class="footer__container">
+      <div class="footer__behind">
+        Who's behind dis?
+      </div>
+      <div class="footer__text">
+        We are the folks behind <img
+          src="/checkly.svg"
+          width="80"
+        > and we see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
+        Feel to contribute by just creating PR on Github!
 
-    <div class="footer-right-wrap">
-      <ul
-        v-if="copyright"
-        class="copyright"
-      >
-        <li
-          v-for="item in copyright"
-          :key="item.text"
-          class="copyright-item"
+        <ul
+          v-if="copyright"
+          class="copyright"
         >
-          <NavLink :link="item.link">
-            {{ item.text }}
-          </NavLink>
-        </li>
-      </ul>
+          <li
+            v-for="item in copyright"
+            :key="item.text"
+            class="copyright-item"
+          >
+            <NavLink :link="item.link">
+              {{ item.text }}
+            </NavLink>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
 </template>
@@ -138,85 +131,40 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-ol, ul
-  list-style none
-  margin 0
-  padding 0
-
-.footer
-  min-height $footerHeight
-  box-sizing border-box
-  background-color $footerBgColor
-  display flex
-  padding 2rem 2rem
-  flex-shrink: 0;
-
-  .footer-left-wrap
-    line-height 30px
-    flex 1
-    display flex
-
-    .contact
-      display flex
-      flex-wrap wrap
-      justify-content center
-
-      .contact-item
-        margin-right 10px
-
-        a
-          font-size 12px
-          color $footerColor
-          text-decoration none
-          transition color 0.3s
-
-          &:hover
-            color #FFF
-
-  .footer-right-wrap
-    flex 1
-    display flex
-    align-items center
-    justify-content center
-
-    @media (min-width: $MQNarrow)
-      justify-content flex-end
-
-    .copyright
-      display flex
-      justify-content flex-end
-
-      .copyright-item
-        flex 0 0 auto
-        padding 0 10px
-        position relative
-        line-height 12px
-        border-right 1px solid $footerColor
-
-        &:last-child
-          border-right none
-
-        a
-          font-size 12px
-          color $gray
-          text-decoration none
-
-@media (max-width: $MQMobile)
-  .footer
-    min-height 100px
-    flex-direction column
-
-    .footer-left-wrap
-      align-items center
-      justify-content center
-
-    .footer-right-wrap
-      .copyright
-        display block
-
-        .copyright-item
-          line-height 1
-          border-right none
-          text-align center
+<style lang="scss" scoped>
+.footer {
+  width: 100%;
+  background: #F9FAFC;
+  padding: 50px 0;
+  &__container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+  }
+  &__behind {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.4px;
+    color: #FF4949;
+    font-weight: bold;
+    min-width: 350px;
+    text-align: right;
+    margin-right: 40px;
+  }
+  &__text {
+    font-size: 14px;
+    color: #3C4858;
+    img {
+      vertical-align: middle;
+    }
+    a {
+      color: #8492A6;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+  }
+}
 </style>
