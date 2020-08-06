@@ -170,4 +170,17 @@ export default {
     }
   }
 }
+
+@media (max-width: 719px) {
+  .footer {
+    &__container {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+    &__behind {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
+}
 </style>

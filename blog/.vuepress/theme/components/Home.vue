@@ -43,14 +43,16 @@
       </div>
       <h3>Recent guides</h3>
       <div class="home__posts">
-        <div
+        <router-link
           v-for="page in recentPosts"
           :key="page.path"
           class="home__posts__post"
+          :to="page.path"
+          tag="div"
         >
-          <router-link :to="page.path">
+          <div class="home__posts__post__title">
             {{ page.title }}
-          </router-link>
+          </div>
           <p>{{ page.summary }}</p>
           <div class="home__posts__post__author">
             <img
@@ -60,7 +62,7 @@
             >
             {{ page.frontmatter.author }}
           </div>
-        </div>
+        </router-link>
       </div>
       <div class="home__recent__learn">
         <router-link to="/posts">
@@ -241,7 +243,12 @@ export default {
       box-sizing: border-box;
       border-radius: 15px;
       padding: 20px;
-      a {
+      cursor: pointer;
+      transition: border-color ease-in-out 300ms;
+      &:hover {
+        border-color: #8492A6;
+      }
+      &__title {
         font-size: 22px;
         color: #000000;
         font-weight: bold;
@@ -328,7 +335,24 @@ export default {
   letter-spacing: 0.4px;
   border-bottom: 8px solid #DF0000;
   &:active {
-    border-bottom-color: #FF4949;
+    border-bottom-width: 5px;
+  }
+}
+
+@media (max-width: 719px) {
+  .home {
+    &__top {
+      padding: 0 10px;
+    }
+    &__posts {
+      display: block;
+      &__post {
+        margin-bottom: 20px;
+      }
+    }
+    &__subscribe {
+      padding: 40px 20px;
+    }
   }
 }
 </style>
