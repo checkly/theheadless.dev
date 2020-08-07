@@ -39,58 +39,6 @@
           </NavLink>
         </header>
 
-        <div class="ui-post-meta-wrapper">
-          <div
-            v-if="page.frontmatter.author"
-            class="ui-post-meta ui-post-author"
-            itemprop="publisher author"
-            itemtype="http://schema.org/Person"
-            itemscope
-          >
-            <img
-              class="ui-post-githubUser"
-              :src="'https://github.com/' + page.frontmatter.githubUser + '.png?size=100'"
-              :alt="page.frontmatter.githubUser"
-              v-if="page.frontmatter.githubUser"
-            >
-            <UserIcon v-else />
-            <span itemprop="name">{{ page.frontmatter.author }}</span>
-            <span
-              v-if="page.frontmatter.location"
-              itemprop="address"
-            >
-              &nbsp; in {{ page.frontmatter.location }}
-            </span>
-          </div>
-
-          <div
-            v-if="page.frontmatter.date"
-            class="ui-post-meta ui-post-date"
-          >
-            <ClockIcon />
-            <time
-              pubdate
-              itemprop="datePublished"
-              :datetime="page.frontmatter.date"
-            >
-              {{ resolvePostDate(page.frontmatter.date) }}
-            </time>
-          </div>
-
-          <div
-            v-if="page.frontmatter.tags"
-            class="ui-post-meta ui-post-tag"
-            itemprop="keywords"
-          >
-            <TagIcon />
-            <PostTag
-              v-for="tag in resolvePostTags(page.frontmatter.tags)"
-              :key="tag"
-              :tag="tag"
-            />
-          </div>
-        </div>
-
         <!-- eslint-disable vue/no-v-html -->
         <p
           v-if="page.excerpt"
@@ -107,13 +55,67 @@
           {{ page.frontmatter.summary || page.summary }}
         </p>
 
-        <NavLink
-          :link="page.path"
-          class="ui-post-continue-link"
-        >
-          Continue reading
-          <ArrowRightIcon />
-        </NavLink>
+        <div class="ui-post-meta-wrapper">
+          <div class="ui-post-meta-wrapper-meta">
+            <div
+              v-if="page.frontmatter.author"
+              class="ui-post-meta ui-post-author"
+              itemprop="publisher author"
+              itemtype="http://schema.org/Person"
+              itemscope
+            >
+              <img
+                class="ui-post-githubUser"
+                :src="'https://github.com/' + page.frontmatter.githubUser + '.png?size=100'"
+                :alt="page.frontmatter.githubUser"
+                v-if="page.frontmatter.githubUser"
+              >
+              <UserIcon v-else />
+              <span itemprop="name">{{ page.frontmatter.author }}</span>
+              <span
+                v-if="page.frontmatter.location"
+                itemprop="address"
+              >
+                &nbsp; in {{ page.frontmatter.location }}
+              </span>
+            </div>
+
+            <div
+              v-if="page.frontmatter.date"
+              class="ui-post-meta ui-post-date"
+            >
+              <ClockIcon />
+              <time
+                pubdate
+                itemprop="datePublished"
+                :datetime="page.frontmatter.date"
+              >
+                {{ resolvePostDate(page.frontmatter.date) }}
+              </time>
+            </div>
+
+            <div
+              v-if="page.frontmatter.tags"
+              class="ui-post-meta ui-post-tag"
+              itemprop="keywords"
+            >
+              <TagIcon />
+              <PostTag
+                v-for="tag in resolvePostTags(page.frontmatter.tags)"
+                :key="tag"
+                :tag="tag"
+              />
+            </div>
+          </div>
+
+          <NavLink
+            :link="page.path"
+            class="ui-post-continue-link"
+          >
+            Continue reading
+            <ArrowRightIcon />
+          </NavLink>
+        </div>
       </article>
     </div>
 
@@ -172,7 +174,7 @@ export default {
   @require '../styles/wrapper.styl'
   .list
     @extend $wrapper
-    padding-top $navbarHeight + 2rem
+    // padding-top $navbarHeight + 2rem
   .ui-posts-count-summary
     margin-bottom 25px
     color $gray
@@ -198,7 +200,6 @@ export default {
   .ui-post-title
     font-size 32px
     border-bottom 0
-    padding-bottom 16px
     a
       cursor pointer
       color $darkTextColor
@@ -224,8 +225,7 @@ export default {
     font-size 16px
     font-style normal
     line-height 16px
-    color $blue
-    font-weight bold
+    color $accentColor
     text-decoration none
 
     svg
@@ -237,6 +237,11 @@ export default {
     display flex
     align-items center
     flex-wrap wrap
+    justify-content: space-between
+    margin: 30px 0
+
+  .ui-post-meta-wrapper-meta
+    display: flex
 
   .ui-post-meta
     display inline-flex
@@ -260,14 +265,12 @@ export default {
         margin-bottom 10px
 
   .ui-post-author
-    color $gray
-    font-weight 600
+    color $grayLight
     display flex
     align-items center
 
   .ui-post-date
-    color $gray
-    font-weight 600
+    color $grayLight
 
   .ui-post-githubUser
     border-radius 9999px

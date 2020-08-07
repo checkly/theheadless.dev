@@ -113,18 +113,12 @@ export default {
         margin-bottom 10px
 
   .post-author
-    color $gray
-    font-weight 600
+    color $grayLight
     display flex
     align-items center
 
   .post-date
-    color $gray
-    font-weight 600
-
-  .post-tag
-    color $gray
-    font-weight 600
+    color $grayLight
 
   .post-githubUser
     border-radius 9999px

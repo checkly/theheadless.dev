@@ -99,22 +99,27 @@ function renderExternal (h, to, text) {
   font-size 0.95em
 
 a.sidebar-link
-  font-size 1em
+  font-size 16px
   font-weight 400
   display inline-block
-  color $blackLighter
+  color #8492A6
   border-left 0.25rem solid transparent
   padding 0.35rem 1rem 0.35rem 1.25rem
   line-height 1.4
   width: 100%
   box-sizing: border-box
   &:hover
-    color $accentColor
-    text-decoration underline
+    color: #161616
+    &:after {
+      content: '👈'
+      padding-left: 10px
+    }
   &.active
-    font-weight 600
-    color $accentColor
-    border-left-color $accentColor
+    color: #161616
+    &:after {
+      content: '👈'
+      padding-left: 10px
+    }
   .sidebar-sub-headers &
     padding-top 0.25rem
     padding-bottom 0.25rem
