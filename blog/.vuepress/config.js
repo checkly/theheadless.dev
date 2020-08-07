@@ -83,7 +83,12 @@ module.exports = {
       }
     ],
     ['smooth-scroll', true],
-    'tabs'
+    'tabs',
+    ['vuepress-plugin-code-copy', {
+      color: '#FFF',
+      staticIcon: true,
+      align: 'top'
+    }]
   ],
   themeConfig
 }
