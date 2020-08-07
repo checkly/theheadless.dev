@@ -1,7 +1,7 @@
 <template>
   <header
     class="navbar"
-    :class="{ 'home': isHomePage }"
+    :class="{ 'home': isHomePage, 'stick': !isHomePage }"
   >
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
@@ -105,6 +105,22 @@ $navbar-horizontal-padding = 1.5rem
     padding: 0
     max-width: 1150px
     margin: 40px auto 0
+  &.stick
+    position: fixed
+    top: 0
+    background-color: #fff
+    width: 100%
+    z-index 1000
+    .home-link
+      padding-left: 13px
+    &:before
+      content: ''
+      position: absolute
+      width: 224px
+      background-color: #F9FAFC
+      height: 100%
+      top: 0
+      left: 0
   line-height $navbarHeight - 1.4rem
   a, span, img
     display flex
@@ -141,6 +157,9 @@ $navbar-horizontal-padding = 1.5rem
     margin: 0px !important
     max-width: 100%
     padding-left 4rem !important
+    &.stick
+      &:before
+        background-color: #FFF
     .can-hide
       display none
     .links

@@ -174,7 +174,7 @@ export default {
   @require '../styles/wrapper.styl'
   .list
     @extend $wrapper
-    // padding-top $navbarHeight + 2rem
+    padding-top $navbarHeight + 2rem
   .ui-posts-count-summary
     margin-bottom 25px
     color $gray
