@@ -14,7 +14,7 @@ const themeConfig = {
   nav: [
   ],
   sitemap: {
-    hostname: 'https://guides.checklyhq.com'
+    hostname: 'https://theheadless.dev'
   },
   summary: true,
   summaryLength: 200,
@@ -30,7 +30,7 @@ const themeConfig = {
     apiKey: 'b2b616fdea14b860ff00c72fa72bf267',
     indexName: 'checkly_docs'
   },
-  docsRepo: 'checkly/guides.checklyhq.com',
+  docsRepo: 'checkly/theheadless.dev',
   docsDir: 'blog',
   docsBranch: 'master',
   editLinks: true,
@@ -60,10 +60,10 @@ const vuePressBlogConfig = {
     lengthPerPage: 5
   },
   feed: {
-    canonical_base: 'https://guides.checklyhq.com'
+    canonical_base: 'https://theheadless.dev'
   },
   sitemap: {
-    hostname: 'https://guides.checklyhq.com'
+    hostname: 'https://theheadless.dev'
   }
 }
 
