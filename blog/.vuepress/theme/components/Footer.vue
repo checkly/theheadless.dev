@@ -6,7 +6,7 @@
       </div>
       <div class="footer__text">
         We are the folks behind <a
-          href="https://checklyhq.com"
+          href="https://checklyhq.com/?utm_source=headless-dev&utm_campaign=headless-dev"
           target="_blank"
         ><img
           src="/checkly.svg"
