@@ -26,8 +26,7 @@ module.exports = themeConfig => {
 
       // META
       const metaTagOptions = {
-        canonicalBase: 'https://guides.checklyhq.com'
-
+        canonicalBase: 'https://theheadless.dev'
       }
 
       addMetaTags(pageCtx, metaTagOptions)

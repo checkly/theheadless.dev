@@ -20,7 +20,7 @@
         class="site-name"
         v-if="$siteTitle"
         :class="{ 'can-hide': $site.themeConfig.logo }"
-      >{{ $siteTitle }}</span>
+      >theheadless.dev</span>
     </router-link>
 
     <div class="links">
