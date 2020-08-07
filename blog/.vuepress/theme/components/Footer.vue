@@ -11,7 +11,7 @@
         ><img
           src="/checkly.svg"
           width="80"
-        ></a> and we see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
+        ></a> and we do API monitoring and synthetic monitoring using Puppeteer and very soon™ Playwright. This means we see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
         Feel to contribute by just creating PR on Github!
 
         <ul
