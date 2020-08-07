@@ -12,7 +12,11 @@
           src="/checkly.svg"
           width="80"
         ></a> and we see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
-        Feel to contribute by just creating PR on Github!
+        Feel to contribute <a
+          class="github"
+          :href="'https://github.com/' + $site.themeConfig.docsRepo"
+          target="_blank"
+        >by just creating PR on Github!</a>
 
         <ul
           v-if="copyright"
@@ -168,6 +172,10 @@ export default {
       padding: 0;
       margin-top: 30px;
     }
+  }
+
+  .github {
+    color: #FF4949;
   }
 }
 
