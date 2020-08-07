@@ -73,7 +73,7 @@
 
     <div class="home__subscribe">
       <h1>Don't miss a bit</h1>
-      <p>Aenean leo et, sit ut mattis. Pretium fringilla.</p>
+      <p>You'll get an update whenever we publish a new guide</p>
       <form>
         <input
           type="email"

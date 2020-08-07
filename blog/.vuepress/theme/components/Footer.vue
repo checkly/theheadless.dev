@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__behind">
-        Who's behind dis?
+        Who's running this?
       </div>
       <div class="footer__text">
         We are the folks behind <a
