@@ -1,5 +1,8 @@
 <template>
-  <header class="navbar">
+  <header
+    class="navbar"
+    :class="{ 'home': isHomePage }"
+  >
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
     <router-link
@@ -20,12 +23,7 @@
       >{{ $siteTitle }}</span>
     </router-link>
 
-    <div
-      class="links"
-      :style="linksWrapMaxWidth ? {
-        'max-width': linksWrapMaxWidth + 'px'
-      } : {}"
-    >
+    <div class="links">
       <AlgoliaSearchBox
         v-if="isAlgoliaSearch"
         :options="algolia"
@@ -76,6 +74,10 @@ export default {
 
     isAlgoliaSearch () {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName
+    },
+
+    isHomePage () {
+      return this.$route.path === '/'
     }
   }
 }
@@ -92,8 +94,17 @@ function css (el, property) {
 $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
 
+.site-name
+  background: linear-gradient(260deg, rgba(255,0,0,1) 0%, rgba(255,97,154,1) 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
 .navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
+  padding: 10px
+  &.home
+    padding: 0
+    max-width: 1150px
+    margin: 40px auto 0
   line-height $navbarHeight - 1.4rem
   a, span, img
     display flex
@@ -109,14 +120,11 @@ $navbar-horizontal-padding = 1.5rem
     color $textColor
     position relative
   .links
-    padding-left 1.5rem
+    display: flex;
+    align-items: center;
     box-sizing border-box
-    background-color white
     white-space nowrap
     font-size 0.9rem
-    position absolute
-    right $navbar-horizontal-padding
-    top $navbar-vertical-padding
     display flex
     .search-box
       flex: 0 0 auto
@@ -130,7 +138,9 @@ $navbar-horizontal-padding = 1.5rem
 
 @media (max-width: $MQMobile)
   .navbar
-    padding-left 4rem
+    margin: 0px !important
+    max-width: 100%
+    padding-left 4rem !important
     .can-hide
       display none
     .links

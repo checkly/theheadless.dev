@@ -68,7 +68,7 @@ const vuePressBlogConfig = {
 }
 
 module.exports = {
-  title: 'the headless dev',
+  title: 'theheadless.dev',
   markdown: {
     lineNumbers: true
   },

@@ -3,55 +3,97 @@
     class="home"
     aria-labelledby="main-title"
   >
-    <header class="hero">
-      <h1
-        id="main-title"
+    <div class="home__top">
+      <h1>Learn <span>Puppeteer & Playwright</span></h1>
+      <h2>{{ data.tagline || $description }}</h2>
+
+      <div class="home__top__icons">
+        <div class="home__top__icons--left">
+          <span />
+          <span />
+          <span />
+        </div>
+        <span><img
+          src="/puppeteer.png"
+          width="40"
+        ></span>
+        <span class="playwright">🎭</span>
+        <div class="home__top__icons--right">
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
+
+      <router-link
+        to="/posts"
+        class="button home__top__dive"
+        tag="button"
       >
-        👩‍💻 Learn Puppeteer & Playwright
-      </h1>
-
-      <p class="description">
-        {{ data.tagline || $description }}
-      </p>
-
-      <p
-        class="action"
-        v-if="data.actionText && data.actionLink"
-      >
-        <NavLink
-          class="action-button"
-          :item="actionLink"
-        />
-      </p>
-    </header>
-
-    <div class="recent-activity">
-      <h2>Recent activity</h2>
-      <ul>
-        <li
-          v-for="page in recentPosts"
-          :key="page.path"
-        >
-          <router-link :to="page.path">
-            {{ page.title }}
-          </router-link>
-        </li>
-      </ul>
+        Dive into it
+      </router-link>
     </div>
 
-    <div
-      class="footer"
-      v-if="data.footer"
-    >
-      {{ data.footer }}
+    <div class="home__recent">
+      <div class="home__recent__icon">
+        <Icon
+          name="chevron-down"
+          :width="20"
+        />
+      </div>
+      <h3>Recent guides</h3>
+      <div class="home__posts">
+        <router-link
+          v-for="page in recentPosts"
+          :key="page.path"
+          class="home__posts__post"
+          :to="page.path"
+          tag="div"
+        >
+          <div class="home__posts__post__title">
+            {{ page.title }}
+          </div>
+          <p>{{ page.summary }}</p>
+          <div class="home__posts__post__author">
+            <img
+              :src="'https://github.com/' + page.frontmatter.githubUser + '.png?size=100'"
+              :alt="page.frontmatter.githubUser"
+              v-if="page.frontmatter.githubUser"
+            >
+            {{ page.frontmatter.author }}
+          </div>
+        </router-link>
+      </div>
+      <div class="home__recent__learn">
+        <router-link to="/posts">
+          See learn all <Icon name="arrow-right" />
+        </router-link>
+      </div>
+    </div>
+
+    <div class="home__subscribe">
+      <h1>Don't miss a bit</h1>
+      <p>Aenean leo et, sit ut mattis. Pretium fringilla.</p>
+      <form>
+        <input
+          type="email"
+          placeholder="Your precious email"
+        >
+        <button class="button">
+          Subscribe to theheadless.dev
+        </button>
+      </form>
+      <small class="home__subscribe__spam">We never spam.</small>
     </div>
   </main>
 </template>
 
 <script>
 import NavLink from './NavLink.vue'
+import Icon from './Icon.vue'
+
 export default {
-  components: { NavLink },
+  components: { NavLink, Icon },
 
   computed: {
     data () {
@@ -70,77 +112,247 @@ export default {
         .filter(page => {
           return page.id === 'post'
         })
-      return posts.slice(0, 10)
+      return posts.slice(0, 6)
     }
   }
 }
 </script>
 
-<style lang="stylus">
-.home
-  padding $navbarHeight 2rem 0
-  max-width $contentWidth
-  min-height "calc(100vh - %s)" % ($footerHeight + $navbarHeight + 2rem)
-  margin 0 auto
-  display block
-  .hero
-    text-align left
-    img
-      max-width: 100%
-      max-height 280px
-      display block
-      margin 3rem auto 1.5rem
-    h1
-      font-size 3rem
-    h1, .description, .action
-      margin 1.8rem 0
-    .description
-      max-width $contentWidth
-      font-size 1.6rem
-      line-height 1.3
-      color $darkTextColor
-    .action-button
-      display inline-block
-      font-size 1.2rem
-      color #fff
-      background-color $accentColor
-      padding 0.8rem 1.6rem
-      border-radius 4px
-      transition background-color .1s ease
-      box-sizing border-box
-      border-bottom 1px solid darken($accentColor, 10%)
-      &:hover
-        background-color lighten($accentColor, 10%)
+<style lang="scss">
+.home {
+  max-width: 1150px;
+  margin: 50px auto;
+  &__top {
+    text-align: center;
+    h1 {
+      font-size: 52px;
+      color: #161616;
+      letter-spacing: 0.4px;
+      line-height: 48px;
+      span {
+        background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,97,154,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    h2 {
+      border-bottom: 0;
+      color: #697280;
+      font-size: 32px;
+      letter-spacing: 0.4px;
+      font-weight: 300;
+      padding-top: 0;
+      margin-top: 30px;
+    }
+    &__icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 25px 0;
+      &--left,
+      &--right {
+        position: relative;
+        span {
+          width: 14px;
+          height: 3px;
+          background-color: #FF4949;
+          top: 0;
+          left: 0;
+          position: absolute;
+        }
+      }
+      &--left {
+        margin-right: 50px;
+        span:first-child {
+          top: -20px;
+          transform: rotate(25deg);
+        }
+        span:last-child {
+          transform: rotate(-25deg);
+          top: 20px;
+        }
+      }
+      &--right {
+        margin-left: 30px;
+        span:first-child {
+          top: -20px;
+          transform: rotate(150deg);
+        }
+        span:last-child {
+          transform: rotate(195deg);
+          top: 20px;
+        }
+      }
+      .playwright {
+        font-size: 50px;
+        margin-left: 20px;
+      }
+    }
+    &__dive {
+      width: 349px;
+      height: 67px;
+    }
+  }
+  &__recent {
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 24px;
+      color: #697280;
+      opacity: 0.5;
+      letter-spacing: 5px;
+      font-weight: 300;
+    }
+    &__icon {
+      text-align: center;
+      color: #FF4949;
+      margin-top: 80px;
+    }
+    &__learn {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 50px;
+      a {
+        color: #000;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 40px;
+          background-color: #FF4949;
+          transform: rotate(45deg);
+          left: 17px;
+          top: -3px;
+        }
+      }
+    }
+  }
+  &__posts {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-top: 40px;
+    &__post {
+      border: 7px solid #E0E6ED;
+      box-sizing: border-box;
+      border-radius: 15px;
+      padding: 20px;
+      cursor: pointer;
+      transition: border-color ease-in-out 300ms;
+      &:hover {
+        border-color: #8492A6;
+      }
+      &__title {
+        font-size: 22px;
+        color: #000000;
+        font-weight: bold;
+      }
+      p {
+        font-size: 14px;
+        color: #3C4858;
+        margin: 15px 0 0 0;
+      }
+      &__author {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #8492A6;
+        margin-top: 20px;
+        img {
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &__subscribe {
+    border: 7px solid #E0E6ED;
+    box-sizing: border-box;
+    border-radius: 15px;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 100px;
+    h1 {
+      font-size: 42px;
+      letter-spacing: 0.4px;
+      color: #161616;
+      margin: 0px !important;
+      padding: 0px !important;;
+    }
+    p {
+      font-size: 24px;
+      letter-spacing: 0.4px;
+      color: #161616;
+      font-weight: 300;
+      margin-top: 10px !important;
+      margin-bottom: 40px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 660px;
+      margin: 0 auto;
+      input {
+        background: #E0E6ED;
+        border-radius: 15px;
+        padding: 15px;
+        font-size: 20px;
+        border: 0;
+        outline: none;
+        color: #8492A6;
+        margin-bottom: 15px;
+      }
+      button {
+        margin-bottom: 15px;
+      }
+    }
+    &__spam {
+      color: #8492A6;
+      font-size: 16px;
+    }
+  }
+}
 
-  .recent-activity
-    h2
-      padding-top 1rem
-    ul
-      list-style none
-      padding-left 0
-      li
-        margin-bottom .25rem
-  .footer
-    padding 2.5rem
-    border-top 1px solid $borderColor
-    text-align center
-    color lighten($textColor, 25%)
+.button {
+  height: 67px;
+  background-color: #FF4949;
+  border-radius: 100px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 22px;
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 8px solid #DF0000;
+  &:active {
+    border-bottom-width: 5px;
+  }
+}
 
-@media (max-width: $MQMobileNarrow)
-  .home
-    padding-left 1.5rem
-    padding-right 1.5rem
-    .hero
-      img
-        max-height 210px
-        margin 2rem auto 1.2rem
-      h1
-        font-size 2rem
-      h1, .description, .action
-        margin 1.2rem auto
-      .description
-        font-size 1.2rem
-      .action-button
-        font-size 1rem
-        padding 0.6rem 1.2rem
+@media (max-width: 719px) {
+  .home {
+    &__top {
+      padding: 0 10px;
+    }
+    &__posts {
+      display: block;
+      &__post {
+        margin-bottom: 20px;
+      }
+    }
+    &__subscribe {
+      padding: 40px 20px;
+    }
+  }
+}
 </style>

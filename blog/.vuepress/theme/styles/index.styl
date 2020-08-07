@@ -7,17 +7,14 @@
 @require '~vuepress-plugin-tabs/dist/themes/default.styl'
 @require './tabs-component-overrides.styl'
 
-@font-face
-font-family Inter
-font-style normal
-src url('https://rsms.me/inter/inter.css')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
 
 html, body
   padding 0
   background-color #fff
 
 body
-  font-family Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   font-size $fontSize
@@ -137,13 +134,9 @@ th, td
   padding .6em 1em
 
 .navbar
-  position fixed
-  z-index 20
-  top 0
-  left 0
-  right 0
+  display: flex
+  justify-content: space-between
   height $navbarHeight
-  background-color #fff
   box-sizing border-box
 
 .sidebar-mask
