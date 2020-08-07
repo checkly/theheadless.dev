@@ -138,17 +138,14 @@ $navbar-horizontal-padding = 1.5rem
   .links
     display: flex;
     align-items: center;
-    box-sizing border-box
-    white-space nowrap
-    font-size 0.9rem
-    display flex
     .search-box
       flex: 0 0 auto
       vertical-align top
       padding-right 1rem
       input
-        background-color $queenLightest
-        border-radius 3px
+        background-color #fff
+        border-radius 100px
+        border: 2px solid #8492A6
     .icon-link
       margin-left 1.5rem
 

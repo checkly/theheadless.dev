@@ -58,6 +58,7 @@ export default {
   letter-spacing 0
   color $textColor
   position relative
+  max-width 730px
 
 @media (max-width: $MQMobile)
   .post-title
