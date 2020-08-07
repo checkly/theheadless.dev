@@ -2,16 +2,16 @@
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__behind">
-        Who's behind dis?
+        Who's running this?
       </div>
       <div class="footer__text">
         We are the folks behind <a
-          href="https://checklyhq.com"
+          href="https://checklyhq.com/?utm_source=headless-dev&utm_campaign=headless-dev"
           target="_blank"
         ><img
           src="/checkly.svg"
           width="80"
-        ></a> and we see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
+        ></a> and we do API monitoring and synthetic monitoring using Puppeteer and very soon™ Playwright. This means we see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
         Feel to contribute by just creating PR on Github!
 
         <ul
