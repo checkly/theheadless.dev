@@ -158,7 +158,7 @@ export default {
 
 .main
   padding-left $sidebarWidth
-  max-width $contentWidth
+  // max-width $contentWidth
   min-height "calc(100vh - %s)" % ($footerHeight + $navbarHeight / 2)
 
 </style>

@@ -20,7 +20,6 @@
         />
       </header>
       <Content itemprop="articleBody" />
-      <hr>
       <footer>
         <Newsletter v-if="$service.email.enabled" />
         <PostEdit />
@@ -54,10 +53,12 @@ export default {
 
 .post
   @extend $wrapper
+  padding-top: 0
   font-size 16px
   letter-spacing 0
   color $textColor
   position relative
+  max-width 730px
 
 @media (max-width: $MQMobile)
   .post-title

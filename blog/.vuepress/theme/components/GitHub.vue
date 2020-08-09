@@ -22,7 +22,8 @@ export default {
 <style lang="stylus">
 .github
   display inline-table
-  color $blackLighter
+  color: $blackLighter
+  line-height: 1px !important
 
   &:hover
     color $accentColor

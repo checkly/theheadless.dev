@@ -1,7 +1,6 @@
 <template>
   <div
     class="post-tag"
-    :style="'background:' + color"
   >
     <router-link :to="'/tag/' + tag">
       <span>{{ tag }}</span>
@@ -30,9 +29,10 @@ export default {
 
 <style scoped lang="stylus">
 .post-tag
-  padding 2px 6px
-  border-radius 3px
+  padding 5px
+  border-radius 5px
   margin-right 5px
+  background-color: #E0E6ED
   &:not(:last-child)
     margin-right 5px
 

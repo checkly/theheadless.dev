@@ -136,8 +136,8 @@ th, td
 .navbar
   display: flex
   justify-content: space-between
-  height $navbarHeight
   box-sizing border-box
+  height: $navbarHeight
 
 .sidebar-mask
   position fixed
@@ -185,3 +185,10 @@ th, td
 
 
 @require 'mobile.styl'
+
+.code-copy-added 
+  .code-copy 
+    height: 0
+    svg 
+      right: 30px
+  

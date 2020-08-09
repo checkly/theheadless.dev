@@ -2,7 +2,7 @@ const themeConfig = {
   logo: '',
   sidebar: [
     {
-      title: '🚩 Headless 101', // required
+      title: '🎓 Headless 101', // required
       collapsable: false, // optional, defaults to true
       sidebarDepth: 1, // optional, defaults to 1
       children: [
@@ -68,7 +68,7 @@ const vuePressBlogConfig = {
 }
 
 module.exports = {
-  title: 'theheadless.dev',
+  title: 'The headless.dev - Learn Puppeteer & Playwright',
   markdown: {
     lineNumbers: true
   },
@@ -83,7 +83,12 @@ module.exports = {
       }
     ],
     ['smooth-scroll', true],
-    'tabs'
+    'tabs',
+    ['vuepress-plugin-code-copy', {
+      color: '#FFF',
+      staticIcon: true,
+      align: 'top'
+    }]
   ],
   themeConfig
 }

@@ -39,7 +39,8 @@ export default {
 <style lang="stylus">
 .feed
   display: inline-table
-  color $blackLighter
+  color: $blackLighter
+  line-height: 1px !important
 
   &:hover
     color $accentColor

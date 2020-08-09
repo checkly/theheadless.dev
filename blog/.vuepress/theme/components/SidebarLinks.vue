@@ -100,3 +100,9 @@ function descendantIsActive (route, item) {
   return false
 }
 </script>
+
+<style lang="scss" scoped>
+.sidebar-links {
+  margin-top: 5px;
+}
+</style>

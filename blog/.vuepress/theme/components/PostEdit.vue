@@ -112,12 +112,13 @@ export default {
   .edit-link
     display inline-block
     a
-      color $textColor
+      color $grayLight
       margin-right 0.25rem
       font-weight normal
 
   .last-updated
     float right
+    color: $grayLight
     font-size 0.9em
 
 @media (max-width: $MQMobile)
