@@ -71,6 +71,8 @@ const vuePressBlogConfig = {
   }
 }
 
+const shareImage = 'https://og-image.theheadless.dev/intro.png?intro=true'
+
 module.exports = {
   title: 'The headless.dev - Learn Puppeteer & Playwright',
   markdown: {
@@ -102,6 +104,8 @@ module.exports = {
   ],
   themeConfig,
   head: [
-    ['link', { rel: 'shortcut icon', href: '/favicon.png' }]
+    ['link', { rel: 'shortcut icon', href: '/favicon.png' }],
+    ['meta', { property: 'og:image', content: shareImage }],
+    ['meta', { name: 'twitter:image', content: shareImage }]
   ]
 }
