@@ -1,9 +1,9 @@
-const puppeteer = require('puppeteer'); // import puppeteer
+const puppeteer = require('puppeteer');
 
 (async () => {
-  const browser = await puppeteer.launch(); // launch puppeteer
-  const page = await browser.newPage(); // get a page object
-  await page.goto('https://example.com'); // navigate to https://example.com
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('https://danube-webshop.herokuapp.com');
 
-  await browser.close(); // close the browser
+  await browser.close();
 })();
