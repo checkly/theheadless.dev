@@ -94,5 +94,8 @@ module.exports = {
       align: 'top'
     }]
   ],
-  themeConfig
+  themeConfig,
+  head: [
+    ['link', { rel: 'shortcut icon', href: '/favicon.png' }]
+  ]
 }
