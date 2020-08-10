@@ -7,7 +7,7 @@ const defaultMetas = {}
 const resolveURL = (base, path) =>
   `${_.trimEnd(base, '/')}/${_.trimStart(path, '/')}`
 
-const ogImageURL = 'https://og-image.checkly.vercel.app'
+const ogImageURL = 'https://og-image.theheadless.dev'
 
 const getOptionDefaults = () => {
   return {
