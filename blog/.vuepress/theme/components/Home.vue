@@ -72,28 +72,43 @@
     </div>
 
     <div class="home__subscribe">
-      <h1>Don't miss a bit</h1>
-      <p>You'll get an update whenever we publish a new guide</p>
-      <form>
+      <SimpleNewsletter v-slot="{ slotProps }">
+        <h1>{{ slotProps.title }}</h1>
+        <p>{{ slotProps.content }}</p>
         <input
+          class="my-input"
           type="email"
+          name="email"
+          aria-label="Email"
           placeholder="Your precious email"
+          v-model="slotProps.mail"
+          required
+          autocapitalize="off"
+          autocorrect="off"
+          data-cy="email"
         >
-        <button class="button">
-          Subscribe to theheadless.dev
+        <button
+          type="submit"
+          class="button"
+          data-cy="submit"
+        >
+          {{ slotProps.submitText }}
         </button>
-      </form>
+      </SimpleNewsletter>
+
       <small class="home__subscribe__spam">We never spam.</small>
     </div>
   </main>
 </template>
 
 <script>
+import SimpleNewsletter from 'vuepress-plugin-mailchimp/src/components/SimpleNewsletter'
+
 import NavLink from './NavLink.vue'
 import Icon from './Icon.vue'
 
 export default {
-  components: { NavLink, Icon },
+  components: { NavLink, Icon, SimpleNewsletter },
 
   computed: {
     data () {
@@ -298,7 +313,7 @@ export default {
     form {
       display: flex;
       flex-direction: column;
-      max-width: 660px;
+      max-width: 680px;
       margin: 0 auto;
       input {
         background: #E0E6ED;
