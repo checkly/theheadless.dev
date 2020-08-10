@@ -45,7 +45,7 @@ const vuePressBlogConfig = {
       path: '/posts/',
       itemPermalink: '/posts/:slug', // Permalink for matched pages.
       pagination: {
-        lengthPerPage: 5
+        lengthPerPage: 15
       }
     }
   ],
