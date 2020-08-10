@@ -4,7 +4,8 @@ date: 2020-07-16
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - Basics
+  - E2E
+  - Testing
 ---
 
 Headless browsers can be leveraged for testing in a variety of ways, and different scenarios do command different approaches. That being said, there are some general pointers most should follow in order to keep their tests _valuable_.

@@ -4,10 +4,14 @@ const themeConfig = {
     {
       title: '🎓 Headless 101', // required
       collapsable: false, // optional, defaults to true
-      sidebarDepth: 1, // optional, defaults to 1
+      sidebarDepth: 0, // optional, defaults to 1
       children: [
-        ['/posts/basics', 'Basics'],
-        ['/posts/more-basics', 'More basics']
+        ['/posts/basics-puppeteer-intro', 'What is Puppeteer?'],
+        ['/posts/basics-playwright-intro', 'What is Playwright?'],
+        ['/posts/basics-local-setup', 'Installation & setup'],
+        ['/posts/basics-navigation', 'Basic navigation'],
+        ['/posts/basics-selectors', 'Using selectors'],
+        ['/posts/basics-clicking-typing', 'Clicking & typing']
       ]
     }
   ],
@@ -45,7 +49,7 @@ const vuePressBlogConfig = {
       path: '/posts/',
       itemPermalink: '/posts/:slug', // Permalink for matched pages.
       pagination: {
-        lengthPerPage: 5
+        lengthPerPage: 15
       }
     }
   ],

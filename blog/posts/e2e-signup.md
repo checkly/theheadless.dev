@@ -12,6 +12,8 @@ Signups are key transactions in most web platforms, and therefore prime targets 
 
 Oftentimes, registering an account is where we will find longer forms asking the user to answer a variety of questions. Luckily, Puppeteer and Playwright are quick enough to blaze through these in seconds or even less.
 
+## Steps
+
 The flow will often match the following:
 
 1. Navigate to the signup form

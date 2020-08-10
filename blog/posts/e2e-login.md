@@ -10,6 +10,8 @@ tags:
 
 When automating key site transactions, we inevitably stumble into login scenarios. In most cases, users need to be able to access accounts on a platform to get any value out of it. If they suddenly become unable to do so, we need to be informed as quickly as possible.
 
+## Steps
+
 In its simplest form, a login procedure requires the user to:
 
 0. Navigate to the login form
@@ -47,7 +49,7 @@ node login.js
 :::
 ::::
 
-# Takeaways
+## Takeaways
 
 - Use environment variables to inject secrets.
 - You might need to wait for the navigation as you are redirected to the login screen/modal.

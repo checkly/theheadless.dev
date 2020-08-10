@@ -1,5 +1,5 @@
 ---
-title: Starting the browser and navigating to a webpage
+title: Basic navigation
 date: 2020-06-15
 author: Giovanni Rago
 githubUser: ragog

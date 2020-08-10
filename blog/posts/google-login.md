@@ -10,7 +10,7 @@ tags:
 
 Social login using your personal Google or Google Gsuite account is an extremely common use case for many login scenarios.
 
-# Steps
+## Steps
 
 1. We start at a site that offers Google as an authentication provider. In this case we use https://stackoverflow.com/
 2. We fetch the login page and click the "Login with Google" button.
@@ -50,7 +50,7 @@ node google-login.js
 This example does not work when you have 2-factor authentication enabled. Also you might trigger a recaptcha check.
 :::
 
-# Takeaways
+## Takeaways
 
 - Use environment variables to inject secrets.
 - Wait for the navigation as your are redirected to Google.

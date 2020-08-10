@@ -4,7 +4,7 @@ date: 2020-07-23
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - Basics
+  - Security
 ---
 
 While automation tools are fundamental to modern software development, they also have the innate potential to be used for malicious purposes. This applies to Puppeteer and Playwright, too.
@@ -12,7 +12,7 @@ While automation tools are fundamental to modern software development, they also
 As a consequence, some user flows are made purposely hard to automate to defend against threat actors. Some examples:
 1. New user signup
 2. Social login through providers like Google, Facebook etc.
-3. 'Forgot password' and similar reset scenarios
+3. "Forgot password" and similar reset scenarios
 
 There are several means through which automation is made more difficult.
 

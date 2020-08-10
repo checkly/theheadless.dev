@@ -4,12 +4,13 @@ date: 2020-07-13
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - Coupons
   - E2E
-  - Chai
+  - Assertions
 ---
 
 Webshops and subscription-based services often offer discounts through coupon codes. Applying a valid coupon code during checkout might reduce the price of one, several, or all items in the shopping cart.
+
+## Steps
 
 While discount coupons will be applied in different ways depending on the service or shop they are relevant to, in most cases:
 * having selected one or more products will be a prerequisite for applying the coupon
@@ -42,7 +43,7 @@ node coupon.js
 :::
 ::::
 
-# Takeaways
+## Takeaways
 
 - We can simply verify that coupons are accepted, or also check that they command the right discount.
 - Assertion libraries are useful when non-trivial assertions are required.

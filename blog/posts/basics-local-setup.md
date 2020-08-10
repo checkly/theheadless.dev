@@ -25,7 +25,7 @@ npm i playwright
 :::
 ::::
 
-Puppeteer and Playwright come bundled with their respective browsers, so we now have all we need to run our first script. Let's create a script to navigate to [https://example.com](https://example.com):
+Puppeteer and Playwright come bundled with their respective browsers, so we now have all we need to run our first script. Let's create a script to navigate to [https://example.com](https://example.com)
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 

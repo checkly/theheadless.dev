@@ -45,10 +45,7 @@ node mslive-login.js
 ::::
 
 
-> Note: this example does not work when you have 2-factor authentication enabled.
-
-> Note: you might trigger a recaptcha check.
-
+> Note: this example does not work when you have 2-factor authentication enabled, and you might trigger a recaptcha check.
 
 ## Takeaways
 

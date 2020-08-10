@@ -22,7 +22,7 @@ It is worth noting that Puppeteer is an open-source project maintained by the Ch
 
 We now know what Puppeteer is. The next question is "what can we use it for?"
 
-### Main use cases:
+## Main use cases
 
 - **Test automation in modern web applications**: verifying that the features we are exposing our users/customers to are actually behaving as expected.
 - **Taking screenshots of web pages**: useful for a variety of different uses going from simple archiving to automated comparison for e.g. visual testing.
@@ -37,4 +37,7 @@ In this guide we will be looking at all these different use cases, with a focus 
 - As for the Chromium project, the [focus](https://www.chromium.org/developers/core-principles) is on speed, security, stability and simplicity. Expect these four things to be prioritised when a tradeoff is on the horizon.
 - Chromium is bundled together with Puppeteer to minimise incompatibilities. This means every Puppeteer version has a specific Chromium version it supports.
 
+## Further reading
+1. [Official Puppeteer API documentation](https://pptr.dev/)
+2. [Official Puppeteer GitHub repo](https://github.com/puppeteer/puppeteer)
 
