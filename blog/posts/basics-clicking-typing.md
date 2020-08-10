@@ -186,4 +186,4 @@ node basic-click-type.js
 
 ## Further reading
 1. The related official documentation of [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v5.2.1&show=api-pageclickselector-options) and [Playwright](https://playwright.dev/#version=v1.2.1&path=docs%2Finput.md&q=)
-2. [Finding effective selectors](./selectors.md)
+2. [Finding effective selectors](basics-selectors.md)

@@ -5,10 +5,12 @@ author: Giovanni Rago
 tags: 
   - Search
   - E2E
-  - Chai
+  - Assertions
 ---
 
 Searching a website is an everyday action for most internet users. For most services, the speed at which their customers are able to get to the products they are looking for is directly tied to revenue. To enable that, a performant and reliable search function is needed.
+
+## Steps
 
 The example below, which is running against our [test webshop](https://danube-store.herokuapp.com/), shows how we can verify the correctness of a search's result from an end-to-end perspective. In short, we will:
 1. Enter a known search term
@@ -65,6 +67,6 @@ Listing search terms and their corresponding expected results in a file could be
 ]
 ```
 
-# Takeaways
+## Takeaways
 1. Moving test data to a separate file can help when running more thorough comparisons.
 2. Assertion libraries help us cleanly verify multiple constraints in our test.
