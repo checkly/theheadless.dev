@@ -39,6 +39,7 @@
     "vue-tabs-component": "^1.5.0",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-container": "^2.1.4",
+    "vuepress-plugin-mailchimp": "^1.4.2",
     "vuepress-plugin-tabs": "^0.3.0"
   },
   "eslintConfig": {

@@ -92,6 +92,12 @@ module.exports = {
       color: '#FFF',
       staticIcon: true,
       align: 'top'
+    }],
+    ['vuepress-plugin-mailchimp', {
+      endpoint: 'https://checklyhq.us15.list-manage.com/subscribe/post?u=9af9712f622c6511cb2113669&id=a897f939ef',
+      title: 'Don\'t miss a bit',
+      content: 'You\'ll get an update whenever we publish a new guide',
+      submitText: 'Subscribe to theheadless.dev'
     }]
   ],
   themeConfig,
