@@ -276,4 +276,10 @@ export default {
     border-radius 9999px
     width 25px
     margin-right .5rem
+
+@media (max-width: $MQMobile)
+  .ui-post-meta-wrapper-meta
+    flex-wrap wrap
+  .ui-post-tag
+    margin 5px 0 15px
 </style>
