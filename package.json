@@ -1,5 +1,5 @@
 {
-  "name": "guides.checklyhq.com",
+  "name": "theheadless.dev",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix blog/.vuepress"
   },
   "author": "",
-  "license": "ISC",
+  "license": "CC-BY-SA-4.0",
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.9.2",
     "@vuepress/plugin-medium-zoom": "1.0.0",

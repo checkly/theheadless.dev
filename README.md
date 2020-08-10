@@ -1,6 +1,6 @@
 # theheadless.dev
 
-🖖 Hi, this is the repo with all content, code examples and the VuePress website that make up [theheadless.dev](theheadless.dev), a community driven knowledge base for learning headless browser automation with Puppeteer and Playwright.
+🖖 Hi, this is the repo with all content, code examples and the VuePress website that make up [theheadless.dev](https://theheadless.dev), a community driven knowledge base for learning headless browser automation with Puppeteer and Playwright.
 
 ## Acknowledgements
 

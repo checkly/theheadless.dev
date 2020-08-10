@@ -25,7 +25,7 @@ const themeConfig = {
   footer: {
     copyright: [
       {
-        text: 'MIT Licensed | Copyright © 2020-present Checkly inc.',
+        text: 'CC-BY-4.0 Licensed | Copyright © 2020-present Checkly inc.',
         link: 'https://opensource.org/licenses/MIT'
       }
     ]
