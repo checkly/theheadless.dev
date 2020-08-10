@@ -7,6 +7,8 @@ const defaultMetas = {}
 const resolveURL = (base, path) =>
   `${_.trimEnd(base, '/')}/${_.trimStart(path, '/')}`
 
+const ogImageURL = 'https://og-image.theheadless.dev'
+
 const getOptionDefaults = () => {
   return {
     enable: true, // enables/disables everything - control per page using frontmatter
@@ -339,22 +341,15 @@ defaultMetas.twitter = ($page, defaultValues) => {
     }
   ]
 
-  if (defaultValues.image) {
-    out.push({
-      name: 'twitter:card',
-      content: 'summary_large_image'
-    })
+  out.push({
+    name: 'twitter:card',
+    content: 'summary_large_image'
+  })
 
-    out.push({
-      name: 'twitter:image',
-      content: defaultValues.image
-    })
-  } else {
-    out.push({
-      name: 'twitter:card',
-      content: 'summary'
-    })
-  }
+  out.push({
+    name: 'twitter:image',
+    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?theme=light&md=1&fontSize=120px`
+  })
 
   if (defaultValues.canonicalUrl) {
     out.push({
@@ -404,13 +399,6 @@ defaultMetas.og = ($page, defaultValues) => {
     }
   ]
 
-  if (defaultValues.image) {
-    out.push({
-      property: 'og:image',
-      content: defaultValues.image
-    })
-  }
-
   if (defaultValues.canonicalUrl) {
     out.push({
       property: 'og:url',
@@ -452,6 +440,12 @@ defaultMetas.og = ($page, defaultValues) => {
         })
       }
     }
+
+    // @TODO review if there's a better way
+    out.push({
+      property: 'og:image',
+      content: `${ogImageURL}/**${encodeURI(getDefaultTitle($page) || '')}**.png?theme=light&md=1&fontSize=120px`
+    })
   }
 
   return out
