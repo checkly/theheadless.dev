@@ -100,6 +100,15 @@ module.exports = {
       title: 'Don\'t miss a bit',
       content: 'You\'ll get an update whenever we publish a new guide',
       submitText: 'Subscribe to theheadless.dev'
+    }],
+    ['vuepress-plugin-container', {
+      type: 'tip'
+    }],
+    ['vuepress-plugin-container', {
+      type: 'danger'
+    }],
+    ['vuepress-plugin-container', {
+      type: 'warning'
     }]
   ],
   themeConfig,
