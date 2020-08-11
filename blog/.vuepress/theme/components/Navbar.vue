@@ -116,7 +116,7 @@ $navbar-horizontal-padding = 1.5rem
     &:before
       content: ''
       position: absolute
-      width: 224px
+      width: $sidebarWidth
       background-color: #F9FAFC
       height: 100%
       top: 0
