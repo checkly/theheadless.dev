@@ -7,7 +7,7 @@ const assert = require("chai").assert;
 
   const bookList = ['The Foreigner', 'The Transformation', 'For Whom the Ball Tells', 'Baiting for Robot']
 
-  await page.goto('https://danube-webshop.herokuapp.com//')
+  await page.goto('https://danube-webshop.herokuapp.com/')
 
   await page.setViewport({ width: 1200, height: 800 })
 

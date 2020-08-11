@@ -8,7 +8,7 @@ const productsNumber = process.env.PRODUCTS_NUMBER;
 
   const navigationPromise = page.waitForNavigation();
 
-  await page.goto("https://danube-webshop.herokuapp.com//");
+  await page.goto("https://danube-webshop.herokuapp.com/");
 
   await page.setViewport({ width: 1200, height: 800 });
   

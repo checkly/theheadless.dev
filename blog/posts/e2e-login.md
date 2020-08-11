@@ -21,7 +21,7 @@ In its simplest form, a login procedure requires the user to:
 
 At the end of our test, we need to check if our login procedure has been successful. (4) For example, we could verify that an element is shown that we know only appears for logged-in users.
 
-On our [test site](https://danube-store.herokuapp.com/) this could look like the following:
+On our [test site](https://danube-webshop.herokuapp.com/) this could look like the following:
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 

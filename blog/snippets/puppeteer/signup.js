@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   
-  await page.goto('https://danube-webshop.herokuapp.com//');
+  await page.goto('https://danube-webshop.herokuapp.com/');
   
   await page.setViewport({ width: 1200, height: 800 });
   

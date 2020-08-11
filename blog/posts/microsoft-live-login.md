@@ -8,7 +8,7 @@ tags:
   - E2E
 ---
 
-Log in to your Microsoft Live account
+Log in to your Microsoft Live account.
 
 ## Steps
 
@@ -49,9 +49,9 @@ node mslive-login.js
 
 ## Takeaways
 
-- Use environment variables to inject secrets.
-- Wait for the navigation as your are redirected to Google.
-- Wait for the navigation as you are redirected back to the start site.
+1. Use environment variables to inject secrets.
+2. Wait for the navigation as your are redirected to Google.
+3. Wait for the navigation as you are redirected back to the start site.
 
 
 

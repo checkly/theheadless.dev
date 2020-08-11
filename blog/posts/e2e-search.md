@@ -12,7 +12,7 @@ Searching a website is an everyday action for most internet users. For most serv
 
 ## Steps
 
-The example below, which is running against our [test webshop](https://danube-store.herokuapp.com/), shows how we can verify the correctness of a search's result from an end-to-end perspective. In short, we will:
+The example below, which is running against our [test webshop](https://danube-webshop.herokuapp.com/), shows how we can verify the correctness of a search's result from an end-to-end perspective. In short, we will:
 1. Enter a known search term
 2. Firstly, assert the expected number of results is being shown
 3. If the previous point is true, assert that all expected search results are shown
