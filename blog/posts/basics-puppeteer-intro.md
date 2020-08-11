@@ -13,7 +13,7 @@ Straight from the [official documentation](https://developers.google.com/web/too
 
 Let's break that down:
 
-1. **node library**: node.js and javascript are the backbone of most web applications and will be familiar to most developers already
+1. **node library**: Node.js and Javascript are the backbone of most web applications and will be familiar to most developers already
 2. **high-level API:** a human-readable interface for interacting with webpages through the browser (Chrome or Chromium) using...
 3. **...the DevTools Protocol:** the standard protocol used to expose Chrome functionality up to various development-oriented tools
 4. **headless**: running without a graphical user interface.
@@ -40,4 +40,5 @@ In this guide we will be looking at all these different use cases.
 ## Further reading
 1. [Official Puppeteer API documentation](https://pptr.dev/)
 2. [Official Puppeteer GitHub repo](https://github.com/puppeteer/puppeteer)
+3. Nitay Neeman's [Getting to Know Puppeteer Using Practical Examples](https://nitayneeman.com/posts/getting-to-know-puppeteer-using-practical-examples/)
 

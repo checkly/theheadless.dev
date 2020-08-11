@@ -13,10 +13,10 @@ Webshops and subscription-based services often offer discounts through coupon co
 ## Steps
 
 While discount coupons will be applied in different ways depending on the service or shop they are relevant to, in most cases:
-1. having selected one or more products will be a prerequisite for applying the coupon
-2. entering a valid coupon will result in visible feedback, i.e. a reduction of the previous product/cart price
+1. Having selected one or more products will be a prerequisite for applying the coupon
+2. Entering a valid coupon will result in visible feedback, i.e. a reduction of the previous product/cart price
 
-The following example, running against our [test site](https://danube-webshop.herokuapp.com/), will add a variable number of items to the cart, then proceed to compare the total price before and after applying the coupon. The coupon is reducing the price of the whole shopping cart by 20%, therefore we will be asserting that the discounted price is reduced by the right amount. For this step we have chosen Chai, but any solid assertion library will do.
+The following example, running against our [test site](https://danube-webshop.herokuapp.com/), will add a variable number of items to the cart, then proceed to compare the total price before and after applying the coupon. The coupon is reducing the price of the whole shopping cart by 20%, therefore we will be asserting that the discounted price is reduced by the right amount. For this step we have chosen [Chai](https://www.chaijs.com/api/assert/), but any solid assertion library will do.
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 

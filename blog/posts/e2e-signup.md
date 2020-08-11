@@ -10,15 +10,15 @@ tags:
 
 Signups are key transactions in most web platforms, and therefore prime targets for automation.
 
-Oftentimes, registering an account is where we will find longer forms asking the user to answer a variety of questions. Luckily, Puppeteer and Playwright are quick enough to blaze through these in seconds or even less.
+Oftentimes, registering an account is where we will find longer forms asking the user to answer a variety of questions. Luckily, Puppeteer and Playwright are quick enough to blaze through these in seconds.
 
 ## Steps
 
 The flow will often match the following:
 
-1. Navigate to the signup form
+1. Navigate to the signup form.
 2. Fill in all text fields, check all boxes etc.
-3. Submit the form by clicking a button
+3. Submit the form by clicking a button.
 
 We will likely want to also check that some change occurred in the UI to confirm that the registration worked.
 
@@ -31,8 +31,7 @@ We will likely want to also check that some change occurred in the UI to confirm
 :::
 ::::
 
-Run this example as follows. Replace the username and password placeholder with your own credentials.
-
+Run this example as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
 ```shell script
@@ -51,7 +50,8 @@ node signup.js
 The normal signup flow might include asking the user to confirm their email address right away by navigating to a URL included in an automated email. Reliably replicating the steps needed to achieve that is not trivial. A possible solution to the issue is having the system under test distinguish between test sessions and normal user sessions, and skip the verification step for test sessions. A way to achieve this would be to check for a specific user agent ID which could be set as part of our test:
 
 ```js
-await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 TEST_ID/<MY_SECRET>');
+await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 \
+(KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 TEST_ID/<MY_SECRET>');
 ```
 
 ## Takeaways

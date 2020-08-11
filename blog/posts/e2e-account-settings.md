@@ -18,11 +18,11 @@ On our [test site](https://danube-webshop.herokuapp.com/), such a test could loo
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-<<< @/blog/snippets/puppeteer/file-upload.js
+<<< @/blog/snippets/puppeteer/file-upload.js{24-27}
 :::
 
 ::: tab Playwright
-<<< @/blog/snippets/playwright/file-upload.js
+<<< @/blog/snippets/playwright/file-upload.js{18-21}
 :::
 ::::
 

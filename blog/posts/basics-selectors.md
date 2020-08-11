@@ -23,7 +23,7 @@ The CSS selectors you ultimately choose to use in your scripts will determine ho
 
 The attributes of a good selector are:
 
-- **Uniqueness**: the goal is to choose something that will identify the target element, and nothing else; IDs are the natural choice, when available.
+- **Uniqueness**: the goal is to choose something that will identify the target element, and nothing else; [IDs](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#ID_Selectors) are the natural choice, when available.
 - **Stability**: choosing an attribute that is not likely to change over time as the page gets updated lowers the chances that you will need to manually update it.
 - **Conciseness**: a short selector is easier to read, understand and possibly replace if it finally breaks.
 
