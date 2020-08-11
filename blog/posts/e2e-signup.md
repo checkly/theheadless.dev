@@ -34,12 +34,12 @@ We will likely want to also check that some change occurred in the UI to confirm
 Run this example as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 USER_EMAIL=user@email.com USER_PASSWORD=supersecure1 node signup.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 SET USER_EMAIL=user@email.com
 SET USER_PASSWORD=supersecure1
 node signup.js

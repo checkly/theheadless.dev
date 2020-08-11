@@ -36,12 +36,12 @@ Run this example as follows. Replace the username and password placeholder with 
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 USER_EMAIL=user@email.com USER_PASSWORD=supersecure1 node login.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 SET USER_EMAIL=user@email.com
 SET USER_PASSWORD=supersecure1
 node login.js

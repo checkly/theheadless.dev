@@ -32,12 +32,12 @@ We will use [Chai](https://www.chaijs.com/api/assert/) as an assertion library f
 Run this example as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 node search.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 node search.js
 ```
 :::

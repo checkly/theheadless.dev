@@ -31,12 +31,12 @@ Run this example as follows:
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 PRODUCTS_NUMBER=3 node coupon.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 SET PRODUCTS_NUMBER=3
 node coupon.js
 ```

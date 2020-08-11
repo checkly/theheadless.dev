@@ -28,12 +28,12 @@ On our [test site](https://danube-webshop.herokuapp.com/), such a test could loo
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 USER_EMAIL=user@email.com USER_PASSWORD=supersecure1 FILE_PATH=file.jpg node file-upload.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 SET USER_EMAIL=user@email.com
 SET USER_PASSWORD=supersecure1
 SET FILE_PATH=file.jpg

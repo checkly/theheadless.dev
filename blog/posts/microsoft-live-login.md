@@ -31,12 +31,12 @@ Run this example as follows. Replace the username and password placeholder with 
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 MSLIVE_USER=username MSLIVE_PWD=password node mslive-login.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 SET MSLIVE_USER=username
 SET MSLIVE_PWD=password
 node mslive-login.js

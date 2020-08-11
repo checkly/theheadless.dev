@@ -173,12 +173,12 @@ Key presses can also be sent to a specific element:
 You can run the above examples as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 node basic-click-type.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 node basic-click-type.js
 ```
 :::

@@ -23,12 +23,12 @@ Every useful script that we will write will almost certainly include two key ini
 Run this example as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 node basic-browser-navigation.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 node basic-browser-navigation.js
 ```
 :::
