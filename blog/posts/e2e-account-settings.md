@@ -48,3 +48,6 @@ Here, we are simply checking for a message giving us feedback on the status of t
 1. Use environment variables to inject secrets.
 2. Use `uploadFile` (Puppeteer) or `setInputFiles` (Playwright) to upload the file.
 3. If possible, download the file from the platform and compare it with the one that was just uploaded.
+
+## Further reading
+1. Official documentation on file upload with [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v5.2.1&show=api-elementhandleuploadfilefilepaths) and [Playwright](https://playwright.dev/#version=v1.3.0&path=docs%2Fapi.md&q=elementhandlesetinputfilesfiles-options).

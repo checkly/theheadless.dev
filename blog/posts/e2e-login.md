@@ -14,12 +14,12 @@ When automating key site transactions, we inevitably stumble into login scenario
 
 In its simplest form, a login procedure requires the user to:
 
-0. Navigate to the login form
-1. Fill in a username/email field
-2. Fill in a password field
-3. Click a button to finalise the login
+1. Navigate to the login form
+2. Fill in a username/email field
+3. Fill in a password field
+4. Click a button to finalise the login
 
-At the end of our test, we need to check if our login procedure has been successful. (4) For example, we could verify that an element is shown that we know only appears for logged-in users.
+At the end of our test, we need to check if our login procedure has been successful. For example, we could verify that an element is shown that we know only appears for logged-in users.
 
 On our [test site](https://danube-webshop.herokuapp.com/) this could look like the following:
 
@@ -50,7 +50,6 @@ node login.js
 ::::
 
 ## Takeaways
-
-- Use environment variables to inject secrets.
-- You might need to wait for the navigation as you are redirected to the login screen/modal.
+1. Use environment variables to inject secrets.
+2. You might need to wait for the navigation as you are redirected to the login screen/modal.
 

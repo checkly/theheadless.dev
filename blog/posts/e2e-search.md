@@ -68,5 +68,6 @@ Listing search terms and their corresponding expected results in a file could be
 ```
 
 ## Takeaways
+
 1. Moving test data to a separate file can help when running more thorough comparisons.
 2. Assertion libraries help us cleanly verify multiple constraints in our test.

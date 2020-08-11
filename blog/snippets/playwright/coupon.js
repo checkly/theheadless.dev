@@ -14,19 +14,19 @@ const productsNumber = process.env.PRODUCTS_NUMBER;
     await page.click("#logo");
   }
 
-  await page.click('#cart-img')
-  
-  await page.waitForSelector('#total-price')
-  const price = await page.$eval('#total-price', e => e.innerText); 
+  await page.click("#cart-img");
 
-  await page.click('.cart > label')
-  await page.click('#coupon')
-  await page.type('#coupon', 'COUPON2020')
-  await page.click('.cart > div > button')
+  await page.waitForSelector("#total-price");
+  const price = await page.$eval("#total-price", (e) => e.innerText);
 
-  const expectedDiscountedPrice = price * 0.8
-  const discountedPrice = await page.$eval('#total-price', e => e.innerText)
-  assert.equal(discountedPrice, expectedDiscountedPrice)
-  
-  await browser.close()
-})()
+  await page.click(".cart > label");
+  await page.click("#coupon");
+  await page.type("#coupon", "COUPON2020");
+  await page.click(".cart > div > button");
+
+  const expectedDiscountedPrice = price * 0.8;
+  const discountedPrice = await page.$eval("#total-price", (e) => e.innerText);
+  assert.equal(discountedPrice, expectedDiscountedPrice);
+
+  await browser.close();
+})();

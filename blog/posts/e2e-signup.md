@@ -55,5 +55,6 @@ await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHT
 ```
 
 ## Takeaways
+
 1. Use environment variables to inject secrets.
 2. You might need to go through additional steps in case email confirmation or similar is required.

@@ -65,5 +65,6 @@ const foundList = bookList
 ```
 
 ## Takeaways
+
 1. Keep test data separate from your scripts.
 2. REST APIs can be useful to retrieve test data.

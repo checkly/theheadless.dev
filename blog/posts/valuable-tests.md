@@ -99,6 +99,7 @@ If the system you are testing allows it, provision/deprovision your users throug
 :::
 
 ## Takeaways
+
 1. Tests should be reliable and informative in order to be useful.
 2. Keep tests short and focused on testing one feature.
 3. Keep tests independent to maximise their parallelisation potential and reduce total runtime.
