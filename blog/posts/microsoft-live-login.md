@@ -4,8 +4,8 @@ date: 2020-06-22
 author: Tim Nolet
 githubUser: tnolet
 tags: 
-  - Login
-  - E2E
+  - login
+  - e2e
 ---
 
 Log in to your Microsoft Live account

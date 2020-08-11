@@ -4,8 +4,8 @@ date: 2020-06-22
 author: Tim Nolet
 githubUser: tnolet
 tags: 
-  - Login
-  - E2E
+  - login
+  - e2e
 ---
 
 Social login using your personal Google or Google Gsuite account is an extremely common use case for many login scenarios.

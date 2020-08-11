@@ -4,7 +4,7 @@ date: 2020-07-23
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - Security
+  - security
 ---
 
 While automation tools are fundamental to modern software development, they also have the innate potential to be used for malicious purposes. This applies to Puppeteer and Playwright, too.

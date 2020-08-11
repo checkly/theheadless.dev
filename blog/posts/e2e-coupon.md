@@ -4,8 +4,8 @@ date: 2020-07-13
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - E2E
-  - Assertions
+  - e2e
+  - assertions
 ---
 
 Webshops and subscription-based services often offer discounts through coupon codes. Applying a valid coupon code during checkout might reduce the price of one, several, or all items in the shopping cart.

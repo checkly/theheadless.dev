@@ -4,7 +4,7 @@ date: 2020-06-22
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - Basics
+  - basics
 ---
 
 The way you reference a UI element of your target web application for Puppeteer to interact with is through CSS selectors.

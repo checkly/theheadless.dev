@@ -4,7 +4,7 @@ date: 2020-06-15
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - Basics
+  - basics
 ---
 
 Every useful script that we will write will almost certainly include two key initial steps:

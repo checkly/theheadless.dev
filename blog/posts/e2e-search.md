@@ -2,10 +2,11 @@
 title: E2E Search
 date: 2020-07-15
 author: Giovanni Rago
+githubUser: ragog
 tags: 
-  - Search
-  - E2E
-  - Assertions
+  - search
+  - e2e
+  - assertions
 ---
 
 Searching a website is an everyday action for most internet users. For most services, the speed at which their customers are able to get to the products they are looking for is directly tied to revenue. To enable that, a performant and reliable search function is needed.

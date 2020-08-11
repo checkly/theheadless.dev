@@ -4,7 +4,7 @@ date: 2020-07-02
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - E2E
+  - e2e
 ---
 
 Another key website flow that needs to be closely monitored is any sort of checkout. You want to be 100% sure your users are able to pay for goods or services you might be offering, at any given time.
