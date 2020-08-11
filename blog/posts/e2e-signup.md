@@ -4,8 +4,8 @@ date: 2020-06-30
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - E2E
-  - Signup
+  - e2e
+  - signup
 ---
 
 Signups are key transactions in most web platforms, and therefore prime targets for automation.

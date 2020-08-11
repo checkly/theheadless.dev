@@ -4,7 +4,7 @@ date: 2020-06-29
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - Basics
+  - basics
 ---
 
 The [official documentation](https://playwright.dev/) for Playwright reads: 

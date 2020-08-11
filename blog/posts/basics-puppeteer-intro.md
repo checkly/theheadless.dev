@@ -4,7 +4,7 @@ date: 2020-06-19
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - Basics
+  - basics
 ---
 
 Straight from the [official documentation](https://developers.google.com/web/tools/puppeteer): 
