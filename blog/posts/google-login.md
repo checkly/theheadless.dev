@@ -8,7 +8,7 @@ tags:
   - e2e
 ---
 
-Social login using your personal Google or Google Gsuite account is an extremely common use case for many login scenarios.
+Social login using your personal Google or Google Gsuite account is a common use case for many login scenarios.
 
 ## Steps
 
@@ -33,12 +33,12 @@ Run this example as follows. Replace the username and password placeholder with 
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 GOOGLE_USER=username GOOGLE_PWD=password node mslive-login.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 SET GOOGLE_USER=username
 SET GOOGLE_PWD=password
 node google-login.js
@@ -47,7 +47,7 @@ node google-login.js
 ::::
 
 ::: tip
-This example does not work when you have 2-factor authentication enabled. Also you might trigger a recaptcha check.
+This example does not work when you have 2-factor authentication enabled, and you might trigger a recaptcha check.
 :::
 
 ## Takeaways
