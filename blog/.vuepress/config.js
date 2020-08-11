@@ -9,7 +9,7 @@ const themeConfig = {
         ['/posts/basics-puppeteer-intro', 'What is Puppeteer?'],
         ['/posts/basics-playwright-intro', 'What is Playwright?'],
         ['/posts/basics-local-setup', 'Installation & setup'],
-        ['/posts/basics-navigation', 'Basic navigation'],
+        ['/posts/basics-navigation', 'Navigating & waiting'],
         ['/posts/basics-selectors', 'Using selectors'],
         ['/posts/basics-clicking-typing', 'Clicking & typing']
       ]
