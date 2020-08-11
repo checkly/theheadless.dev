@@ -14,7 +14,7 @@ Most services allow users to manage their account settings. These oftentimes hav
 
 Account properties to verify can run the gamut from simple text to connected third party services. In this example, we will focus on a popular case: changing a profile image by uploading one of our own. 
 
-On our [test site](https://danube-store.herokuapp.com/), such a test could look as follows:
+On our [test site](https://danube-webshop.herokuapp.com/), such a test could look as follows:
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
@@ -48,3 +48,6 @@ Here, we are simply checking for a message giving us feedback on the status of t
 1. Use environment variables to inject secrets.
 2. Use `uploadFile` (Puppeteer) or `setInputFiles` (Playwright) to upload the file.
 3. If possible, download the file from the platform and compare it with the one that was just uploaded.
+
+## Further reading
+1. Official documentation on file upload with [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v5.2.1&show=api-elementhandleuploadfilefilepaths) and [Playwright](https://playwright.dev/#version=v1.3.0&path=docs%2Fapi.md&q=elementhandlesetinputfilesfiles-options).

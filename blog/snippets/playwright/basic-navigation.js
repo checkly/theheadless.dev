@@ -1,9 +1,9 @@
-const { chromium } = require("playwright"); // import playwright
+const { chromium } = require("playwright");
 
 (async () => {
-  const browser = await chromium.launch(); // launch playwright
-  const page = await browser.newPage(); // get a page object
-  await page.goto('https://example.com'); // navigate to https://example.com
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+  await page.goto("https://danube-webshop.herokuapp.com");
 
-  await browser.close(); // close the browser
+  await browser.close();
 })();

@@ -12,11 +12,11 @@ Social login using your personal Google or Google Gsuite account is an extremely
 
 ## Steps
 
-1. We start at a site that offers Google as an authentication provider. In this case we use https://stackoverflow.com/
+1. We start at a site that offers Google as an authentication provider. In this case we use [Stack Overflow](https://stackoverflow.com/).
 2. We fetch the login page and click the "Login with Google" button.
 3. We are redirect to Google.
 4. We provide the username and password, injected by using environment variables.
-5. We are redirected back to the starting
+5. We are redirected back to the starting.
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
@@ -52,9 +52,9 @@ This example does not work when you have 2-factor authentication enabled. Also y
 
 ## Takeaways
 
-- Use environment variables to inject secrets.
-- Wait for the navigation as your are redirected to Google.
-- Wait for the navigation as you are redirected back to the start site.
+1. Use environment variables to inject secrets.
+2. Wait for the navigation as your are redirected to Google.
+3. Wait for the navigation as you are redirected back to the start site.
 
 
 

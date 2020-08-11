@@ -40,7 +40,7 @@ Automated tests are effective if they:
 
 The last point is often overlooked. Scripts by themselves have no meaning if their results mean nothing to whoever is looking at them. Ideally, we want the opposite: interpreting a test success or failure should be close to instantaneous and give us a clear understanding of what is working and what is not.
 
-Oftentimes this is impeded by the tendency to have tests do too much. We can draw an example from two scenarios running against our [test site](https://danube-store.herokuapp.com): [E2E Checkout](02-07-2020-e2e-checkout.md) and [E2E Coupon](13-07-2020-e2e-coupon.md). While these two have part of their flow in common, and we might be tempted to combine them to avoid a certain degree of duplication, merging them into a single test would obfuscate the meaning of a test failure as we would be testing two different features. If that combined test were to run red, we would be unable to tell whether the entire checkout is not working as expected, or whether users are just unable to redeem coupon codes. Unless we were to devote additional time to diving deep into the failure - which is exactly what we are trying to avoid.
+Oftentimes this is impeded by the tendency to have tests do too much. We can draw an example from two scenarios running against our [test site](https://danube-webshop.herokuapp.com/): [E2E Checkout](e2e-checkout.md) and [E2E Coupon](e2e-coupon.md). While these two have part of their flow in common, and we might be tempted to combine them to avoid a certain degree of duplication, merging them into a single test would obfuscate the meaning of a test failure as we would be testing two different features. If that combined test were to run red, we would be unable to tell whether the entire checkout is not working as expected, or whether users are just unable to redeem coupon codes. Unless we were to devote additional time to diving deep into the failure - which is exactly what we are trying to avoid.
 
 We can avoid this pitfall by making sure our tests are verifying only one feature each. 
 
@@ -99,6 +99,10 @@ If the system you are testing allows it, provision/deprovision your users throug
 :::
 
 ## Takeaways
+
 1. Tests should be reliable and informative in order to be useful.
 2. Keep tests short and focused on testing one feature.
 3. Keep tests independent to maximise their parallelisation potential and reduce total runtime.
+
+## Further reading
+1. [Gergely Orosz](https://blog.pragmaticengineer.com/readable-code/) on writing readable code.

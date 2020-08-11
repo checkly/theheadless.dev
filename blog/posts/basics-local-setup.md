@@ -25,7 +25,7 @@ npm i playwright
 :::
 ::::
 
-Puppeteer and Playwright come bundled with their respective browsers, so we now have all we need to run our first script. Let's create a script to navigate to [https://example.com](https://example.com)
+Puppeteer and Playwright come bundled with their respective browsers, so we now have all we need to run our first script. Let's create a script to navigate to our [test website](https://danube-webshop.herokuapp.com):
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
@@ -38,32 +38,32 @@ Puppeteer and Playwright come bundled with their respective browsers, so we now 
 
 ::::
 
-Run this example as follows.
+Run this example as follows:
 ```shell script
 node hello-world.js
 ```
 
 Nothing much has happened, right? Remember: by default, Puppeteer and Playwright will run in headless mode! That means we won't see anything of what is happening in the browser when our script runs.
 
-> **Did you know?** Puppeteer/Playwright creates its own browser user profile, which it cleans up on every run. In other words: all runs will be sandboxed and not interfere with one another, as state is always fully reset at the end of a session.
+::: tip
+Puppeteer/Playwright creates its own browser user profile, which it cleans up on every run. In other words: all runs will be sandboxed and not interfere with one another, as state is always fully reset at the end of a session.
+:::
 
 When you are first writing and debugging your scripts, it is a good idea to disable headless mode so you can have a look at what your script is doing:
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-```javascript
-const browser = await puppeteer.launch({headless: false});
+```js
+const browser = await puppeteer.launch({ headless: false });
 ```
 :::
 
 ::: tab Playwright
-```javascript
-const browser = await chromium.launch({headless: false});
+```js
+const browser = await chromium.launch({ headless: false });
 ```
 :::
 
 ::::
-
-
 
 After executing the updated file, you will see Chromium starting up, only to shut down after an instant. Everything is working as expected! Our script is just so short, it runs almost instantaneously.

@@ -16,21 +16,21 @@ The resemblance to Google's [Puppeteer](https://guides.checklyhq.com/2020/06/19/
 ## Puppeteer vs Playwright
 In the words of the authors:
 
-> We are the same team that originally built Puppeteer at Google, but has since then moved on. Puppeteer proved that there is a lot of interest in the new generation of ever-green, capable and reliable automation drivers. With Playwright, we'd like to take it one step further and offer the same functionality for **all** the popular rendering engines. We'd like to see Playwright vendor-neutral and shared governed.
+> We are the same team that originally built Puppeteer at Google, but has since then moved on. [...] With Playwright, we'd like to take it one step further and offer the same functionality for *all* the popular rendering engines. We'd like to see Playwright vendor-neutral and shared governed.
 
 In short, Playwright builds on the experience of Puppeteer to provide a way to:
-* run against all major browsers (Chromium/Chrome, Firefox, WebKit/Safari)
-* write more concise scripts (e.g. minimising the need for explicit waits)
-* easily migrate existing codebases (keeping a very similar API)
+1. run against all major browsers (Chromium/Chrome, Firefox, WebKit/Safari)
+2. write more concise scripts (e.g. minimising the need for explicit waits)
+3. easily migrate existing codebases (keeping a very similar API)
 
 This is achieved in the form of a compact node library that exposes a high-level API to interact with web pages in a fast, secure, stable and simple way. As it is an open-source project, you can [contribute](https://github.com/microsoft/playwright/blob/master/CONTRIBUTING.md) to it yourself.
 
 ## Main use cases
-- **Test automation in modern web applications:** verifying that the features we are exposing our users/customers to are actually behaving as expected.
-- **Cross-browser testing:** ensuring applications are working consistently across browsers and rendering engines.
-- **Taking screenshots of web pages:** useful for a variety of different uses going from simple archiving to automated comparison for e.g. visual testing.
-- **Scraping web sites for data:** extracting data from websites for later retrieval or analysis.
-- **Automating interaction of web pages:** speed up and scale any sort of sequence of actions we would like to perform on a website automatically.
+1. **Test automation in modern web applications:** verifying that the features we are exposing our users/customers to are actually behaving as expected.
+2. **Cross-browser testing:** ensuring applications are working consistently across browsers and rendering engines.
+3. **Taking screenshots of web pages:** useful for a variety of different uses going from simple archiving to automated comparison for e.g. visual testing.
+4. **Scraping web sites for data:** extracting data from websites for later retrieval or analysis.
+5. **Automating interaction of web pages:** speed up and scale any sort of sequence of actions we would like to perform on a website automatically.
 
 In this guide you will find multiple examples showing how to leverage Playwright, with a focus on test automation / active reliability.
 
