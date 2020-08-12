@@ -151,6 +151,8 @@ export default {
   background: #F9FAFC;
   padding: 50px 0;
   margin-top: 150px;
+  position: relative;
+  z-index: 10;
   &.large-margin {
     margin-top: 170px;
   }
