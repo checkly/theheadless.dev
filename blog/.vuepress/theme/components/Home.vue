@@ -349,8 +349,12 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.4px;
   border-bottom: 8px solid #DF0000;
+  font-family: 'Poppins', sans-serif;
   &:active {
     border-bottom-width: 5px;
+  }
+  &:hover {
+    background-color: #ff3939;
   }
 }
 
