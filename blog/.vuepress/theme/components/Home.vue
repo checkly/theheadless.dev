@@ -249,7 +249,7 @@ export default {
   }
   &__posts {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap: 30px;
     row-gap: 30px;
     margin-top: 40px;
