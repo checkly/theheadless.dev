@@ -1,5 +1,8 @@
 <template>
-  <footer class="footer">
+  <footer
+    class="footer"
+    :class="{'large-margin': isHomePage}"
+  >
     <div class="footer__container">
       <div class="footer__behind">
         Who's running this?
@@ -94,6 +97,10 @@ export default {
       return (
         (this.$themeConfig.footer && this.$themeConfig.footer.copyright) || []
       )
+    },
+
+    isHomePage () {
+      return this.$route.path === '/'
     }
   },
 
@@ -143,6 +150,12 @@ export default {
   width: 100%;
   background: #F9FAFC;
   padding: 50px 0;
+  margin-top: 150px;
+  position: relative;
+  z-index: 10;
+  &.large-margin {
+    margin-top: 170px;
+  }
   &__container {
     max-width: 1150px;
     margin: 0 auto;
@@ -160,7 +173,7 @@ export default {
   }
   &__text {
     font-size: 14px;
-    color: #3C4858;
+    color: #8492A6;
     img {
       vertical-align: middle;
     }

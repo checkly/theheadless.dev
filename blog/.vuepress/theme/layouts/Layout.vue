@@ -227,6 +227,7 @@ export default {
     line-height 16px
     color $accentColor
     text-decoration none
+    font-weight bold
 
     svg
       margin-left 2px

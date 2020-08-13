@@ -63,6 +63,10 @@ export default {
   color $textColor
   max-width 730px
 
+  li {
+    margin 12px 0
+  }
+
 @media (max-width: $MQMobile)
   .post-title
     margin-top 0
