@@ -14,6 +14,8 @@ As a consequence, some user flows are made purposely hard to automate to defend 
 2. Social login through providers like Google, Facebook etc.
 3. "Forgot password" and similar reset scenarios
 
+<!-- more -->
+
 There are several means through which automation is made more difficult.
 
 ## Captchas

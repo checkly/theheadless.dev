@@ -9,6 +9,8 @@ tags:
 
 Assuming you already have [Node.js](https://nodejs.org/) available in your local environment, installing Puppeteer or Playwright is achieved with just one instruction. Let's start by creating the folder where we will be storing our scripts going forward.
 
+<!-- more -->
+
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
 ```sh

@@ -14,12 +14,16 @@
         ><img
           src="/checkly.svg"
           width="80"
-        ></a> and we do API monitoring and synthetic monitoring using Puppeteer and very soon™ Playwright. This means we see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
+        ></a> and <a
+          class="recorder"
+          href="https://github.com/checkly/puppeteer-recorder"
+          target="_blank"
+        >Puppeteer Recorder</a>. We do API monitoring and synthetic monitoring using Puppeteer and very soon™ Playwright. We see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
         Feel to contribute <a
           class="github"
           :href="'https://github.com/' + $site.themeConfig.docsRepo"
           target="_blank"
-        >by just creating PR on Github!</a>
+        >by just creating PR on GitHub!</a>
 
         <ul
           v-if="copyright"
@@ -187,6 +191,9 @@ export default {
     }
   }
 
+  .recorder {
+    color: #FF4949;
+  }
   .github {
     color: #FF4949;
   }
