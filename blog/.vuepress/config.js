@@ -26,7 +26,7 @@ const themeConfig = {
     copyright: [
       {
         text: 'CC-BY-4.0 Licensed | Copyright © 2020-present Checkly inc.',
-        link: 'https://opensource.org/licenses/MIT'
+        link: 'https://creativecommons.org/licenses/by-sa/4.0/'
       }
     ]
   },
