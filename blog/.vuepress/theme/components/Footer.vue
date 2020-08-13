@@ -23,7 +23,7 @@
           class="github"
           :href="'https://github.com/' + $site.themeConfig.docsRepo"
           target="_blank"
-        >by just creating PR on Github!</a>
+        >by just creating PR on GitHub!</a>
 
         <ul
           v-if="copyright"
