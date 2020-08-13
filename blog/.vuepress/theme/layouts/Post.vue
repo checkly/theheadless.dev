@@ -3,6 +3,7 @@
     <article
       itemscope
       itemtype="https://schema.org/BlogPosting"
+      class="post-article"
     >
       <header>
         <h1
@@ -52,15 +53,19 @@ export default {
 @require '../styles/wrapper.styl'
 
 .post
+  display flex
+
+.post-article
   @extend $wrapper
-  padding-top: 0
+  padding-top: 25px
   font-size 16px
   letter-spacing 0
   color $textColor
-  position relative
   max-width 730px
 
 @media (max-width: $MQMobile)
   .post-title
     margin-top 0
+  .post
+    display block
 </style>

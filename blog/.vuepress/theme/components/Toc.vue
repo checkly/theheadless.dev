@@ -1,29 +1,30 @@
 <template>
-  <Sticker
+  <div
     v-if="visible"
     class="vuepress-toc"
     v-bind="$attrs"
   >
-    <div
-      v-for="(item, index) in $page.headers"
-      ref="chairTocItem"
-      :key="index"
-      class="vuepress-toc-item"
-      :class="[
-        `vuepress-toc-h${item.level}`,
-        { active: activeIndex === index },
-      ]"
-    >
-      <a
-        :href="`#${item.slug}`"
-        :title="item.title"
-      >{{ item.title }}</a>
+    <div class="vuepress-toc-content">
+      <div
+        v-for="(item, index) in $page.headers"
+        ref="chairTocItem"
+        :key="index"
+        class="vuepress-toc-item"
+        :class="[
+          `vuepress-toc-h${item.level}`,
+          { active: activeIndex === index },
+        ]"
+      >
+        <a
+          :href="`#${item.slug}`"
+          :title="item.title"
+        >{{ item.title }}</a>
+      </div>
     </div>
-  </Sticker>
+  </div>
 </template>
 
 <script>
-import Sticker from './Sticker.vue'
 let initTop
 
 // get offset top
@@ -36,10 +37,6 @@ function getAbsoluteTop (dom) {
 }
 
 export default {
-  components: {
-    Sticker
-  },
-
   data () {
     return {
       activeIndex: 0
@@ -144,20 +141,21 @@ export default {
   display none !important
 
 .vuepress-toc
-  position fixed
   display none
   max-height 100vh
-  max-width 220px
+  width 220px
   overflow-y auto
   padding-top 5rem
   top 0
-  right 2rem
   box-sizing border-box
   z-index 0
 
+  .vuepress-toc-content
+    position fixed
+
   .vuepress-toc-item
     position relative
-    padding 0.1rem 0.6rem 0.1rem 1.5rem
+    padding 5px 0
     line-height 1.5rem
     overflow hidden
 
