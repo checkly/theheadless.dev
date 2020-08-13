@@ -16,6 +16,8 @@ Puppeteer and Playwright also allow us to automate logging in to a Microsoft Liv
 2. We provide the username and password, injected by using environment variables
 3. We are redirected to the main account page
 
+<!-- more -->
+
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
 <<< @/blog/snippets/puppeteer/mslive-login.js

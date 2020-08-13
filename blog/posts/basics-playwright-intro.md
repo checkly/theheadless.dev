@@ -13,6 +13,8 @@ The [official documentation](https://playwright.dev/) for Playwright reads:
 
 The resemblance to Google's [Puppeteer](basics-puppeteer-intro.md) is striking, and for good reason. 
 
+<!-- more -->
+
 ## Puppeteer vs Playwright
 In the words of the authors:
 

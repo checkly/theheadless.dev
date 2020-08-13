@@ -11,6 +11,8 @@ tags:
 
 Searching a website is an everyday action for most internet users. For most services, the speed at which their customers are able to get to the products they are looking for is directly tied to revenue. To enable that, a performant and reliable search function is needed.
 
+<!-- more -->
+
 ## Steps
 
 The example below, which is running against our [test webshop](https://danube-webshop.herokuapp.com/), shows how we can verify the correctness of a search's result from an end-to-end perspective. In short, we will:

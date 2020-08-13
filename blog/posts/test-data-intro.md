@@ -12,6 +12,8 @@ We define _test data_ as any data we consistently use to verify a certain proper
 
 It is oftentimes desirable to [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) up our scripts by factoring out test data. In the case of simpler tests, it is normally not an issue to embed test data directly inside our script. Complex end-to-end scenarios might require us to move this information elsewhere, like a dedicated file.
 
+<!-- more -->
+
 Looking at our [test webshop](https://danube-store.herokuapp.com/), we might want to verify that a certain list of items is being loaded to the store's front page. As this list contains several tens of elements, each with different attributes, keeping our fixtures inside our script would be impractical. Let us add this to a JSON file instead:
 
 ```json

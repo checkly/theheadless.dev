@@ -8,8 +8,11 @@ tags:
 ---
 
 Every useful script that we will write will almost certainly include two key initial steps:
+
 1. Launching the browser
 2. Navigating to a page
+
+<!-- more -->
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 

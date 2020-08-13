@@ -18,6 +18,8 @@ Social login using your personal Google or Google Gsuite account is a common use
 4. We provide the username and password, injected by using environment variables.
 5. We are redirected back to the starting.
 
+<!-- more -->
+
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
 <<< @/blog/snippets/puppeteer/google-login.js

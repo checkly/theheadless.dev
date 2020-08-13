@@ -13,6 +13,8 @@ Headless browsers can be leveraged for testing in a variety of ways, and differe
 Here, we define _valuable_ as _sustainably expressing meaningful, truthful information about the state of a system_.
 A test that does not reliably fulfill these criteria should be fixed, if possible, or simply removed.
 
+<!-- more -->
+
 ## Keep tests short
 
 If they run against a real-world product with a UI that is evolving over time, scripts will need to be regularly updated. This brings up two important points:
