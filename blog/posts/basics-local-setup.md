@@ -7,18 +7,20 @@ tags:
   - basics
 ---
 
-Assuming you already have [node.js](https://nodejs.org/) available in your local environment, installing Puppeteer or Playwright is achieved with just one instruction. Let's start by creating the folder where we will be storing our scripts going forward.
+Assuming you already have [Node.js](https://nodejs.org/) available in your local environment, installing Puppeteer or Playwright is achieved with just one instruction. Let's start by creating the folder where we will be storing our scripts going forward.
+
+<!-- more -->
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-```
+```sh
 mkdir learning-headless && cd $_
 npm i puppeteer
 ```
 :::
 
 ::: tab Playwright
-```
+```sh
 mkdir learning-headless && cd $_
 npm i playwright
 ```
@@ -39,7 +41,7 @@ Puppeteer and Playwright come bundled with their respective browsers, so we now 
 ::::
 
 Run this example as follows:
-```shell script
+```sh
 node hello-world.js
 ```
 

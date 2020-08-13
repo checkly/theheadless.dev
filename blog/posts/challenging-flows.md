@@ -14,6 +14,8 @@ As a consequence, some user flows are made purposely hard to automate to defend 
 2. Social login through providers like Google, Facebook etc.
 3. "Forgot password" and similar reset scenarios
 
+<!-- more -->
+
 There are several means through which automation is made more difficult.
 
 ## Captchas
@@ -28,7 +30,10 @@ For pre-production environments, we can:
 ## Bot detection
 Certain platforms might have built-in mechanisms to tell manual and automated traffic apart, with the goal of shutting down the latter. These could be based on traffic volume analysis, HTTP fingerprinting, IP blacklisting or even on user behaviour analysis (e.g. the way the user moves the mouse cursor). Headless browsers will normally identify themselves as such in their User-Agent request headers, making detection trivial:
 
-```Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/79.0.3945.0 Safari 537.36```
+```
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 
+(KHTML, like Gecko) HeadlessChrome/79.0.3945.0 Safari 537.36
+```
 
 Bot detection could be deactivated for pre-production environments in order to allow automation. For production environments, a secret may be included in the User-Agent (or similar mechanism) for the system to recognise test bots and allow them through:
 
@@ -57,8 +62,9 @@ Certain industries are particularly affected by malicious automation attempts, e
 
 In these cases, UI automation is specifically made more difficult by utilising components that are harder to interact with, and in some cases by randomising attribute values for key elements in order to prevent referencing. Even if this measure does not defeat all attempts, it can make it excruciatingly hard to produce reliable automated scripts, which might be enough to discourage a large number of attackers.
 
-## Security considerations
-Whenever looking at production environments, keep in mind that adding exceptions to the methods listed above might open new attack vectors for malicious users. Always conduct proper risk analysis before proceeding.
+::: warning
+Whenever looking at production environments, keep in mind that adding exceptions to any of the methods listed above might open new attack vectors for malicious users. Always conduct proper risk analysis before proceeding.
+:::
 
 ## Further reading
 1. [OWASP's Automated Threat list](https://wiki.owasp.org/index.php/Category:Automated_Threat)

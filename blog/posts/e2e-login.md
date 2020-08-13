@@ -10,6 +10,8 @@ tags:
 
 When automating key site transactions, we inevitably stumble into login scenarios. In most cases, users need to be able to access accounts on a platform to get any value out of it. If they suddenly become unable to do so, we need to be informed as quickly as possible.
 
+<!-- more -->
+
 ## Steps
 
 In its simplest form, a login procedure requires the user to:
@@ -36,14 +38,14 @@ Run this example as follows. Replace the username and password placeholder with 
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
-USER_EMAIL=username USER_PASSWORD=password node login.js
+```sh
+USER_EMAIL=user@email.com USER_PASSWORD=supersecure1 node login.js
 ```
 :::
 ::: tab Windows
-```shell script
-SET USER_EMAIL=username
-SET USER_PASSWORD=password
+```sh
+SET USER_EMAIL=user@email.com
+SET USER_PASSWORD=supersecure1
 node login.js
 ```
 :::

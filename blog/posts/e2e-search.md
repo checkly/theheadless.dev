@@ -4,12 +4,14 @@ date: 2020-07-15
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - search
   - e2e
   - assertions
+  - search
 ---
 
 Searching a website is an everyday action for most internet users. For most services, the speed at which their customers are able to get to the products they are looking for is directly tied to revenue. To enable that, a performant and reliable search function is needed.
+
+<!-- more -->
 
 ## Steps
 
@@ -18,7 +20,7 @@ The example below, which is running against our [test webshop](https://danube-we
 2. Firstly, assert the expected number of results is being shown
 3. If the previous point is true, assert that all expected search results are shown
 
-We will use Chai as an assertion library for points 2 and 3.
+We will use [Chai](https://www.chaijs.com/api/assert/) as an assertion library for points 2 and 3.
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
@@ -32,18 +34,20 @@ We will use Chai as an assertion library for points 2 and 3.
 Run this example as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 node search.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 node search.js
 ```
 :::
 ::::
 
-> Note: When testing search on large sets of data, you might additionally need to handle result pagination, together with the possibility of duplicate results.
+::: tip
+When testing search on large sets of data, you might additionally need to handle result pagination, together with the possibility of duplicate results.
+:::
 
 Listing search terms and their corresponding expected results in a file could be helpful for additional, more thorough testing. The contents of the file would be then used to drive the searches and comparisons. An example could look like the following JSON:
 

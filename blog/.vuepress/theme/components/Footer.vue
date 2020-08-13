@@ -1,5 +1,8 @@
 <template>
-  <footer class="footer">
+  <footer
+    class="footer"
+    :class="{'large-margin': isHomePage}"
+  >
     <div class="footer__container">
       <div class="footer__behind">
         Who's running this?
@@ -11,12 +14,16 @@
         ><img
           src="/checkly.svg"
           width="80"
-        ></a> and we do API monitoring and synthetic monitoring using Puppeteer and very soon™ Playwright. This means we see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
+        ></a> and <a
+          class="recorder"
+          href="https://github.com/checkly/puppeteer-recorder"
+          target="_blank"
+        >Puppeteer Recorder</a>. We do API monitoring and synthetic monitoring using Puppeteer and very soon™ Playwright. We see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
         Feel to contribute <a
           class="github"
           :href="'https://github.com/' + $site.themeConfig.docsRepo"
           target="_blank"
-        >by just creating PR on Github!</a>
+        >by just creating PR on GitHub!</a>
 
         <ul
           v-if="copyright"
@@ -94,6 +101,10 @@ export default {
       return (
         (this.$themeConfig.footer && this.$themeConfig.footer.copyright) || []
       )
+    },
+
+    isHomePage () {
+      return this.$route.path === '/'
     }
   },
 
@@ -143,6 +154,12 @@ export default {
   width: 100%;
   background: #F9FAFC;
   padding: 50px 0;
+  margin-top: 150px;
+  position: relative;
+  z-index: 10;
+  &.large-margin {
+    margin-top: 170px;
+  }
   &__container {
     max-width: 1150px;
     margin: 0 auto;
@@ -160,7 +177,7 @@ export default {
   }
   &__text {
     font-size: 14px;
-    color: #3C4858;
+    color: #8492A6;
     img {
       vertical-align: middle;
     }
@@ -174,6 +191,9 @@ export default {
     }
   }
 
+  .recorder {
+    color: #FF4949;
+  }
   .github {
     color: #FF4949;
   }

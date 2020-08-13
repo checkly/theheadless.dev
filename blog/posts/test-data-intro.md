@@ -10,9 +10,11 @@ tags:
 
 We define _test data_ as any data we consistently use to verify a certain property, like functionality or performance, of a system. Another popular term for the same concept is _fixture_. We will use these interchangeably.
 
-It is oftentimes desirable to DRY up our scripts by factoring out test data. In the case of simpler tests, it is normally not an issue to embed test data directly inside our script. Complex end-to-end scenarios might require us to move this information elsewhere, like a dedicated file.
+It is oftentimes desirable to [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) up our scripts by factoring out test data. In the case of simpler tests, it is normally not an issue to embed test data directly inside our script. Complex end-to-end scenarios might require us to move this information elsewhere, like a dedicated file.
 
-Looking at our [test webshop](https://danube-store.herokuapp.com/), we might want to verify that a certain list of items is being loaded to the store's front page. As this list contains several tens of elements, each with different attributes, keeping our fixtures inside our script would be impractical. Let us instead add this to a JSON file instead:
+<!-- more -->
+
+Looking at our [test webshop](https://danube-store.herokuapp.com/), we might want to verify that a certain list of items is being loaded to the store's front page. As this list contains several tens of elements, each with different attributes, keeping our fixtures inside our script would be impractical. Let us add this to a JSON file instead:
 
 ```json
 [
@@ -33,11 +35,11 @@ Looking at our [test webshop](https://danube-store.herokuapp.com/), we might wan
 We are then able to feed this file into our test...
 
 ```js
-const fs = require('fs')
+const fs = require('fs');
 ...
-let rawdata = fs.readFileSync('books.json')
-const bookList = JSON.parse(rawdata)
-const foundList = bookList
+let rawdata = fs.readFileSync('books.json');
+const bookList = JSON.parse(rawdata);
+const foundList = bookList;
 ```
 
 ...and have each comparison executed to ensure the right elements are being shown.
@@ -57,11 +59,11 @@ const foundList = bookList
 In case the platform you are testing exposes an API endpoint to pull up-to-date test data, you could fetch the file as part of the setup phase of your test and then utilise it:
 
 ```js
-const axios = require('axios')
+const axios = require('axios');
 ...
-const { data } = await axios.get('https://danube-store.herokuapp.com/api/books')
-const bookList = JSON.parse(data)
-const foundList = bookList
+const { data } = await axios.get('https://danube-store.herokuapp.com/api/books');
+const bookList = JSON.parse(data);
+const foundList = bookList;
 ```
 
 ## Takeaways

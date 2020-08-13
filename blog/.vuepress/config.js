@@ -26,13 +26,13 @@ const themeConfig = {
     copyright: [
       {
         text: 'CC-BY-4.0 Licensed | Copyright © 2020-present Checkly inc.',
-        link: 'https://opensource.org/licenses/MIT'
+        link: 'https://creativecommons.org/licenses/by-sa/4.0/'
       }
     ]
   },
   algolia: {
-    apiKey: 'b2b616fdea14b860ff00c72fa72bf267',
-    indexName: 'checkly_docs'
+    apiKey: 'dcb1395d32100bc066d21f302fb6c0df',
+    indexName: 'theheadless_dev'
   },
   docsRepo: 'checkly/theheadless.dev',
   docsDir: 'blog',

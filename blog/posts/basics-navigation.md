@@ -28,6 +28,8 @@ In the example below we trigger two navigations:
 1. The initial load of the page.
 2. A navigation to the shopping cart by clicking a link
 
+<!-- more -->
+
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
 <<< @/blog/snippets/puppeteer/basic-browser-navigation.js
@@ -40,12 +42,12 @@ In the example below we trigger two navigations:
 Run this example as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 node basic-browser-navigation.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 node basic-browser-navigation.js
 ```
 :::
