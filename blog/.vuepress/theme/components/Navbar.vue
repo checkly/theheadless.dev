@@ -15,12 +15,14 @@
         :src="$withBase($site.themeConfig.logo)"
         :alt="$siteTitle"
       >
-      <span
+      <div
         ref="siteName"
         class="site-name"
         v-if="$siteTitle"
         :class="{ 'can-hide': $site.themeConfig.logo }"
-      >theheadless.dev</span>
+      >
+        theheadless.dev
+      </div>
     </router-link>
 
     <div class="links">
@@ -95,9 +97,10 @@ $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
 
 .site-name
-  background: linear-gradient(260deg, rgba(255,0,0,1) 0%, rgba(255,97,154,1) 100%)
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
+  background linear-gradient(260deg, rgba(255,0,0,1) 0%, rgba(255,97,154,1) 100%)
+  background-clip text
+  -webkit-background-clip text
+  -webkit-text-fill-color transparent
 
 .navbar
   padding: 10px
