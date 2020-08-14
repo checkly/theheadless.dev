@@ -13,17 +13,19 @@ Headless browsers can be leveraged for testing in a variety of ways, and differe
 Here, we define _valuable_ as _sustainably expressing meaningful, truthful information about the state of a system_.
 A test that does not reliably fulfill these criteria should be fixed, if possible, or simply removed.
 
+<!-- more -->
+
 ## Keep tests short
 
 If they run against a real-world product with a UI that is evolving over time, scripts will need to be regularly updated. This brings up two important points:
-1. Most scripts are not write-and-forget, so each script we write is one more script we will have to maintain
-2. Like all cases where code and refactoring are involved, _how_ we write scripts can have a significant influence on how long this maintenance effort takes
+1. Most scripts are not write-and-forget, so each script we write is one more script we will have to maintain.
+2. Like all cases where code and refactoring are involved, _how_ we write scripts can have a significant influence on how long this maintenance effort takes.
 
 Taking example from good software engineering practices, our scripts should strive for *simplicity, conciseness and readability*: 
 
-1. Simplicity: keep in mind the goal of the script, and keep away from overly complex solutions whenever possible
-2. Conciseness: simply put, do not be overly verbose and keep scripts as short as they can be
-3. Readability: follow general [best practices](https://blog.pragmaticengineer.com/readable-code/) around writing code that is easy to read
+1. **Simplicity:** keep in mind the goal of the script, and keep away from overly complex solutions whenever possible.
+2. **Conciseness:** simply put, do not be overly verbose and keep scripts as short as they can be.
+3. **Readability:** follow general [best practices](https://blog.pragmaticengineer.com/readable-code/) around writing code that is easy to read.
 
 The faster we can read and understand a script we (or a teammate) wrote in the past, the quicker we can interpret its results and get to work on updating it and making it relevant again.
 
@@ -34,9 +36,9 @@ Do not underestimate the compounding effect of having messy scripts across a lar
 ## Keep tests focused
 
 Automated tests are effective if they:
-1. Correctly verify the status of the target functionality
-2. Return within a reasonable amount of time
-3. Produce a result that can be easily interpreted by humans
+1. Correctly verify the status of the target functionality.
+2. Return within a reasonable amount of time.
+3. Produce a result that can be easily interpreted by humans.
 
 The last point is often overlooked. Scripts by themselves have no meaning if their results mean nothing to whoever is looking at them. Ideally, we want the opposite: interpreting a test success or failure should be close to instantaneous and give us a clear understanding of what is working and what is not.
 
@@ -67,9 +69,9 @@ test3:
 ```
 
 In this case, the success of each subsequent test depends on previous tests as much as on its own assertions. In other words, previous tests are driving a test's success criteria. This form of coupling can create headaches for us in the shape of:
-1. Lower test result readability: we might need to backtrack and look into previous tests when trying to understand what a subsequent one is doing
-2. Harder maintenance: changes might need to be applied across different scripts
-3. Lack of flexibility and parallelisation: tests need to run sequentially in a specific order to work
+1. **Lower test result readability:** we might need to backtrack and look into previous tests when trying to understand what a subsequent one is doing
+2. **Harder maintenance:** changes might need to be applied across different scripts
+3. **Lack of flexibility and parallelisation:** tests need to run sequentially in a specific order to work
 
 Having each test encapsulate all it needs to give us a meaningful answer is fundamental to avoid the above issues. In case of our example, a solution could look like:
 

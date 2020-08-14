@@ -8,13 +8,15 @@ tags:
   - e2e
 ---
 
-Log in to your Microsoft Live account.
+Puppeteer and Playwright also allow us to automate logging in to a Microsoft Live account.
 
 ## Steps
 
-1. We start at https://login.live.com/
-4. We provide the username and password, injected by using environment variables.
-5. We are redirected to the main account page
+1. We start at `https://login.live.com`
+2. We provide the username and password, injected by using environment variables
+3. We are redirected to the main account page
+
+<!-- more -->
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
@@ -31,12 +33,12 @@ Run this example as follows. Replace the username and password placeholder with 
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 MSLIVE_USER=username MSLIVE_PWD=password node mslive-login.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 SET MSLIVE_USER=username
 SET MSLIVE_PWD=password
 node mslive-login.js
@@ -44,13 +46,14 @@ node mslive-login.js
 :::
 ::::
 
-
-> Note: this example does not work when you have 2-factor authentication enabled, and you might trigger a recaptcha check.
+::: tip
+This example does not work when you have 2-factor authentication enabled, and you might trigger a recaptcha check.
+:::
 
 ## Takeaways
 
 1. Use environment variables to inject secrets.
-2. Wait for the navigation as your are redirected to Google.
+2. Wait for the navigation as your are redirected to Microsoft.
 3. Wait for the navigation as you are redirected back to the start site.
 
 

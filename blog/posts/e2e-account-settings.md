@@ -10,6 +10,9 @@ tags:
 
 Most services allow users to manage their account settings. These oftentimes have far-reaching implications on how the user experiences the platform. Verifying that the account settings can be viewed and modified is key in making sure we are offering a smooth service.
 
+<!-- more -->
+
+
 ## Steps
 
 Account properties to verify can run the gamut from simple text to connected third party services. In this example, we will focus on a popular case: changing a profile image by uploading one of our own. 
@@ -18,22 +21,22 @@ On our [test site](https://danube-webshop.herokuapp.com/), such a test could loo
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-<<< @/blog/snippets/puppeteer/file-upload.js
+<<< @/blog/snippets/puppeteer/file-upload.js{24-27}
 :::
 
 ::: tab Playwright
-<<< @/blog/snippets/playwright/file-upload.js
+<<< @/blog/snippets/playwright/file-upload.js{18-21}
 :::
 ::::
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
-```shell script
+```sh
 USER_EMAIL=user@email.com USER_PASSWORD=supersecure1 FILE_PATH=file.jpg node file-upload.js
 ```
 :::
 ::: tab Windows
-```shell script
+```sh
 SET USER_EMAIL=user@email.com
 SET USER_PASSWORD=supersecure1
 SET FILE_PATH=file.jpg
