@@ -7,7 +7,7 @@ tags:
   - basics
 ---
 
-Every useful script that we will write will almost certainly do two key things:
+Every useful script that we will write will almost certainly do three key things:
 1. Navigating to some web page
 2. Waiting for something
 3. Possibly getting a timeout 😐
@@ -92,12 +92,12 @@ node basic-browser-waiting.js
 ::::
 
 
-This works exactly the same for the `page.waitForXpath()` function is you are using Xpath selectors instead of CSS selectors.
+This works exactly the same for the `page.waitForXpath()` function is you are using XPath selectors instead of CSS selectors.
 
 **page.waitForNavigation()**
 
 In your scripts you can click on a link that triggers a navigation to a new page. You can use Puppeteer's `page.waitForNavigation()` 
-method here to explicitly wait for this event to happen and then continue your script. The excepted notation in Puppeteer's
+method here to explicitly wait for this event to happen and then continue your script. The accepted notation in Puppeteer's
 case is by using the `Promise.all()` method to wait for the click to happen and the navigation to happen before continuing.
 
 ```js
@@ -111,7 +111,7 @@ Interestingly, Playwright offers pretty much the same API for waiting on events 
 of the wait states under the hood. 
 
 ::: tip
-Playwright handles a lot of the common waiting scenario's using its built in "auto waiting". Depending on your use case it
+Playwright handles a lot of the common waiting scenario's using its built-in "auto waiting". Depending on your use case, it
 might serve all your needs
 :::
 
@@ -152,7 +152,7 @@ Playwright has done away with the distinction between `networkidle0` and `networ
 
 Both options 2a and 2b are passed using the `waitUntil` property, e.g. `page.waitForNavigation({ waitUntil: 'networkidle2' })`
 
-Which of these options is useful to you depends:
+Which of these options is useful to you depends on your situation:
 
 - Does your SPA need to be fully rendered and finish all XHR calls? Go with `load`
 - You server render and load in some non-crucial element in a lazy fashion? go for one of the `networkidle` variant.

@@ -4,6 +4,6 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch()
   const page = await browser.newPage()
   await page.goto('https://danube-webshop.herokuapp.com')
-  await page.click('#app > .topbar > .account-buttons > #cart')
+  await page.click('#cart')
   await browser.close()
 })()
