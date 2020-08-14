@@ -13,6 +13,7 @@
   "license": "CC-BY-SA-4.0",
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.9.2",
+    "@vuepress/plugin-google-analytics": "^1.5.3",
     "@vuepress/plugin-medium-zoom": "1.0.0",
     "@vuepress/plugin-nprogress": "1.0.0",
     "@vuepress/plugin-pwa": "1.0.0",

@@ -109,6 +109,9 @@ module.exports = {
     }],
     ['vuepress-plugin-container', {
       type: 'warning'
+    }],
+    ['@vuepress/google-analytics', {
+      ga: 'UA-110523681-5'
     }]
   ],
   themeConfig,
