@@ -362,6 +362,12 @@ export default {
   .home {
     &__top {
       padding: 0 10px;
+      h1 {
+        span {
+          display: inline-block;
+          padding-bottom: 15px;
+        }
+      }
     }
     &__posts {
       display: block;
