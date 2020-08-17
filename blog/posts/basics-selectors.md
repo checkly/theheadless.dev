@@ -45,16 +45,20 @@ Avoid this kind of selector *whenever possible:*
 
 ## Examples of (potentially) good selectors
 
-The following *might* be good selectors:
+The following *might*\* be good selectors:
 
 1. `#elementId`
     - concise
     - unique, as long as the page contains [valid HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
-    - potentially stable
+    - generally stable
 2. `a[data-something=value]`
     - concise
     - unique, as long as `value` is
-    - potentially stable
+    - potentially stable, as long as `value` does not change very often
+3. `#overlay.close-button`
+    - concise
+    - unique, as long as only one element has class `.close-button`
+    - potentially stable, as long as `.close-button` does not change very often
 
 ## Further reading
 1. [W3C CSS spec](https://www.w3.org/TR/CSS21/selector.html%23id-selectors) for CSS selectors. 
