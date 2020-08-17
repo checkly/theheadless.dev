@@ -1,8 +1,12 @@
 ---
 title: Clicking and typing
 date: 2020-06-15
-author: Giovanni Rago
-githubUser: ragog
+author: 
+  - Giovanni Rago
+  - Tim Nolet
+githubUser:
+  - ragog
+  - tnolet
 tags: 
   - basics
 ---

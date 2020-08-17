@@ -1,19 +1,37 @@
 <template>
   <div class="post-meta-wrapper">
     <div
-      v-if="author"
+      v-if="author && Array.isArray(author)"
+      class="post-meta post-author"
+    >
+      <div
+        v-if="contributors"
+        itemprop="publisher author"
+        itemtype="http://schema.org/Person"
+        itemscope
+      >
+        <img
+          v-for="contributor in contributors"
+          :key="contributor.name"
+          class="post-githubUser"
+          :src="'https://github.com/' + contributor.image + '.png?size=100'"
+          :alt="contributor.name"
+          v-tooltip="{ content: contributor.name, classes: 'tooltip', placement: 'top' }"
+        >
+      </div>
+    </div>
+    <div
+      v-else
       class="post-meta post-author"
       itemprop="publisher author"
       itemtype="http://schema.org/Person"
       itemscope
     >
       <img
-        class="post-githubUser"
-        :src="'https://github.com/' + this.githubUser + '.png?size=100'"
-        :alt="this.githubUser"
-        v-if="this.githubUser"
+        class="post-githubUser single"
+        :src="'https://github.com/' + githubUser + '.png?size=100'"
+        :alt="githubUser"
       >
-      <UserIcon v-else />
       <span itemprop="name">{{ author }}</span>
     </div>
 
@@ -47,9 +65,13 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import { VTooltip } from 'v-tooltip'
 import dayjs from 'dayjs'
 import { UserIcon, ClockIcon, TagIcon } from 'vue-feather-icons'
 import PostTag from './PostTag.vue'
+
+Vue.directive('tooltip', VTooltip)
 
 export default {
   name: 'PostMeta',
@@ -59,7 +81,7 @@ export default {
       type: [Array, String]
     },
     author: {
-      type: String
+      type: [Array, String]
     },
     date: {
       type: String
@@ -68,7 +90,7 @@ export default {
       type: String
     },
     githubUser: {
-      type: String
+      type: [Array, String]
     }
   },
   computed: {
@@ -80,6 +102,12 @@ export default {
     resolvedTags () {
       if (!this.tags || Array.isArray(this.tags)) return this.tags
       return [this.tags]
+    },
+    contributors () {
+      return this.author.map((author, index) => ({
+        image: this.githubUser[index] || '',
+        name: author
+      }))
     }
   }
 }
@@ -117,15 +145,58 @@ export default {
     display flex
     align-items center
 
-  .post-date
+  .post-date,
+  .post-tag
     color $grayLight
 
   .post-githubUser
     border-radius 9999px
     width 30px
-    margin-right .5rem
+    margin-left -8px
+    border 2px solid #fff
+    box-sizing border-box
+    position relative
+    &.single {
+      margin-right 5px
+    }
+    &:hover:not(.single) {
+      border-color $accentColor
+    }
+    &:first-child
+      margin-left 0
+      z-index 3
 
 @media (max-width: $MQMobile)
   .post-tag
     display flex
+
+.tooltip
+  border 2px solid $accentColor
+  border-radius 5px
+  padding 3px 6px
+  background-color #fff
+  font-size 14px
+  margin-bottom 3px
+
+.tooltip-arrow
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  margin: 5px;
+  border-color: $accentColor;
+  z-index: 1;
+
+.tooltip[x-placement^="top"]
+  margin-bottom: 5px;
+
+.tooltip[x-placement^="top"] .tooltip-arrow
+  border-width: 5px 5px 0 5px;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent !important;
+  bottom: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
 </style>
