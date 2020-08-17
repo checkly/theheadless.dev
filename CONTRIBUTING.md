@@ -16,7 +16,7 @@ If you have found a spelling mistake, missing info, or anything that you feel is
 We welcome new articles on a range of topics surrounding headless browser frameworks and more specifically Puppeteer and Playwright.
 Articles should cover any topic related to practical, day-to-day usage of these frameworks. Here are our guidelines
 
-- Submit articles with a PR on the [headless.dev repo](https://github.com/checkly/theheadless.dev)
+- Submit articles with a PR on the [theheadless.dev repo](https://github.com/checkly/theheadless.dev)
 - Write articles in markdown and can use the [Markdown extensions provided by Vue press](https://vuepress.vuejs.org/guide/markdown.html)
 - Add articles to the `posts` directory as markdown files 
 - Add code examples to the `snippet` directory as Javascript files and inserted into markdown code blocks using the `<< @snippet` syntax 
