@@ -56,57 +56,13 @@
         </p>
 
         <div class="ui-post-meta-wrapper">
-          <div class="ui-post-meta-wrapper-meta">
-            <div
-              v-if="page.frontmatter.author"
-              class="ui-post-meta ui-post-author"
-              itemprop="publisher author"
-              itemtype="http://schema.org/Person"
-              itemscope
-            >
-              <img
-                class="ui-post-githubUser"
-                :src="'https://github.com/' + page.frontmatter.githubUser + '.png?size=100'"
-                :alt="page.frontmatter.githubUser"
-                v-if="page.frontmatter.githubUser"
-              >
-              <UserIcon v-else />
-              <span itemprop="name">{{ page.frontmatter.author }}</span>
-              <span
-                v-if="page.frontmatter.location"
-                itemprop="address"
-              >
-                &nbsp; in {{ page.frontmatter.location }}
-              </span>
-            </div>
-
-            <div
-              v-if="page.frontmatter.date"
-              class="ui-post-meta ui-post-date"
-            >
-              <ClockIcon />
-              <time
-                pubdate
-                itemprop="datePublished"
-                :datetime="page.frontmatter.date"
-              >
-                {{ resolvePostDate(page.frontmatter.date) }}
-              </time>
-            </div>
-
-            <div
-              v-if="page.frontmatter.tags"
-              class="ui-post-meta ui-post-tag"
-              itemprop="keywords"
-            >
-              <TagIcon />
-              <PostTag
-                v-for="tag in resolvePostTags(page.frontmatter.tags)"
-                :key="tag"
-                :tag="tag"
-              />
-            </div>
-          </div>
+          <PostMeta
+            :tags="page.frontmatter.tags"
+            :author="page.frontmatter.author"
+            :date="page.frontmatter.date"
+            :location="page.frontmatter.location"
+            :github-user="page.frontmatter.githubUser"
+          />
 
           <NavLink
             :link="page.path"
@@ -133,9 +89,10 @@ import {
   Pagination
 } from '@vuepress/plugin-blog/lib/client/components'
 import PostTag from '../components/PostTag'
+import PostMeta from '../components/PostMeta'
 
 export default {
-  components: { UserIcon, ClockIcon, TagIcon, ArrowRightIcon, Pagination, PostTag },
+  components: { UserIcon, ClockIcon, TagIcon, ArrowRightIcon, Pagination, PostTag, PostMeta },
 
   props: ['sidebarItems'],
 

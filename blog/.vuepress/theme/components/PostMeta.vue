@@ -155,6 +155,9 @@ export default {
     border 2px solid #fff
     box-sizing border-box
     position relative
+    &.single {
+      margin-right 5px
+    }
     &:hover:not(.single) {
       border-color $accentColor
     }

@@ -55,12 +55,16 @@
           </div>
           <p>{{ page.summary }}</p>
           <div class="home__posts__post__author">
-            <img
+            <PostMeta
+              :author="page.frontmatter.author"
+              :github-user="page.frontmatter.githubUser"
+            />
+            <!-- <img
               :src="'https://github.com/' + page.frontmatter.githubUser + '.png?size=100'"
               :alt="page.frontmatter.githubUser"
               v-if="page.frontmatter.githubUser"
             >
-            {{ page.frontmatter.author }}
+            {{ page.frontmatter.author }} -->
           </div>
         </router-link>
       </div>
@@ -107,8 +111,10 @@ import SimpleNewsletter from 'vuepress-plugin-mailchimp/src/components/SimpleNew
 import NavLink from './NavLink.vue'
 import Icon from './Icon.vue'
 
+import PostMeta from './PostMeta'
+
 export default {
-  components: { NavLink, Icon, SimpleNewsletter },
+  components: { NavLink, Icon, SimpleNewsletter, PostMeta },
 
   computed: {
     data () {
@@ -280,10 +286,8 @@ export default {
         color: #8492A6;
         margin-top: 20px;
         img {
-          border-radius: 50%;
           width: 32px;
           height: 32px;
-          margin-right: 10px;
         }
       }
     }
