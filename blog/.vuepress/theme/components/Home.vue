@@ -59,12 +59,6 @@
               :author="page.frontmatter.author"
               :github-user="page.frontmatter.githubUser"
             />
-            <!-- <img
-              :src="'https://github.com/' + page.frontmatter.githubUser + '.png?size=100'"
-              :alt="page.frontmatter.githubUser"
-              v-if="page.frontmatter.githubUser"
-            >
-            {{ page.frontmatter.author }} -->
           </div>
         </router-link>
       </div>
