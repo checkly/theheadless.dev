@@ -375,6 +375,9 @@ export default {
     }
     &__subscribe {
       padding: 40px 20px;
+      .button {
+        font-size: 16px;
+      }
     }
   }
 }
