@@ -98,17 +98,18 @@
 
       <small class="home__subscribe__spam">We never spam.</small>
     </div>
+    <Contributors />
   </main>
 </template>
 
 <script>
 import SimpleNewsletter from 'vuepress-plugin-mailchimp/src/components/SimpleNewsletter'
-
 import NavLink from './NavLink.vue'
 import Icon from './Icon.vue'
+import Contributors from './Contributors'
 
 export default {
-  components: { NavLink, Icon, SimpleNewsletter },
+  components: { NavLink, Icon, SimpleNewsletter, Contributors },
 
   computed: {
     data () {
