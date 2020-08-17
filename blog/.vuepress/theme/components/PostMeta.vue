@@ -145,7 +145,8 @@ export default {
     display flex
     align-items center
 
-  .post-date
+  .post-date,
+  .post-tag
     color $grayLight
 
   .post-githubUser
