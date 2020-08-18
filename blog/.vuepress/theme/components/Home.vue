@@ -32,6 +32,16 @@
       >
         Dive into it
       </router-link>
+
+      <p class="home__top__learn">
+        Learn more about <a
+          href="https://github.com/puppeteer/puppeteer"
+          target="_blank"
+        >Puppeteer <Icon name="share" /></a> and <a
+          href="https://github.com/microsoft/playwright"
+          target="_blank"
+        >Playwright <Icon name="share" /></a>
+      </p>
     </div>
 
     <div class="home__recent">
@@ -207,6 +217,12 @@ export default {
     &__dive {
       width: 349px;
       height: 67px;
+    }
+    &__learn {
+      color: #697280;
+      a {
+        text-decoration: underline;
+      }
     }
   }
   &__recent {
