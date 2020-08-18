@@ -1,102 +1,104 @@
 <template>
-  <main
-    class="home"
-    aria-labelledby="main-title"
-  >
-    <div class="home__top">
-      <h1>Learn <span>Puppeteer & Playwright</span></h1>
-      <h2>{{ data.tagline || $description }}</h2>
+  <main aria-labelledby="main-title">
+    <div class="home">
+      <div class="home__top">
+        <h1>Learn <span>Puppeteer & Playwright</span></h1>
+        <h2>{{ data.tagline || $description }}</h2>
 
-      <div class="home__top__icons">
-        <div class="home__top__icons--left">
-          <span />
-          <span />
-          <span />
+        <div class="home__top__icons">
+          <div class="home__top__icons--left">
+            <span />
+            <span />
+            <span />
+          </div>
+          <span><img
+            src="/puppeteer.png"
+            width="40"
+          ></span>
+          <span class="playwright">🎭</span>
+          <div class="home__top__icons--right">
+            <span />
+            <span />
+            <span />
+          </div>
         </div>
-        <span><img
-          src="/puppeteer.png"
-          width="40"
-        ></span>
-        <span class="playwright">🎭</span>
-        <div class="home__top__icons--right">
-          <span />
-          <span />
-          <span />
-        </div>
-      </div>
 
-      <router-link
-        to="/posts"
-        class="button home__top__dive"
-        tag="button"
-      >
-        Dive into it
-      </router-link>
-    </div>
-
-    <div class="home__recent">
-      <div class="home__recent__icon">
-        <Icon
-          name="chevron-down"
-          :width="20"
-        />
-      </div>
-      <h3>Recent guides</h3>
-      <div class="home__posts">
         <router-link
-          v-for="page in recentPosts"
-          :key="page.path"
-          class="home__posts__post"
-          :to="page.path"
-          tag="div"
+          to="/posts"
+          class="button home__top__dive"
+          tag="button"
         >
-          <div class="home__posts__post__title">
-            {{ page.title }}
-          </div>
-          <p>{{ page.summary }}</p>
-          <div class="home__posts__post__author">
-            <PostMeta
-              :author="page.frontmatter.author"
-              :github-user="page.frontmatter.githubUser"
-            />
-          </div>
+          Dive into it
         </router-link>
       </div>
-      <div class="home__recent__learn">
-        <router-link to="/posts">
-          See learn all <Icon name="arrow-right" />
-        </router-link>
+
+      <div class="home__recent">
+        <div class="home__recent__icon">
+          <Icon
+            name="chevron-down"
+            :width="20"
+          />
+        </div>
+        <h3>Recent guides</h3>
+        <div class="home__posts">
+          <router-link
+            v-for="page in recentPosts"
+            :key="page.path"
+            class="home__posts__post"
+            :to="page.path"
+            tag="div"
+          >
+            <div class="home__posts__post__title">
+              {{ page.title }}
+            </div>
+            <p>{{ page.summary }}</p>
+            <div class="home__posts__post__author">
+              <PostMeta
+                :author="page.frontmatter.author"
+                :github-user="page.frontmatter.githubUser"
+              />
+            </div>
+          </router-link>
+        </div>
+        <div class="home__recent__learn">
+          <router-link to="/posts">
+            See learn all <Icon name="arrow-right" />
+          </router-link>
+        </div>
       </div>
     </div>
 
-    <div class="home__subscribe">
-      <SimpleNewsletter v-slot="{ slotProps }">
-        <h1>{{ slotProps.title }}</h1>
-        <p>{{ slotProps.content }}</p>
-        <input
-          class="my-input"
-          type="email"
-          name="email"
-          aria-label="Email"
-          placeholder="Your precious email"
-          v-model="slotProps.mail"
-          required
-          autocapitalize="off"
-          autocorrect="off"
-          data-cy="email"
-        >
-        <button
-          type="submit"
-          class="button"
-          data-cy="submit"
-        >
-          {{ slotProps.submitText }}
-        </button>
-      </SimpleNewsletter>
-
-      <small class="home__subscribe__spam">We never spam.</small>
-    </div>
     <Contributors />
+
+    <div class="home">
+      <div class="home__subscribe">
+        <SimpleNewsletter v-slot="{ slotProps }">
+          <h1>{{ slotProps.title }}</h1>
+          <p>{{ slotProps.content }}</p>
+          <input
+            class="my-input"
+            type="email"
+            name="email"
+            aria-label="Email"
+            placeholder="Your precious email"
+            v-model="slotProps.mail"
+            required
+            autocapitalize="off"
+            autocorrect="off"
+            data-cy="email"
+          >
+          <button
+            type="submit"
+            class="button"
+            data-cy="submit"
+          >
+            {{ slotProps.submitText }}
+          </button>
+        </SimpleNewsletter>
+
+        <small class="home__subscribe__spam">We never spam.</small>
+      </div>
+    </div>
   </main>
 </template>
 
