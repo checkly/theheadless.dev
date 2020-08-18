@@ -2,10 +2,10 @@
   <div class="contributors__wrap">
     <h3>Contributors</h3>
     <a
-      :href="contributor.url"
-      target="_blank"
       v-for="contributor in contributors"
       :key="contributor.login"
+      :href="contributor.html_url"
+      target="_blank"
     >
       <img
         class="contributors__avatar"
@@ -32,20 +32,12 @@ export default {
 </script>
 
 <style lang="stylus">
-  .contributors__wrap
-    max-width none
-    text-align center
-
-  .contributors__avatar
-    border-radius 9999px
-    width 30px
-    margin-right .5rem
-
-@media (max-width: $MQMobile)
-  .newsletter
-    .newsletter &__fields
-      display block
-
-    .newsletter &__input
-      margin-bottom 10px
+  .contributors
+    &__wrap
+      max-width none
+      text-align center
+    &__avatar
+      border-radius 9999px
+      width 30px
+      margin-right .5rem
 </style>
