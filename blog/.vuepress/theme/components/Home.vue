@@ -213,6 +213,8 @@ export default {
     }
   }
   &__recent {
+    padding-bottom: 50px;
+
     h3 {
       text-align: center;
       text-transform: uppercase;
@@ -295,7 +297,7 @@ export default {
     border-radius: 15px;
     text-align: center;
     padding: 40px 0;
-    margin-top: 100px;
+    margin-top: 120px;
     h1 {
       font-size: 42px;
       letter-spacing: 0.4px;
