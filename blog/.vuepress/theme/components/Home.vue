@@ -65,6 +65,16 @@
             See learn all <Icon name="arrow-right" />
           </router-link>
         </div>
+
+        <p class="home__recent__whatis">
+          What is <a
+            href="https://github.com/puppeteer/puppeteer"
+            target="_blank"
+          >Puppeteer <Icon name="share" /></a> and <a
+            href="https://github.com/microsoft/playwright"
+            target="_blank"
+          >Playwright <Icon name="share" /></a>?
+        </p>
       </div>
     </div>
 
@@ -249,6 +259,14 @@ export default {
           left: 17px;
           top: -3px;
         }
+      }
+    }
+    &__whatis {
+      color: #697280;
+      text-align: center;
+      margin-top: 100px;
+      a {
+        text-decoration: underline;
       }
     }
   }
