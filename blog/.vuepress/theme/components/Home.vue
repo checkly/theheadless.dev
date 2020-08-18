@@ -55,12 +55,10 @@
           </div>
           <p>{{ page.summary }}</p>
           <div class="home__posts__post__author">
-            <img
-              :src="'https://github.com/' + page.frontmatter.githubUser + '.png?size=100'"
-              :alt="page.frontmatter.githubUser"
-              v-if="page.frontmatter.githubUser"
-            >
-            {{ page.frontmatter.author }}
+            <PostMeta
+              :author="page.frontmatter.author"
+              :github-user="page.frontmatter.githubUser"
+            />
           </div>
         </router-link>
       </div>
@@ -108,8 +106,10 @@ import NavLink from './NavLink.vue'
 import Icon from './Icon.vue'
 import Contributors from './Contributors'
 
+import PostMeta from './PostMeta'
+
 export default {
-  components: { NavLink, Icon, SimpleNewsletter, Contributors },
+  components: { NavLink, Icon, SimpleNewsletter, Contributors, PostMeta },
 
   computed: {
     data () {
@@ -281,10 +281,8 @@ export default {
         color: #8492A6;
         margin-top: 20px;
         img {
-          border-radius: 50%;
           width: 32px;
           height: 32px;
-          margin-right: 10px;
         }
       }
     }
@@ -378,6 +376,9 @@ export default {
     }
     &__subscribe {
       padding: 40px 20px;
+      .button {
+        font-size: 16px;
+      }
     }
   }
 }
