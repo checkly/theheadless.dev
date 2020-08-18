@@ -7,7 +7,7 @@ tags:
   - basics
 ---
 
-Headless browsers are fully capable of taking screenshots, which can be very useful in troubleshooting failures or faulty scripts. Through the use of additional libraries and tools, it is also possible to automate visual comparisons using 
+Headless browsers are fully capable of taking screenshots, which is very useful in troubleshooting failures or faulty scripts. Using additional libraries and tools, it is also possible to automate visual comparisons.
 
 ## Generating and saving screenshots
 
