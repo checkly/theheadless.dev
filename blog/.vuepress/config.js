@@ -11,7 +11,8 @@ const themeConfig = {
         ['/posts/basics-local-setup', 'Installation & setup'],
         ['/posts/basics-navigation', 'Navigating & waiting'],
         ['/posts/basics-selectors', 'Using selectors'],
-        ['/posts/basics-clicking-typing', 'Clicking & typing']
+        ['/posts/basics-clicking-typing', 'Clicking & typing'],
+        ['/posts/basics-taking-screenshots', 'Taking screenshots']
       ]
     }
   ],
