@@ -17,6 +17,8 @@ Users normally access most website functionality through clicks, keystrokes etc.
 
 ## Clicking 
 
+Clicking is the default way of selecting and activating elements on web pages, and will appear very often in most headless scripts.
+
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
 ```js
@@ -59,6 +61,8 @@ For the times when even the humble click fails, you can try the following altern
 
 ## Hovering
 
+A popular pattern among web pages is exposing additional information or functionality when the user hovers the mouse cursor over a specific item. Examples include, menus, previews and dialogs containing extra information on the item.
+
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
 ```js
@@ -96,6 +100,8 @@ const { chromium } = require('playwright');
 
 ## Focussing
 
+Focussing on specific UI elements allows the user to interact with them without clicks. It can also result in a proactive reaction from the webapp, such as displaying suggestions.
+
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
 ```js
@@ -132,6 +138,8 @@ const { chromium } = require('playwright');
 ::::
 
 ## Typing
+
+We can simulate typing on a real keyboard using `page.type()`:
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
@@ -175,6 +183,14 @@ Single key presses can also be executed. For example, to press the Enter key:
 Key presses can also be sent to a specific element:
 
 `await (await page.$('input[type="text"]')).press('Enter');`
+
+We can also hold down and release one or more keys, possibly combining them to use keyboard shortcuts:
+
+```js
+await page.keyboard.down('Control');
+await page.keyboard.press('V');
+await page.keyboard.up('Control');
+```
 
 You can run the above examples as follows:
 :::: tabs :options="{ useUrlFragment: false }"
