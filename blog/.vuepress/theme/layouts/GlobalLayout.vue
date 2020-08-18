@@ -178,7 +178,6 @@ export default {
     },
 
     addGoogleAnalytics () {
-      console.log('addGoogleAnalytics')
       /* global ga */
       if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
         (function (i, s, o, g, r, a, m) {
