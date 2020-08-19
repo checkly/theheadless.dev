@@ -2,6 +2,8 @@
 
 🖖 Hi, this is the repo with all content, code examples and the VuePress website that make up [theheadless.dev](https://theheadless.dev), a community driven knowledge base for learning headless browser automation with Puppeteer and Playwright.
 
+You can browse [all code examples in this folder](https://github.com/checkly/theheadless.dev/tree/master/blog/snippets), or contribute your own!
+
 ## Contribute
 
 We welcome new articles on Puppeteer, Playwright and any topic surrounding the practical application of modern headless browser
