@@ -93,7 +93,8 @@ export default {
   data () {
     return {
       isSidebarOpen: false,
-      cookieLawComponent: null
+      cookieLawComponent: null,
+      analyticsLoaded: false
     }
   },
 
@@ -106,6 +107,10 @@ export default {
     import('vue-cookie-law').then(module => {
       this.cookieLawComponent = module.default
     })
+
+    if (localStorage.getItem('cookie:accepted') === null) {
+      this.addGoogleAnalytics()
+    }
   },
 
   computed: {
@@ -185,7 +190,7 @@ export default {
 
     addGoogleAnalytics () {
       /* global ga */
-      if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
+      if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && !this.analyticsLoaded) {
         (function (i, s, o, g, r, a, m) {
           i.GoogleAnalyticsObject = r
           i[r] = i[r] || function () {
@@ -206,6 +211,8 @@ export default {
           ga('set', 'page', to.fullPath)
           ga('send', 'pageview')
         })
+
+        this.analyticsLoaded = true
       }
     }
   }
