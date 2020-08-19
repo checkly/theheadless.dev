@@ -41,7 +41,9 @@
     </main>
     <Footer />
 
-    <cookie-law
+    <component
+      v-if="cookieLawComponent"
+      :is="cookieLawComponent"
       theme="headless"
       @accept="addGoogleAnalytics()"
     >
@@ -65,7 +67,7 @@
           </button>
         </div>
       </div>
-    </cookie-law>
+    </component>
   </div>
 </template>
 
@@ -77,7 +79,6 @@ import MobileHeader from '@theme/components/MobileHeader.vue'
 import Footer from '@theme/components/Footer.vue'
 import Home from '@theme/components/Home.vue'
 import { resolveSidebarItems } from '../util'
-import CookieLaw from 'vue-cookie-law'
 
 export default {
   components: {
@@ -86,19 +87,24 @@ export default {
     Sidebar,
     MobileHeader,
     Footer,
-    Home,
-    CookieLaw
+    Home
   },
 
   data () {
     return {
-      isSidebarOpen: false
+      isSidebarOpen: false,
+      cookieLawComponent: null
     }
   },
 
   mounted () {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
+    })
+
+    // Load component dynamically because is not SSR supported
+    import('vue-cookie-law').then(module => {
+      this.cookieLawComponent = module.default
     })
   },
 
