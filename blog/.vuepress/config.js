@@ -116,6 +116,7 @@ module.exports = {
   head: [
     ['link', { rel: 'shortcut icon', href: '/favicon.png' }],
     ['meta', { property: 'og:image', content: shareImage }],
-    ['meta', { name: 'twitter:image', content: shareImage }]
+    ['meta', { name: 'twitter:image', content: shareImage }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }]
   ]
 }
