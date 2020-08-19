@@ -46,6 +46,7 @@
       :is="cookieLawComponent"
       theme="headless"
       @accept="addGoogleAnalytics()"
+      @decline="removeGoogleAnalytics()"
     >
       <div
         slot-scope="props"
@@ -214,6 +215,13 @@ export default {
 
         this.analyticsLoaded = true
       }
+    },
+
+    /**
+     * Mock window.ga when user decline to stop tracking the user
+     */
+    removeGoogleAnalytics () {
+      window.ga = () => {}
     }
   }
 }
