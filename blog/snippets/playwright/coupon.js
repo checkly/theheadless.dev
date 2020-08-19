@@ -14,7 +14,7 @@ const productsNumber = process.env.PRODUCTS_NUMBER;
     await page.click("#logo");
   }
 
-  await page.click("#cart-img");
+  await page.click("#cart");
 
   await page.waitForSelector("#total-price");
   const price = await page.$eval("#total-price", (e) => e.innerText);
