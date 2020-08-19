@@ -117,6 +117,8 @@ module.exports = {
     ['link', { rel: 'shortcut icon', href: '/favicon.png' }],
     ['meta', { property: 'og:image', content: shareImage }],
     ['meta', { name: 'twitter:image', content: shareImage }],
+    ['meta', { name: 'twitter:title', content: 'theheadless.dev - Learn Puppeteer & Playwright' }],
+    ['meta', { name: 'twitter:url', content: 'https://theheadless.dev' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }]
   ]
 }
