@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/posts/:post.html",
+      "destination": "/posts/:post"
+    }
+  ]
+}
