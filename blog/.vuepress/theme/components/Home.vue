@@ -30,19 +30,6 @@
         >
           Dive into it
         </router-link>
-
-        <div style="margin-top: 40px">
-          <a
-            href="https://www.producthunt.com/posts/theheadless-dev-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-theheadless-dev-2"
-            target="_blank"
-          ><img
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=237416&theme=light"
-            alt="theheadless.dev - In-depth Puppeteer and Playwright guides from the trenches | Product Hunt Embed"
-            style="width: 250px; height: 54px;"
-            width="250px"
-            height="54px"
-          ></a>
-        </div>
       </div>
 
       <div class="home__recent">
