@@ -4,9 +4,9 @@ const puppeteer = require("puppeteer");
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto("https://danube-webshop.herokuapp.com");
-  const titles = await page.$$eval(".preview-title", (nodes) =>
+  const categories = await page.$$eval("li a", (nodes) =>
     nodes.map((n) => n.innerText)
   );
-  console.log(titles);
+  console.log(categories);
   await browser.close();
 })();
