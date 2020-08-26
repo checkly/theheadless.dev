@@ -70,6 +70,8 @@ Scraping images from a page is also possible. For example, we can easily get the
 :::
 ::::
 
+We are using [axios](https://github.com/axios/axios) to make a `GET` request against the source URL of the image. The response body will contain the image itself, which can be written to a file using [fs](https://nodejs.org/api/fs.html).
+
 ## Generating JSON from scraping
 
 Once we start scraping more information, we might want to have it stored in a standard format for later use. Let's gather the title, author and price from each book that appears on the home page of our test site:
