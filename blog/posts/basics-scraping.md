@@ -1,6 +1,6 @@
 ---
 title: Scraping pages
-date: 2020-08-21
+date: 2020-08-26
 author: Giovanni Rago
 githubUser: ragog
 tags: 
