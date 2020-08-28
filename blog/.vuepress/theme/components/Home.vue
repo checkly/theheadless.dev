@@ -140,6 +140,9 @@ export default {
         .filter(page => {
           return page.id === 'post'
         })
+        .sort((a, b) => {
+          return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+        })
       return posts.slice(0, 6)
     }
   }
