@@ -178,6 +178,7 @@ export default {
   &__text {
     font-size: 14px;
     color: #8492A6;
+    line-height: 28px;
     img {
       vertical-align: middle;
     }
