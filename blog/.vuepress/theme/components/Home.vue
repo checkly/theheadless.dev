@@ -283,6 +283,8 @@ export default {
       padding: 20px;
       cursor: pointer;
       transition: border-color ease-in-out 300ms;
+      display: flex;
+      flex-direction: column;
       &:hover {
         border-color: #8492A6;
       }
@@ -301,7 +303,8 @@ export default {
         align-items: center;
         font-size: 14px;
         color: #8492A6;
-        margin-top: 20px;
+        padding-top: 20px;
+        margin-top: auto;
         img {
           width: 32px;
           height: 32px;
