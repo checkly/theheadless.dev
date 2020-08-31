@@ -24,18 +24,20 @@ We can approach this scenario in different ways. One possibility is to perform t
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-<<< @/blog/snippets/puppeteer/file-download.js
+<<< @/blog/snippets/puppeteer/file-download.js{29-34}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/file-download.js
+<<< @/blog/snippets/playwright/file-download.js{22-27}
 :::
 ::::
 
 We could also click the link directly and wait for the download event, then proceed with the comparison. Waiting for the download event is currently not supported by Puppeteer.
 
+Note that in this case, we need to enable downloads in the browser context before proceeding.
+
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Playwright
-<<< @/blog/snippets/playwright/file-download-alt.js
+<<< @/blog/snippets/playwright/file-download-alt.js{7}
 :::
 ::::
 
@@ -56,3 +58,11 @@ node file-download.js
 ::::
 
 ## Takeaways
+
+1. Use environment variables to inject secrets.
+2. Compare the expected file with the newly downloaded one.
+3. There is more than one way to download a file within our script.
+
+## Further reading
+
+1. [Playwright's](https://playwright.dev/#version=v1.3.0&path=docs%2Fapi.md&q=class-download) documentation on downloading files.
