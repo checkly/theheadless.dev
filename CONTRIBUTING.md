@@ -1,6 +1,6 @@
 # Contributing a guide or article to theheadless.dev
 
-Thanks contributing to The Headless Dev! 
+Thanks contributing to The Headless Dev!
 
 - [Reporting an Issue](#reporting-issues) - how to report typo's, bugs and other issues.
 - [Contributing Content](#contributing-content) - how to contribute an article
