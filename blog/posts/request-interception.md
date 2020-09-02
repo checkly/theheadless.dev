@@ -7,20 +7,31 @@ tags:
   - network
 ---
 
-When browsing the web, a series of HTTP requests and responses are exchanged between our browser and the pages we are visiting. There are scenarios in which it is useful to manipulate this traffic, instead of letting it happen as-is.
+When we browse the web, a series of HTTP requests and responses are exchanged between our browser and the pages we are visiting. There are scenarios in which it is useful to monitor or manipulate this traffic, instead of letting it happen as-is.
 
 ## Request interception
 
-There are cases when intercepting and modifying outgoing requests can be helpful. For example, when [scraping web pages](basics-scraping.md) we might want to block unnecessary elements from loading in order to speed up the procedure and lower bandwidth usage.
-
-In the following snippet we are going to abort all requests for images on our [test website](https://danube-webshop.herokuapp.com). We will identify them based off of their [`resourceType`](https://pptr.dev/#?product=Puppeteer&version=v5.2.1&show=api-httprequestresourcetype), while letting all other requests through without modification.
+Request interception enables us to observe which requests and responses are being exchanged as part of our script's execution. For example, this is how we could print them out when we load our [test website](https://danube-webshop.herokuapp.com):
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-<<< @/blog/snippets/puppeteer/request-interception.js{9-13}
+<<< @/blog/snippets/puppeteer/request-interception-read.js{9-18}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/request-interception.js{9-13}
+<<< @/blog/snippets/playwright/request-interception-read.js{9-12}
+:::
+::::
+
+We might want to intervene and filter the outgoing requests. For example, when [scraping web pages](basics-scraping.md), we might want to block unnecessary elements from loading in order to speed up the procedure and lower bandwidth usage.
+
+In the following snippet we are going to abort all requests for images on our test website. We will identify them based off of their [`resourceType`](https://pptr.dev/#?product=Puppeteer&version=v5.2.1&show=api-httprequestresourcetype), while letting all other requests through without modification.
+
+:::: tabs :options="{ useUrlFragment: false }"
+::: tab Puppeteer 
+<<< @/blog/snippets/puppeteer/request-interception-block.js{9-13}
+:::
+::: tab Playwright
+<<< @/blog/snippets/playwright/request-interception-block.js{9-13}
 :::
 ::::
 
@@ -42,7 +53,7 @@ Every time we load it, our test website is sending a request to its backend to f
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-<<< @/blog/snippets/puppeteer/response-interception.js
+<<< @/blog/snippets/puppeteer/response-interception.js{19-28}
 :::
 ::::
 

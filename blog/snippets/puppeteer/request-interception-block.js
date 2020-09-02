@@ -7,6 +7,7 @@ const puppeteer = require('puppeteer');
   await page.setViewport({ width: 1200, height: 800 })
 
   await page.setRequestInterception(true)
+
   page.on('request', (request) => {
     if (request.resourceType() === 'image') request.abort()
     else request.continue()

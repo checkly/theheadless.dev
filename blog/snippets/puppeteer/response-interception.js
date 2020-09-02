@@ -17,6 +17,7 @@ const mockResponseObject = [
   const page = await browser.newPage()
 
   await page.setRequestInterception(true)
+
   page.on('request', (request) => {
     if (request.url() === 'https://danube-webshop.herokuapp.com/api/books') {
       request.respond({
