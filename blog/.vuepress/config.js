@@ -66,7 +66,8 @@ const vuePressBlogConfig = {
     lengthPerPage: 5
   },
   feed: {
-    canonical_base: 'https://theheadless.dev'
+    canonical_base: 'https://theheadless.dev',
+    sort: entries => entries.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
   },
   sitemap: {
     hostname: 'https://theheadless.dev'
