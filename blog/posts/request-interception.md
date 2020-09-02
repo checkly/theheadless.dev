@@ -1,33 +1,44 @@
 ---
-title: Intercepting requests and responses
+title: Intercepting requests
 date: 2020-09-08
 author: Giovanni Rago
 githubUser: ragog
 tags: 
-  - mocking
+  - network
 ---
 
-When browsing the web, a series of requests and responses are exchanged between our browser and the pages we are visiting. There are scenarios in which it is useful to manipulate this traffic, instead of letting it happen as-is.
-
-1. When [scraping web pages](basics-scraping.md), blocking unnecessary elements from loading in order to speed up the procedure and lower bandwidth usage
-2. When we need to isolate software components from their dependencies for testing purposes. This is known as _mocking_.
+When browsing the web, a series of HTTP requests and responses are exchanged between our browser and the pages we are visiting. There are scenarios in which it is useful to manipulate this traffic, instead of letting it happen as-is.
 
 ## Request interception
 
-There are cases when intercepting and modifying outgoing requests can be helpful. For example, when scraping web pages we might want to block unnecessary elements from loading in order to speed up the procedure and lower bandwidth usage.
+There are cases when intercepting and modifying outgoing requests can be helpful. For example, when [scraping web pages](basics-scraping.md) we might want to block unnecessary elements from loading in order to speed up the procedure and lower bandwidth usage.
+
+In the following snippet we are going to abort all requests for images on our [test website](https://danube-webshop.herokuapp.com). We will identify them based off of their [`resourceType`](https://pptr.dev/#?product=Puppeteer&version=v5.2.1&show=api-httprequestresourcetype), while letting all other requests through without modification.
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
-<<< @/blog/snippets/puppeteer/request-interception-block.js
+<<< @/blog/snippets/puppeteer/request-interception.js{9-13}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/request-interception-block.js
+<<< @/blog/snippets/playwright/request-interception.js{9-13}
 :::
 ::::
 
+ As a result, you will see the website logo not being loaded.
+
+ ![test site without images](/request-interception-image.png)
+
+ Similarly, switching the `resourceType` to `stylesheet` would result in the target website loading without any CSS styling.
+
+ ![test site without css](/request-interception-css.png)
+
 ## Response interception
 
-Not available in Playwright at the moment.
+Isolating one or more software components from their dependencies makes them easier to test. We can do so by substituting interactions with such dependencies with simulated, simplified ones. This is also known as _stubbing_. 
+
+Puppeteer makes it easy for us, as for every request we can intercept we also can stub a response. This functionality is [not yet available in Playwright](https://github.com/microsoft/playwright/issues/1774).
+
+Every time we load it, our test website is sending a request to its backend to fetch a list of best selling books. For our example, we are going to intercept this response and modify it to return a single book we define on the fly.
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
@@ -35,22 +46,30 @@ Not available in Playwright at the moment.
 :::
 ::::
 
+Here is what the homepage will look like with our stubbed response:
+
+![test site with stubbed response](/response-interception.png)
+
 Run the above examples as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
 ```sh
-USER_EMAIL=user@email.com USER_PASSWORD=supersecure1 node request-interception-block.js
+node request-interception.js
 ```
 :::
 ::: tab Windows
 ```sh
-SET USER_EMAIL=user@email.com
-SET USER_PASSWORD=supersecure1
-node request-interception-block.js
+node request-interception.js
 ```
 :::
 ::::
 
 ## Takeaways
 
+1. Puppeteer and Playwright give us control over outgoing HTTP requests.
+2. With Puppeteer we can easily stub HTTP responses. 
+
 ## Further reading
+
+1. Official documentation on this topic from [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v5.2.1&show=api-class-httprequest) and [Playwright](https://playwright.dev/#version=v1.3.0&path=docs%2Fnetwork.md&q=handle-requests).
+2. [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html) by Martin Fowler.
