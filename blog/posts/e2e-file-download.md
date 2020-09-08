@@ -1,6 +1,6 @@
 ---
-title: E2E Invoice Download
-date: 2020-08-31
+title: E2E File Download
+date: 2020-09-09
 author: Giovanni Rago
 githubUser: ragog
 tags: 
@@ -31,7 +31,7 @@ We can approach this scenario in different ways. One possibility is to perform t
 :::
 ::::
 
-We could also click the link directly and wait for the download event, then proceed with the comparison. Waiting for the download event is currently not supported by Puppeteer.
+We could also click the link directly and wait for the download event, then proceed with the comparison. Waiting for the download event is currently supported by Playwright, but not  by Puppeteer.
 
 Note that in this case, we need to enable downloads in the browser context before proceeding.
 
