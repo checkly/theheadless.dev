@@ -1,0 +1,52 @@
+# Headless code examples
+
+This directory contains example code snippets used in [theheadless.dev](https://theheadless.dev).
+
+## Playwright
+
+- [basic-browser-navigation.js](./playwright/basic-browser-navigation.js)
+- [basic-browser-waiting.js](./playwright/basic-browser-waiting.js)
+- [basic-click-type.js](./playwright/basic-click-type.js)
+- [basic-get-data-json.js](./playwright/basic-get-data-json.js)
+- [basic-get-href-handle.js](./playwright/basic-get-href-handle.js)
+- [basic-get-href-value.js](./playwright/basic-get-href-value.js)
+- [basic-get-image.js](./playwright/basic-get-image.js)
+- [basic-get-text-values.js](./playwright/basic-get-text-values.js)
+- [basic-navigation.js](./playwright/basic-navigation.js)
+- [basic-screenshot-clipped.js](./playwright/basic-screenshot-clipped.js)
+- [basic-screenshot.js](./playwright/basic-screenshot.js)
+- [checkout.js](./playwright/checkout.js)
+- [coupon.js](./playwright/coupon.js)
+- [file-upload.js](./playwright/file-upload..js)
+- [google-login.js](./playwright/google-login.js)
+- [login.js](./playwright/loginj.js)
+- [mslive-login.js](./playwright/mslive-login.js)
+- [request-interception-block.js](./playwright/request-interception-block.js)
+- [request-interception-read.js](./playwright/request-interception-read.js)
+- [search.js](./playwright/search.js)
+- [signup.js](./playwright/signup.js)
+
+## Puppeteer
+
+- [basic-browser-navigation.js](./puppeteer/basic-browser-navigation.js)
+- [basic-browser-waiting.js](./puppeteer/basic-browser-waiting.js)
+- [basic-click-type.js](./puppeteer/basic-click-type.js)
+- [basic-get-data-json.js](./puppeteer/basic-get-data-json.js)
+- [basic-get-href-handle.js](./puppeteer/basic-get-href-handle.js)
+- [basic-get-href-value.js](./puppeteer/basic-get-href-value.js)
+- [basic-get-image.js](./puppeteer/basic-get-image.js)
+- [basic-get-text-values.js](./puppeteer/basic-get-text-values.js)
+- [basic-navigation.js](./puppeteer/basic-navigation.js)
+- [basic-screenshot-clipped.js](./puppeteer/basic-screenshot-clipped.js)
+- [basic-screenshot.js](./puppeteer/basic-screenshot.js)
+- [checkout.js](./puppeteer/checkout.js)
+- [coupon.js](./puppeteer/coupon.js)
+- [file-upload.js](./puppeteer/file-upload.js)
+- [google-login.js](./puppeteer/google-login.js)
+- [login.js](./puppeteer/login.js)
+- [mslive-login.js](./puppeteer/mslive-login.js)
+- [request-interception-block.js](./puppeteer/request-interception-block.js)
+- [request-interception-read.js](./puppeteer/request-interception-read.js)
+- [response-interception.js](./puppeteer/response-interception.js)
+- [search.js](./puppeteer/search.js)
+- [signup.js](./puppeteer/signup.js)
