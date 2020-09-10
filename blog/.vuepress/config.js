@@ -122,5 +122,10 @@ module.exports = {
     ['meta', { name: 'twitter:title', content: 'theheadless.dev - Learn Puppeteer & Playwright' }],
     ['meta', { name: 'twitter:url', content: 'https://theheadless.dev' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }]
+  ],
+  patterns: [
+    '**/*.md',
+    '**/*.vue',
+    '!snippets/README.md'
   ]
 }
