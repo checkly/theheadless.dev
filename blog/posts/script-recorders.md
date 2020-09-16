@@ -1,6 +1,6 @@
 ---
 title: Using script recorders
-date: 2020-09-03
+date: 2020-09-16
 author: Hannes Lenke
 githubUser: hlenke
 tags: 
