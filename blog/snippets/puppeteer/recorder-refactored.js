@@ -11,10 +11,8 @@ const puppeteer = require('puppeteer');
 
   await navigationPromise
 
-  await page.waitForSelector('input')
   await page.click('input')
 
-  await page.waitForSelector('#button-search')
   await page.click('#button-search')
 
   await page.waitForSelector('.preview:nth-child(1)')
