@@ -12,9 +12,9 @@ In the last few years, as web applications increased in [complexity and size](ht
 
 ## Why performance matters
 
-We must keep in mind that it is the end-user's own perception that ultimately determines what we call User Experience. The time it takes for a service to become usable, as well as its general responsiveness, bear a lot of weight on this perception. Helpful features, great design and other awesome characteristics all become irrelevant when an online service is slow enough to motivate users to navigate away. 
+We must keep in mind that it is the end-user's own perception that ultimately determines what we call User Experience. The time it takes for a service to become usable, as well as its general responsiveness, bear a lot of weight on this perception. Helpful features, great design and other awesome characteristics all become irrelevant when an online service is so slow that users navigate away. 
 
-In other words: you can build the best web application in the world, but be mindful that each user will have a specific amount of time they are willing to invest in your service to solve their problems. Go over that amount, and you risk losing them to a different, more performant solution. This is likely even truer for new users, who haven't yet been given proof of the quality of your service, and are essentially investing their time up-front, hoping for a return.
+You can build the best web application in the world, but be mindful that each user will have a specific amount of time they are willing to invest in your service to solve their problems. Go over that amount, and you risk losing them to a different, more performant solution. This is likely even truer for new users, who haven't yet been given proof of the quality of your service, and are essentially investing their time up-front, hoping for a return.
 
 ### A competitive differentiator
 
@@ -59,7 +59,13 @@ The [Navigation Timing](https://www.w3.org/TR/navigation-timing/) and the [Resou
 
 ### Additional performance libraries
 
-(example: programmatic lighthouse run)
+:::: tabs :options="{ useUrlFragment: false }"
+::: tab Puppeteer 
+<<< @/blog/snippets/puppeteer/basic-performance-lighthouse.js
+:::
+::::
+
+(example: programmatic [lighthouse](https://github.com/GoogleChrome/lighthouse/blob/HEAD/docs/readme.md#using-programmatically) run)
 
 ## Further reading
 1. [MDN Web Performance docs](https://developer.mozilla.org/en-US/docs/Web/Performance)
