@@ -8,9 +8,9 @@ tags:
   - performance
 ---
 
-Over the course of recent years, the need for fast, responsive applications has been precipitated by the fact that web access has largely shifted away from faster and better connected desktop machines to less powerful, slower mobile devices. 
+Over the course of recent years, the need for fast, responsive applications has been precipitated by the fact that web access has [largely shifted away](https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/worldwide/2019) from faster and better connected desktop machines to less powerful, slower mobile devices. 
 
-Still, web applications have been increasing in [complexity and size](https://httparchive.org/reports/page-weight), with rising load times. It is therefore clear why the topic of webpage performance is likely more popular today than it ever was.
+Still, web applications have been increasing in [complexity and size](https://httparchive.org/reports/page-weight), with rising load times. It is therefore clear why the topic of webpage performance is more popular today than it likely ever was.
 
 This article aims at giving a practical introduction to the whys and hows of web performance, without getting lost in the depth or breadth of this massive topic.
 
@@ -18,17 +18,17 @@ This article aims at giving a practical introduction to the whys and hows of web
 
 ## Why performance matters
 
-We must keep in mind that it is the end-user's own perception that ultimately determines what we call _user experience_. The time it takes for a service to become usable, as well as its general responsiveness, bear a lot of weight on this perception. Helpful features, great design and other awesome characteristics all become irrelevant when an online service is so slow that users navigate away. 
+We must keep in mind that it is the end-user's own perception that ultimately determines what we call _user experience_. The time it takes for a service to become usable, as well as its general responsiveness, bear a lot of weight on this perception. Helpful features, great design and other prominent characteristics all become irrelevant when an online service is so slow that users navigate away. 
 
-You can build the best web application in the world, but be mindful that each user will have a specific amount of time they are willing to invest in your service to solve their problems. Exceed that amount, and you risk losing them to a different, more performant solution. This is likely even truer for new users, who haven't yet been given proof of the quality of your service, and are essentially investing their time up-front, hoping for a return.
+You can build the best web application in the world, but be mindful that each user will have a specific amount of time they are willing to invest in your service to solve their problems. Exceed that amount, and you risk losing them to a different, more performant solution. This is even truer for new users, who haven't yet been given proof of the quality of your service, and are essentially investing their time up-front, hoping for a return.
 
 ### A competitive differentiator
 
 There is a brighter side to the topic: if low performance can sink an online platform, high performance can very well help it rise to the top. Speed and responsiveness can be a differentiating characteristic for a service, prompting users to choose it over the competition. Therefore an investment in this area will almost always pay off. Some notorious real-world examples from known businesses include:
 
 1. Pinterest decreasing wait time for their users, [increasing both traffic and conversions](https://medium.com/@Pinterest_Engineering/driving-user-growth-with-performance-improvements-cfc50dafadd7).
-2. Zalando applying small improvements in load time and fiding direct correlation with [increased revenue per session](https://engineering.zalando.com/posts/2018/06/loading-time-matters.html).
-3. The BBC finding out that every extra second that a page took to load led to 10% of [users leaving the page](https://www.creativebloq.com/features/how-the-bbc-builds-websites-that-scale).
+2. Zalando applying small improvements in load time and finding a direct correlation with [increased revenue per session](https://engineering.zalando.com/posts/2018/06/loading-time-matters.html).
+3. The BBC discovering that every extra second that a page took to load led to 10% of [users leaving the page](https://www.creativebloq.com/features/how-the-bbc-builds-websites-that-scale).
 
 ## Measuring performance
 
@@ -36,12 +36,12 @@ Given the importance of page performance, it is no coincidence that browsers exp
 
 1. _Real user monitoring_ to understand what performance actual end-users of your service are experiencing.
 2. _Synthetic monitoring_ to proactively gather intel on service performance, as well as to find issues before users stumble into them.
-3. _Performance testing_ to avoid releasing performance regression to production.
+3. _Performance testing_ to avoid releasing performance regression to production in the first place.
 4. _Regular audits_ to get an overview of your page's performance and suggestions on how to improve it, e.g. with tools such as [Google Lighthouse](https://developers.google.com/web/tools/lighthouse).
 
 ## Performance with headless tools
 
-As much as we should be striving to build performant applications, we should commit to monitoring and testing performance to enable continuous feedback and rapid intervention in case of degradation. Puppeteer and Playwright give us a great toolkit to address both synthetic monitoring and performance testing.
+As much as we should be striving to build performant applications, we should commit to monitoring and testing performance to enable continuous feedback and rapid intervention in case of degradation. Puppeteer and Playwright give us a great toolkit to power both synthetic monitoring and performance testing.
 
 1. Access to the Web Performance APIs, especially [PerformanceNavigationTiming](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming) and [PerformanceResourceTiming](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming).
 2. Whenever testing against Chromium, access to the Chrome DevTools Protocol for traffic inspection, network emulation and more.
@@ -94,7 +94,7 @@ The DevTools Protocol is quite extensive. We recommend exploring the [documentat
 
 ### Additional performance libraries
 
-Lighthouse can easily be used programmatically with Playwright and Puppeteer to gather values and scores for different metrics, like Time To Interactive (TTI):
+Lighthouse can easily be used programmatically with Playwright and Puppeteer to gather values and scores for different metrics, like [Time To Interactive (TTI)](https://web.dev/interactive/):
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
