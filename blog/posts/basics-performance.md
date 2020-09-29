@@ -37,7 +37,7 @@ Given the importance of page performance, it is no coincidence that browsers exp
 
 As much as we should be striving to build performant applications, we should commit to monitoring and testing performance to enable continuous feedback and rapid intervention in case of degradation. Puppeteer and Playwright give us a great toolkit to address both synthetic monitoring and performance testing.
 
-1. Access to the Web Performance APIs, especially [`PerformanceNavigationTiming`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming) and [PerformanceResourceTiming](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming).
+1. Access to the Web Performance APIs, especially [PerformanceNavigationTiming](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming) and [PerformanceResourceTiming](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming).
 2. Whenever testing against Chromium, access to the Chrome DevTools protocol for traffic inspection, network emulation and more.
 3. Easy interoperability with performance libraries from the Node.js ecosystem.
 
@@ -73,9 +73,18 @@ The Resource Timing API allows us to zoom in to single resources and get accurat
 
 The Chrome DevTools protocol offers many great performance tools for us to leverage together with Puppeteer and Playwright.
 
-(example 1: HAR file retrieval)
+One important example is network throttling, through which we can simulate the experience of users accessing our page with different network conditions.
 
-(example 2: network emulation)
+:::: tabs :options="{ useUrlFragment: false }"
+::: tab Puppeteer 
+<<< @/blog/snippets/puppeteer/basic-performance-emulation.js
+:::
+::: tab Playwright
+<<< @/blog/snippets/playwright/basic-performance-emulation.js
+:::
+::::
+
+The DevTools protocol is quite extensive. We recommend exploring the [documentation](https://chromedevtools.github.io/devtools-protocol/) and getting a comprehensive overview of its capabilities.
 
 ### Additional performance libraries
 
@@ -91,9 +100,8 @@ Lighthouse can easily be used programmatically with Playwright and Puppeteer to 
 ::::
 
 ## Further reading
-1. [MDN Web Performance docs](https://developer.mozilla.org/en-US/docs/Web/Performance)
-2. [Get Started with Google Lighthouse](https://developers.google.com/web/tools/lighthouse#get-started)
+1. The comprehensive [MDN Web Performance documentation](https://developer.mozilla.org/en-US/docs/Web/Performance)
+2. [web.dev's performance section](https://web.dev/learn/#performance)
 3. [Web Performance Recipes With Puppeteer](https://addyosmani.com/blog/puppeteer-recipes/) by Addy Osmani
-https://fdalvi.github.io/blog/2018-02-05-puppeteer-network-throttle/
-https://developer.mozilla.org/en-US/docs/Learn/Performance
-https://michaljanaszek.com/blog/test-website-performance-with-puppeteer/#navigationTimingAPI
+4. [Getting started with Chrome DevTools Protocol](https://github.com/aslushnikov/getting-started-with-cdp) by Andrey Lushnikov
+5. [Get Started with Google Lighthouse](https://developers.google.com/web/tools/lighthouse#get-started)
