@@ -1,5 +1,5 @@
 const chromeLauncher = require('chrome-launcher')
-const puppeteer = require('puppeteer')
+const { chromium } = require('playwright')
 const lighthouse = require('lighthouse')
 const request = require('request')
 const util = require('util');
@@ -9,7 +9,7 @@ const util = require('util');
 
   const resp = await util.promisify(request)(`http://localhost:${chrome.port}/json/version`)
   const { webSocketDebuggerUrl } = JSON.parse(resp.body)
-  const browser = await puppeteer.connect({ browserWSEndpoint: webSocketDebuggerUrl })
+  const browser = await chromium.connect({ wsEndpoint: webSocketDebuggerUrl })
 
   const { lhr } = await lighthouse('https://danube-webshop.herokuapp.com', { port: chrome.port }, null)
 
@@ -18,6 +18,6 @@ const util = require('util');
   console.log(`Time To Interactive - Score: ${lhr.audits.interactive.score}, 
 Value: ${lhr.audits.interactive.numericValue} ${lhr.audits.interactive.numericUnit}`)
 
-  await browser.disconnect()
+  await browser.close()
   await chrome.kill()
 })()

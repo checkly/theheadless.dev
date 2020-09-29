@@ -47,11 +47,31 @@ The [Navigation Timing](https://www.w3.org/TR/navigation-timing/) and the [Resou
 
 > Navigation timings are metrics measuring a browser's document navigation events. Resource timings are detailed network timing measurements regarding the loading of an application's resources. Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.
 
-(example 1: leverage navigation timing API through P&P script)
+We can use the Navigation Timing API to retrieve timestamps of key events in the page load timeline. 
 
-(example 2: leverage resource timing API through P&P scripts)
+:::: tabs :options="{ useUrlFragment: false }"
+::: tab Puppeteer 
+<<< @/blog/snippets/puppeteer/basic-performance-navigation.js
+:::
+::: tab Playwright
+<<< @/blog/snippets/playwright/basic-performance-navigation.js
+:::
+::::
+
+The Resource Timing API allows us to zoom in to single resources and get accurate information about how quickly they are being loaded.
+
+:::: tabs :options="{ useUrlFragment: false }"
+::: tab Puppeteer 
+<<< @/blog/snippets/puppeteer/basic-performance-resource.js
+:::
+::: tab Playwright
+<<< @/blog/snippets/playwright/basic-performance-resource.js
+:::
+::::
 
 ### Chrome DevTools for performance
+
+The Chrome DevTools protocol offers many great performance tools for us to leverage together with Puppeteer and Playwright.
 
 (example 1: HAR file retrieval)
 
@@ -59,13 +79,16 @@ The [Navigation Timing](https://www.w3.org/TR/navigation-timing/) and the [Resou
 
 ### Additional performance libraries
 
+Lighthouse can easily be used programmatically with Playwright and Puppeteer to gather metric values and scores.
+
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
 <<< @/blog/snippets/puppeteer/basic-performance-lighthouse.js
 :::
+::: tab Playwright
+<<< @/blog/snippets/playwright/basic-performance-lighthouse.js
+:::
 ::::
-
-(example: programmatic [lighthouse](https://github.com/GoogleChrome/lighthouse/blob/HEAD/docs/readme.md#using-programmatically) run)
 
 ## Further reading
 1. [MDN Web Performance docs](https://developer.mozilla.org/en-US/docs/Web/Performance)
@@ -73,3 +96,4 @@ The [Navigation Timing](https://www.w3.org/TR/navigation-timing/) and the [Resou
 3. [Web Performance Recipes With Puppeteer](https://addyosmani.com/blog/puppeteer-recipes/) by Addy Osmani
 https://fdalvi.github.io/blog/2018-02-05-puppeteer-network-throttle/
 https://developer.mozilla.org/en-US/docs/Learn/Performance
+https://michaljanaszek.com/blog/test-website-performance-with-puppeteer/#navigationTimingAPI
