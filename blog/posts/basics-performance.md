@@ -1,6 +1,6 @@
 ---
 title: Measuring page performance
-date: 2020-09-29
+date: 2020-09-30
 author: Giovanni Rago
 githubUser: ragog
 tags: 
@@ -8,17 +8,23 @@ tags:
   - performance
 ---
 
-In the last few years, as web applications increased in [complexity and size](https://httparchive.org/reports/page-weight), the topic of performance has become more and more prominent. Its importance has been compounded by the fact that web access has largely shifted away from faster and better connected desktop machines to less powerful, slower mobile devices.
+Over the course of recent years, the need for fast, responsive applications has been precipitated by the fact that web access has largely shifted away from faster and better connected desktop machines to less powerful, slower mobile devices. 
+
+Still, web applications have been increasing in [complexity and size](https://httparchive.org/reports/page-weight), with rising load times. It is therefore clear why the topic of webpage performance is likely more popular today than it ever was.
+
+This article aims at giving a practical introduction to the whys and hows of web performance, without getting lost in the depth or breadth of this massive topic.
+
+<!-- more -->
 
 ## Why performance matters
 
-We must keep in mind that it is the end-user's own perception that ultimately determines what we call User Experience. The time it takes for a service to become usable, as well as its general responsiveness, bear a lot of weight on this perception. Helpful features, great design and other awesome characteristics all become irrelevant when an online service is so slow that users navigate away. 
+We must keep in mind that it is the end-user's own perception that ultimately determines what we call _user experience_. The time it takes for a service to become usable, as well as its general responsiveness, bear a lot of weight on this perception. Helpful features, great design and other awesome characteristics all become irrelevant when an online service is so slow that users navigate away. 
 
-You can build the best web application in the world, but be mindful that each user will have a specific amount of time they are willing to invest in your service to solve their problems. Go over that amount, and you risk losing them to a different, more performant solution. This is likely even truer for new users, who haven't yet been given proof of the quality of your service, and are essentially investing their time up-front, hoping for a return.
+You can build the best web application in the world, but be mindful that each user will have a specific amount of time they are willing to invest in your service to solve their problems. Exceed that amount, and you risk losing them to a different, more performant solution. This is likely even truer for new users, who haven't yet been given proof of the quality of your service, and are essentially investing their time up-front, hoping for a return.
 
 ### A competitive differentiator
 
-There is a brighter side to the topic: if low performance can sink an online platform, high performance can very well help it rise to the top. Speed and responsiveness can be a differentiating characteristic for a service, prompting users to choose it over the competition. Therefore an investment in this area will often pay off. Some notorious real-world examples from known businesses include:
+There is a brighter side to the topic: if low performance can sink an online platform, high performance can very well help it rise to the top. Speed and responsiveness can be a differentiating characteristic for a service, prompting users to choose it over the competition. Therefore an investment in this area will almost always pay off. Some notorious real-world examples from known businesses include:
 
 1. Pinterest decreasing wait time for their users, [increasing both traffic and conversions](https://medium.com/@Pinterest_Engineering/driving-user-growth-with-performance-improvements-cfc50dafadd7).
 2. Zalando applying small improvements in load time and fiding direct correlation with [increased revenue per session](https://engineering.zalando.com/posts/2018/06/loading-time-matters.html).
@@ -38,7 +44,7 @@ Given the importance of page performance, it is no coincidence that browsers exp
 As much as we should be striving to build performant applications, we should commit to monitoring and testing performance to enable continuous feedback and rapid intervention in case of degradation. Puppeteer and Playwright give us a great toolkit to address both synthetic monitoring and performance testing.
 
 1. Access to the Web Performance APIs, especially [PerformanceNavigationTiming](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming) and [PerformanceResourceTiming](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming).
-2. Whenever testing against Chromium, access to the Chrome DevTools protocol for traffic inspection, network emulation and more.
+2. Whenever testing against Chromium, access to the Chrome DevTools Protocol for traffic inspection, network emulation and more.
 3. Easy interoperability with performance libraries from the Node.js ecosystem.
 
 ### Web Performance APIs
@@ -58,7 +64,7 @@ We can use the Navigation Timing API to retrieve timestamps of key events in the
 :::
 ::::
 
-The Resource Timing API allows us to zoom in to single resources and get accurate information about how quickly they are being loaded.
+The Resource Timing API allows us to zoom in to single resources and get accurate information about how quickly they are being loaded. For example, we could specifically look at our website's logo:
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
@@ -71,7 +77,7 @@ The Resource Timing API allows us to zoom in to single resources and get accurat
 
 ### Chrome DevTools for performance
 
-The Chrome DevTools protocol offers many great performance tools for us to leverage together with Puppeteer and Playwright.
+The Chrome DevTools Protocol offers many great performance tools for us to leverage together with Puppeteer and Playwright.
 
 One important example is network throttling, through which we can simulate the experience of users accessing our page with different network conditions.
 
@@ -84,11 +90,11 @@ One important example is network throttling, through which we can simulate the e
 :::
 ::::
 
-The DevTools protocol is quite extensive. We recommend exploring the [documentation](https://chromedevtools.github.io/devtools-protocol/) and getting a comprehensive overview of its capabilities.
+The DevTools Protocol is quite extensive. We recommend exploring the [documentation](https://chromedevtools.github.io/devtools-protocol/) and getting a comprehensive overview of its capabilities.
 
 ### Additional performance libraries
 
-Lighthouse can easily be used programmatically with Playwright and Puppeteer to gather metric values and scores.
+Lighthouse can easily be used programmatically with Playwright and Puppeteer to gather values and scores for different metrics, like Time To Interactive (TTI):
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
