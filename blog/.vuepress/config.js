@@ -13,7 +13,8 @@ const themeConfig = {
         ['/posts/basics-selectors', 'Using selectors'],
         ['/posts/basics-clicking-typing', 'Clicking & typing'],
         ['/posts/basics-scraping', 'Scraping pages'],
-        ['/posts/basics-taking-screenshots', 'Taking screenshots']
+        ['/posts/basics-taking-screenshots', 'Taking screenshots'],
+        ['/posts/basics-performance', 'Measuring performance']
       ]
     }
   ],
