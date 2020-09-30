@@ -8,9 +8,7 @@ tags:
   - performance
 ---
 
-Over the course of recent years, the need for fast, responsive applications has been precipitated by the fact that web access has [largely shifted away](https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/worldwide/2019) from faster and better connected desktop machines to less powerful, slower mobile devices. 
-
-Still, web applications have been increasing in [complexity and size](https://httparchive.org/reports/page-weight), with rising load times. It is therefore clear why the topic of webpage performance is more popular today than it likely ever was.
+The need for fast and responsive applications has never been greater because of the move from [desktop to mobile](https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/worldwide/2019). Still, web applications have been increasing in [complexity and size](https://httparchive.org/reports/page-weight), with rising load times. It is therefore clear why the topic of webpage performance is more popular today than it likely ever was.
 
 This article aims at giving a practical introduction to the whys and hows of web performance, without getting lost in the depth or breadth of this massive topic.
 
@@ -18,7 +16,7 @@ This article aims at giving a practical introduction to the whys and hows of web
 
 ## Why performance matters
 
-We must keep in mind that it is the end-user's own perception that ultimately determines what we call _user experience_. The time it takes for a service to become usable, as well as its general responsiveness, bear a lot of weight on this perception. Helpful features, great design and other prominent characteristics all become irrelevant when an online service is so slow that users navigate away. 
+The time it takes for a service to become usable, as well as its general responsiveness, bear a lot of weight on the user's perception of that service. Helpful features, great design and other prominent characteristics all become irrelevant when an online service is so slow that users navigate away. 
 
 You can build the best web application in the world, but be mindful that each user will have a specific amount of time they are willing to invest in your service to solve their problems. Exceed that amount, and you risk losing them to a different, more performant solution. This is even truer for new users, who haven't yet been given proof of the quality of your service, and are essentially investing their time up-front, hoping for a return.
 
