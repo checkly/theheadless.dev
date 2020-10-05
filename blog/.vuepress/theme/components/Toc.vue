@@ -170,7 +170,6 @@ export default {
       transition color 0.3s
       overflow hidden
       text-overflow ellipsis
-      white-space nowrap
 
     &.active
       a
