@@ -16,9 +16,9 @@
           width="80"
         ></a> and <a
           class="recorder"
-          href="https://github.com/checkly/puppeteer-recorder"
+          href="https://github.com/checkly/headless-recorder"
           target="_blank"
-        >Puppeteer Recorder</a>. We do API monitoring and synthetic monitoring using Puppeteer and very soon™ Playwright. We see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
+        >Headless Recorder</a>. We do API monitoring and synthetic monitoring using Puppeteer and Playwright. We see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
         Feel to contribute <a
           class="github"
           :href="'https://github.com/' + $site.themeConfig.docsRepo"
