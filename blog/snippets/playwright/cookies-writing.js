@@ -1,11 +1,18 @@
-const { chromium } = require('playwright');
+const { chromium } = require('playwright')
+const fs = require('fs');
 
 (async () => {
   const browser = await chromium.launch()
-  const page = await browser.newPage()
+  const context = await browser.newContext()
 
-  await page.setViewport({ width: 1280, height: 800 })
-  await page.goto('https://danube-webshop.herokuapp.com/')
+  const cookies = fs.readFileSync('cookies.json', 'utf8')
+
+  const deserializedCookies = JSON.parse(cookies)
+  await context.addCookies(deserializedCookies)
+
+  const page = await context.newPage()
+
+  await page.goto('https://github.com/ragog')
 
   await browser.close()
 })()

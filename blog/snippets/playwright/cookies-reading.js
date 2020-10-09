@@ -1,11 +1,26 @@
-const { chromium } = require('playwright');
+const { chromium } = require('playwright')
+const fs = require('fs');
 
 (async () => {
   const browser = await chromium.launch()
-  const page = await browser.newPage()
+  const context = await browser.newContext();
 
-  await page.setViewport({ width: 1280, height: 800 })
-  await page.goto('https://danube-webshop.herokuapp.com/')
+  const page = await context.newPage()
+
+  await page.goto('https://github.com/login')
+
+  await page.type('#login_field', process.env.GITHUB_USER)
+  await page.type('#password', process.env.GITHUB_PWD)
+
+  await page.waitForSelector('.js-cookie-consent-reject-all')
+  await page.click('.js-cookie-consent-reject-all')
+  await page.$eval('[name="commit"]', (elem) => elem.click())
+  await page.waitForNavigation()
+
+  const cookies = await context.cookies()
+  const cookieJson = JSON.stringify(cookies)
+
+  fs.writeFileSync('cookies.json', cookieJson)
 
   await browser.close()
 })()
