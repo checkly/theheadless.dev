@@ -10,8 +10,8 @@ const fs = require('fs');
   await page.type('#login_field', process.env.GITHUB_USER)
   await page.type('#password', process.env.GITHUB_PWD)
 
-  await page.waitForSelector('.js-cookie-consent-reject-all')
-  await page.click('.js-cookie-consent-reject-all')
+  await page.waitForSelector('.js-cookie-consent-reject')
+  await page.click('.js-cookie-consent-reject')
   await page.$eval('[name="commit"]', (elem) => elem.click())
   await page.waitForNavigation()
 

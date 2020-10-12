@@ -10,7 +10,7 @@ const fs = require('fs');
   const deserializedCookies = JSON.parse(cookies)
   await page.setCookie(...deserializedCookies)
 
-  await page.goto('https://github.com/ragog')
+  await page.goto(`https://github.com/${process.env.GITHUB_USER}`)
 
   await browser.close()
 })()

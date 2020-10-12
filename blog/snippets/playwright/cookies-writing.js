@@ -12,7 +12,7 @@ const fs = require('fs');
 
   const page = await context.newPage()
 
-  await page.goto('https://github.com/ragog')
+  await page.goto(`https://github.com/${process.env.GITHUB_USER}`)
 
   await browser.close()
 })()
