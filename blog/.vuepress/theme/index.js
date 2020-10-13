@@ -10,13 +10,7 @@ module.exports = themeConfig => {
       }
 
       if (themeConfig.summary) {
-        pageCtx.summary =
-          removeMd(
-            strippedContent
-              .trim()
-              .replace(/^#+\s+(.*)/, '')
-              .slice(0, themeConfig.summaryLength)
-          ) + ' ...'
+        pageCtx.summary = removeMd(strippedContent.trim()).slice(0, themeConfig.summaryLength) + '...'
         pageCtx.frontmatter.description = pageCtx.summary
       }
 
