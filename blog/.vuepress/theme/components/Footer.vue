@@ -11,6 +11,7 @@
         We are the folks behind <a
           href="https://checklyhq.com/?utm_source=headless-dev&utm_campaign=headless-dev"
           target="_blank"
+          rel="noopener"
         ><img
           src="/checkly.svg"
           width="80"
@@ -18,11 +19,13 @@
           class="recorder"
           href="https://github.com/checkly/headless-recorder"
           target="_blank"
+          rel="noopener noreferrer"
         >Headless Recorder</a>. We do API monitoring and synthetic monitoring using Puppeteer and Playwright. We see A LOT of headless browser workloads so we thought we’d share some of our learnings with the community.<br>
         Feel to contribute <a
           class="github"
           :href="'https://github.com/' + $site.themeConfig.docsRepo"
           target="_blank"
+          rel="noopener noreferrer"
         >by just creating PR on GitHub!</a>
 
         <ul

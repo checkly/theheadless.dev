@@ -3,6 +3,7 @@
     class="github"
     :href="'https://github.com/' + $site.themeConfig.docsRepo"
     target="_blank"
+    rel="noopener noreferrer"
   >
     <Icon
       name="logo-github"

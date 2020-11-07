@@ -118,6 +118,7 @@ module.exports = {
   themeConfig,
   head: [
     ['link', { rel: 'shortcut icon', href: '/favicon.png' }],
+    ['meta', { name: 'viewport', content: 'width=device-width', 'initial-scale': 1, 'maximum-scale': '1' }],
     ['meta', { property: 'og:image', content: shareImage }],
     ['meta', { name: 'twitter:image', content: shareImage }],
     ['meta', { name: 'twitter:title', content: 'theheadless.dev - Learn Puppeteer & Playwright' }],
