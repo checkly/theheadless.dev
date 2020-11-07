@@ -15,6 +15,7 @@
         ><img
           src="/checkly.svg"
           width="80"
+          alt="Checkly logo"
         ></a> and <a
           class="recorder"
           href="https://github.com/checkly/headless-recorder"
