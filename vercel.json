@@ -9,6 +9,6 @@
       "src": "/assets/(.*)",
       "headers": { "cache-control": "max-age=315360000, s-maxage=315360000" },
       "dest": "/assets/$1"
-    },
+    }
   ]
 }
