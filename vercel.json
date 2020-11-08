@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/posts/:post.html",
-      "destination": "/posts/:post"
+      "src": "/posts/(.*).html",
+      "dest": "/posts/$1"
     },
     {
       "src": "/assets/(.*)",
