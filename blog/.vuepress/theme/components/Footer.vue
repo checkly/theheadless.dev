@@ -166,6 +166,7 @@ export default {
   }
   &__container {
     max-width: 1150px;
+    padding: 0 0 0 240px;
     margin: 0 auto;
     display: flex;
   }
