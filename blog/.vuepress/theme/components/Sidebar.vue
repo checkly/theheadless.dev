@@ -68,6 +68,25 @@ export default {
       line-height 1.25rem
       font-size 1.1em
       padding 0.5rem 0 0.5rem 1.5rem
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $queenLighter;
+  }
   & > .sidebar-links
     padding 1.5rem 0 0 0
     & > li > a.sidebar-link
