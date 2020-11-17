@@ -166,6 +166,7 @@ export default {
   }
   &__container {
     max-width: 1150px;
+    padding: 0 0 0 240px;
     margin: 0 auto;
     display: flex;
   }
@@ -175,7 +176,7 @@ export default {
     letter-spacing: 0.4px;
     color: #FF4949;
     font-weight: bold;
-    min-width: 350px;
+    min-width: 270px;
     text-align: right;
     margin-right: 40px;
   }
