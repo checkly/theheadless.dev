@@ -12,10 +12,6 @@ const fs = require('fs');
 
   await page.emulateMediaType('screen')
 
-  await page.setViewport({
-    width: 1920,
-    height: 1080
-  })
   await page.goto('https://theheadless.dev/posts')
 
   await navigationPromise
