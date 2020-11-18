@@ -23,7 +23,7 @@ const fs = require('fs');
   await page.waitForSelector('.accept', { hidden: true })
 
   await page.pdf({
-    path: 'pdf.pdf',
+    path: 'hd-posts.pdf',
     displayHeaderFooter: true,
     headerTemplate: templateHeader,
     footerTemplate: templateFooter,
