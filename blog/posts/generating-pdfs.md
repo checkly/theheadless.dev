@@ -26,9 +26,7 @@ After loading a page, we use the `page.pdf()` command to convert it to a PDF.
 :::
 ::::
 
-::: tip
-We need to pass the `path` option to have the PDF file actually saved to disk.
-:::
+Note that we need to pass the `path` option to have the PDF file actually saved to disk.
 
 ::: warning
 This feature is currently only supported in Chromium headless in both Puppeteer and Playwright.
