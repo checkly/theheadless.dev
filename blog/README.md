@@ -4,7 +4,7 @@ actionText: Get Started →
 actionLink: /posts/
 meta:
   - name: description
-    content: "Tips, tricks and in-depth guides from the trenches"
+    content: "Puppeteer and Playwright headless automation tips, tricks and in-depth guides from the trenches"
   - name: keywords
-    content: super duper SEO
+    content: Puppeteer, Playwright, headless, headless automation
 ---
