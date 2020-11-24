@@ -3,7 +3,7 @@
     <div class="home">
       <div class="home__top">
         <h1>Learn <span>Puppeteer & Playwright</span></h1>
-        <h2>{{ data.tagline || $description }}</h2>
+        <h2>Tips, tricks and in-depth guides from the trenches</h2>
 
         <div class="home__top__icons">
           <div class="home__top__icons--left">
