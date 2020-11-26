@@ -113,6 +113,9 @@ module.exports = {
     }],
     ['vuepress-plugin-container', {
       type: 'warning'
+    }],
+    ['plausible', {
+      domain: 'theheadless.dev'
     }]
   ],
   themeConfig,
