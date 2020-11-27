@@ -80,7 +80,8 @@ const shareImage = 'https://og-image.theheadless.dev/intro.png?intro=true'
 module.exports = {
   title: 'Learn Puppeteer & Playwright - theheadless.dev',
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    pageSuffix: '/'
   },
   plugins: [
     ['@vuepress/blog', vuePressBlogConfig],
