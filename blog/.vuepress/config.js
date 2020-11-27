@@ -117,6 +117,10 @@ module.exports = {
     }],
     ['plausible', {
       domain: 'theheadless.dev'
+    }],
+    ['clean-urls': {
+      normalSuffix: '',
+      indexSuffix: '/'
     }]
   ],
   themeConfig,

@@ -45,7 +45,8 @@
     "vuepress-plugin-container": "^2.1.4",
     "vuepress-plugin-mailchimp": "^1.4.2",
     "vuepress-plugin-plausible": "0.0.2",
-    "vuepress-plugin-tabs": "^0.3.0"
+    "vuepress-plugin-tabs": "^0.3.0",
+    "vuepress-plugin-clean-urls": "1.1.2":
   },
   "eslintConfig": {
     "extends": [
