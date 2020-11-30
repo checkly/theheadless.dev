@@ -4,8 +4,10 @@ const stripTags = require('striptags')
 
 const defaultMetas = {}
 
-const resolveURL = (base, path) =>
-  `${_.trimEnd(base, '/')}/${_.trimStart(path, '/')}`
+const resolveURL = (base, path) => {
+  const tempURL = `${_.trimEnd(base, '/')}/${_.trimStart(path, '/')}`
+  return tempURL.replace('.html', '/')
+}
 
 const ogImageURL = 'https://og-image.theheadless.dev'
 
