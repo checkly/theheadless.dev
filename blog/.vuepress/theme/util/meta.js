@@ -193,7 +193,7 @@ const getDefaultDescription = ($page, options) => {
   }
 
   if (_.isEmpty(options.descriptionSources)) {
-    return
+    return getDefaultTitle($page, options)
   }
 
   let out = ''
