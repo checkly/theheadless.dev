@@ -2,7 +2,7 @@
   <div
     class="post-tag"
   >
-    <router-link :to="'/tag/' + tag">
+    <router-link :to="'/tag/' + tag + '/'">
       <span>{{ tag }}</span>
     </router-link>
   </div>
