@@ -1,13 +1,13 @@
 ---
 title: Clicking and typing
 date: 2020-06-15
-author: 
+author:
   - Giovanni Rago
   - Tim Nolet
 githubUser:
   - ragog
   - tnolet
-tags: 
+tags:
   - basics
 ---
 
@@ -15,12 +15,12 @@ Users normally access most website functionality through clicks, keystrokes etc.
 
 <!-- more -->
 
-## Clicking 
+## Clicking
 
 Clicking is the default way of selecting and activating elements on web pages, and will appear very often in most headless scripts.
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 ```js
 const puppeteer = require('puppeteer');
 
@@ -31,7 +31,7 @@ const puppeteer = require('puppeteer');
 
   await page.waitForSelector('#login');
   await page.click('#login');
-  
+
   await browser.close();
 })()
 ```
@@ -64,7 +64,7 @@ For the times when even the humble click fails, you can try the following altern
 A popular pattern among web pages is exposing additional information or functionality when the user hovers the mouse cursor over a specific item. Examples include, menus, previews and dialogs containing extra information on the item.
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 ```js
 const puppeteer = require('puppeteer');
 
@@ -75,7 +75,7 @@ const puppeteer = require('puppeteer');
 
   await page.waitForSelector('a');
   await page.hover('a');
-  
+
   await browser.close();
 })()
 ```
@@ -103,7 +103,7 @@ const { chromium } = require('playwright');
 Focussing on specific UI elements allows the user to interact with them without clicks. It can also result in a proactive reaction from the webapp, such as displaying suggestions.
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 ```js
 const puppeteer = require('puppeteer');
 
@@ -114,7 +114,7 @@ const puppeteer = require('puppeteer');
 
   await page.waitForSelector('input');
   await page.focus('input');
-  
+
   await browser.close();
 })()
 ```
@@ -142,7 +142,7 @@ const { chromium } = require('playwright');
 We can simulate typing on a real keyboard using `page.type()`:
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 ```js
 const puppeteer = require('puppeteer');
 
@@ -153,7 +153,7 @@ const puppeteer = require('puppeteer');
 
   await page.waitForSelector('input')
   await page.type('input', 'some search terms');
-  
+
   await browser.close();
 })()
 ```
@@ -208,4 +208,4 @@ node basic-click-type.js
 
 ## Further reading
 1. The related official documentation of [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v5.2.1&show=api-pageclickselector-options) and [Playwright](https://playwright.dev/#version=v1.2.1&path=docs%2Finput.md&q=)
-2. [Finding effective selectors](basics-selectors.md)
+2. [Finding effective selectors](basics-selectors/)

@@ -3,15 +3,15 @@ title: What is Playwright?
 date: 2020-06-29
 author: Giovanni Rago
 githubUser: ragog
-tags: 
+tags:
   - basics
 ---
 
-The [official documentation](https://playwright.dev/) for Playwright reads: 
+The [official documentation](https://playwright.dev/) for Playwright reads:
 
 > Playwright provides a set of APIs to automate Chromium, Firefox and WebKit browsers. By using the Playwright API, you can write JavaScript code to create new browser pages, navigate to URLs and then interact with elements on a page.
 
-The resemblance to Google's [Puppeteer](basics-puppeteer-intro.md) is striking, and for good reason. 
+The resemblance to Google's [Puppeteer](basics-puppeteer-intro/) is striking, and for good reason. 
 
 <!-- more -->
 

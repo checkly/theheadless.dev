@@ -3,7 +3,7 @@ title: E2E File Download
 date: 2020-09-09
 author: Giovanni Rago
 githubUser: ragog
-tags: 
+tags:
   - e2e
   - file download
 ---
@@ -18,12 +18,12 @@ This example runs against our [test webshop](https://danube-webshop.herokuapp.co
 2. Navigating to the account page
 3. Downloading a linked file
 
-We will check that the downloaded file is as expected by comparing it to a [fixture file](test-data-intro.md) in our final assertion.
+We will check that the downloaded file is as expected by comparing it to a [fixture file](test-data-intro/) in our final assertion.
 
-We can approach this scenario in different ways. One possibility is to perform the first two steps, then [extract](basics-scraping.md) the `href` value and use it to retrieve the file with a `GET` request (performed with [axios](https://github.com/axios/axios), for example).
+We can approach this scenario in different ways. One possibility is to perform the first two steps, then [extract](basics-scraping/) the `href` value and use it to retrieve the file with a `GET` request (performed with [axios](https://github.com/axios/axios), for example).
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 <<< @/blog/snippets/puppeteer/file-download.js{29-34}
 :::
 ::: tab Playwright
