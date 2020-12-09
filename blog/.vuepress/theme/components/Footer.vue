@@ -182,13 +182,13 @@ export default {
   }
   &__text {
     font-size: 14px;
-    color: #8492A6;
+    color: #3C4858;
     line-height: 28px;
     img {
       vertical-align: middle;
     }
     a {
-      color: #8492A6;
+      color: #3C4858;
     }
     ul {
       list-style: none;

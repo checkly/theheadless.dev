@@ -102,7 +102,7 @@ a.sidebar-link
   font-size 16px
   font-weight 400
   display inline-block
-  color #8492A6
+  color #3C4858
   border-left 0.25rem solid transparent
   padding 0.35rem 1rem 0.35rem 1.25rem
   line-height 1.4
