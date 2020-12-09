@@ -23,6 +23,8 @@ Articles should cover any topic related to practical, day-to-day usage of these 
 - Code examples should cover both Puppeteer and Playwright where applicable
 - Add your full name and GitHub username in the relevant `author` and `githubUser` front matter
 
+You can find additional styling guidelines in this [dedicated file](https://github.com/checkly/theheadless.dev/blob/master/STYLE.MD). Our team will gladly help you apply these after the initial review.
+
 ## Editorial workflow
 
 The maintainers of this repo will review your contribution. During a review we will check for:
