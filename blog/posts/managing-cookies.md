@@ -3,7 +3,7 @@ title: Setting state using cookies
 date: 2020-10-14
 author: Giovanni Rago
 githubUser: ragog
-tags: 
+tags:
   - cookies
 ---
 
@@ -20,7 +20,7 @@ Reading or modifying cookies opens up useful possibilities. A practical example 
 The following examples show how we can save existing cookies after logging in to GitHub and reuse them later to skip login. First, let us perform login with our credentials, read the cookies and save them to a file.
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 <<< @/blog/snippets/puppeteer/cookies-reading.js
 :::
 ::: tab Playwright
@@ -65,7 +65,7 @@ After a successful login, our saved cookies file will look something like this:
 We are now able to read the file later and load the cookies into our new browser session. Notice how we are logged in from the start, without having gone through the UI login procedure.
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 <<< @/blog/snippets/puppeteer/cookies-writing.js
 :::
 ::: tab Playwright
@@ -87,14 +87,14 @@ Notice how Puppeteer handles cookies at page level while Playwright does so at c
 
 ## localStorage and sessionStorage
 
-Cookies are sent with every request, potentially deteriorating [performance](basics-performance.md) if used for storing large amounts of data. The [localStorage and sessionStorage](https://javascript.info/localstorage) APIs can help us offload some of this data to the browser. Just like with cookies, Puppeteer and Playwright make accessing localStorage and sessionStorage straightforward.
+Cookies are sent with every request, potentially deteriorating [performance](basics-performance/) if used for storing large amounts of data. The [localStorage and sessionStorage](https://javascript.info/localstorage) APIs can help us offload some of this data to the browser. Just like with cookies, Puppeteer and Playwright make accessing localStorage and sessionStorage straightforward.
 
 Our test site, [Danube](https://danube-webshop.herokuapp.com/), actually uses localStorage to keep track of a few things, such as the content of your cart. Let's see how we can access this state and then replicate it in a later session.
 
 We will first fill the cart by adding three items, then we will copy the contents of localStorage to a file.
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 <<< @/blog/snippets/puppeteer/localstorage-reading.js
 :::
 ::: tab Playwright
@@ -113,7 +113,7 @@ In this case our file will look as follows:
 We can use the content of this file to set localStorage in a separate session. That way we will immediately start with the three items already in our shopping cart, potentially getting us closer to a specific scenario we want to test and thereby saving ourselves time.
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 <<< @/blog/snippets/puppeteer/localstorage-writing.js
 :::
 ::: tab Playwright

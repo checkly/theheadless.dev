@@ -3,13 +3,13 @@ title: Using script recorders
 date: 2020-09-16
 author: Hannes Lenke
 githubUser: hlenke
-tags: 
+tags:
   - script generation
 ---
 
 With Puppeteer and Playwright, writing scripts by hand is not the only option. Since browser automation first became possible, there have always been tools trying to simplify script creation. Such instruments normally aim to help users with little or no scripting skills use automation tools, while also saving more expert users time when creating brand new scripts.
 
-Recorders can be used to quickly generate code for a scenario, saving time users would otherwise have to spend inspecting the various pages to find valid selectors. When creating multiple scripts, this adds up to a noticeable amount of time saved. 
+Recorders can be used to quickly generate code for a scenario, saving time users would otherwise have to spend inspecting the various pages to find valid selectors. When creating multiple scripts, this adds up to a noticeable amount of time saved.
 
 ## Extensions vs libraries
 
@@ -29,14 +29,14 @@ Regardless of the approach you choose, you will want to inspect the output scrip
 
 That being said, you should always double-check the newly created scripts and tweak it when necessary, especially keeping an eye out for:
 
-1. Selectors, which should be in line with common [best practices](basics-selectors.md).
-2. [Waits](basics-navigation.md), which should ensure the right element is present and/or ready for interaction at the right time; also, make sure you get rid of unnecessary waits.
+1. Selectors, which should be in line with common [best practices](basics-selectors/).
+2. [Waits](basics-navigation/), which should ensure the right element is present and/or ready for interaction at the right time; also, make sure you get rid of unnecessary waits.
 3. Any sort of needless duplication.
 
 An example of recorded Puppeteer script:
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 <<< @/blog/snippets/puppeteer/recorder-rough.js
 :::
 ::::
@@ -46,15 +46,15 @@ We can modify this script to improve readability and efficiency:
 1. The duplicated `await navigationPromise` on line 14 serves no purpose and can be deleted.
 2. The `page.waitForSelector` on line 16 is not needed as we already are waiting on the navigationPromise.
 3. The `page.waitForSelector` on line 19 can be skipped as the element is present on the same page as the previous one.
-4. All the selectors used can be [refactored](basics-selectors.md).
+4. All the selectors used can be [refactored](basics-selectors/).
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 <<< @/blog/snippets/puppeteer/recorder-refactored.js
 :::
 ::::
 
-Like all scripts, recorded scripts need to be maintained in order to [remain useful](valuable-tests.md) over time.
+Like all scripts, recorded scripts need to be maintained in order to [remain useful](valuable-tests/) over time.
 
 ## Takeaways
 

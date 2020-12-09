@@ -3,7 +3,7 @@ title: E2E Checkout
 date: 2020-07-02
 author: Giovanni Rago
 githubUser: ragog
-tags: 
+tags:
   - e2e
 ---
 
@@ -21,7 +21,7 @@ Checkout procedures can vary dramatically depending on what is being bought or s
 Modelled on the above structure is the following example running against our test website. We will add a few products to the shopping cart, then proceed until the summary screen shows up and verify that the transaction has been confirmed. Here we can get creative and, for example, iterate through a number of products to fill the cart:
 
 :::: tabs :options="{ useUrlFragment: false }"
-::: tab Puppeteer 
+::: tab Puppeteer
 <<< @/blog/snippets/puppeteer/checkout.js
 :::
 ::: tab Playwright
@@ -45,7 +45,7 @@ node checkout.js
 :::
 ::::
 
-Note: In some cases, users will need to [log in](e2e-login.md) before they can proceed to a purchase. When users are allowed to buy both with and without having a pre-existing account on the platform, it might be worthwhile to test both flows separately.
+Note: In some cases, users will need to [log in](e2e-login/) before they can proceed to a purchase. When users are allowed to buy both with and without having a pre-existing account on the platform, it might be worthwhile to test both flows separately.
 
 ## Limitations
 
