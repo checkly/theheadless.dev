@@ -24,7 +24,7 @@
         </div>
 
         <router-link
-          to="/posts"
+          to="/posts/"
           class="button home__top__dive"
           tag="button"
         >
@@ -61,7 +61,7 @@
           </router-link>
         </div>
         <div class="home__recent__learn">
-          <router-link to="/posts">
+          <router-link to="/posts/">
             See learn all <Icon name="arrow-right" />
           </router-link>
         </div>
