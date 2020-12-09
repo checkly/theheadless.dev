@@ -78,7 +78,7 @@ const vuePressBlogConfig = {
 const shareImage = 'https://og-image.theheadless.dev/intro.png?intro=true'
 
 module.exports = {
-  title: 'Puppeteer & Playwright guides - theheadless.dev',
+  title: 'Learn Puppeteer & Playwright - theheadless.dev',
   markdown: {
     lineNumbers: true
   },
