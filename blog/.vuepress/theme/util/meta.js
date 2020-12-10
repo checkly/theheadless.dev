@@ -193,7 +193,7 @@ const getDefaultDescription = ($page, options) => {
   }
 
   if (_.isEmpty(options.descriptionSources)) {
-    return
+    return getDefaultTitle($page, options)
   }
 
   let out = ''
@@ -240,10 +240,6 @@ const getDefaultDescription = ($page, options) => {
 
       break
     }
-  }
-  
-  if (out === "") {
-    out = getDefaultTitle($page, options)
   }
 
   return out
