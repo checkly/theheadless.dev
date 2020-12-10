@@ -40,35 +40,6 @@
       />
     </main>
     <Footer />
-
-    <component
-      v-if="cookieLawComponent"
-      :is="cookieLawComponent"
-      theme="headless"
-      @accept="addGoogleAnalytics()"
-      @decline="removeGoogleAnalytics()"
-    >
-      <div
-        slot-scope="props"
-        class="container"
-      >
-        <p>This website uses cookies to ensure you get the best experience on our website.</p>
-        <div>
-          <button
-            class="accept"
-            @click="props.accept"
-          >
-            <span>Accept</span>
-          </button>
-          <button
-            class="decline"
-            @click="props.decline"
-          >
-            <span>Decline</span>
-          </button>
-        </div>
-      </div>
-    </component>
   </div>
 </template>
 
@@ -93,9 +64,7 @@ export default {
 
   data () {
     return {
-      isSidebarOpen: false,
-      cookieLawComponent: null,
-      analyticsLoaded: false
+      isSidebarOpen: false
     }
   },
 
@@ -103,15 +72,6 @@ export default {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
     })
-
-    // Load component dynamically because is not SSR supported
-    import('vue-cookie-law').then(module => {
-      this.cookieLawComponent = module.default
-    })
-
-    if (localStorage.getItem('cookie:accepted') === null) {
-      this.addGoogleAnalytics()
-    }
   },
 
   computed: {
@@ -187,41 +147,6 @@ export default {
           this.toggleSidebar(false)
         }
       }
-    },
-
-    addGoogleAnalytics () {
-      /* global ga */
-      if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && !this.analyticsLoaded) {
-        (function (i, s, o, g, r, a, m) {
-          i.GoogleAnalyticsObject = r
-          i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-          }
-          i[r].l = 1 * new Date()
-          a = s.createElement(o)
-          m = s.getElementsByTagName(o)[0]
-          a.async = 1
-          a.src = g
-          m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
-
-        ga('create', 'UA-110523681-5', 'auto')
-        ga('set', 'anonymizeIp', true)
-
-        this.$router.afterEach(function (to) {
-          ga('set', 'page', to.fullPath)
-          ga('send', 'pageview')
-        })
-
-        this.analyticsLoaded = true
-      }
-    },
-
-    /**
-     * Mock window.ga when user decline to stop tracking the user
-     */
-    removeGoogleAnalytics () {
-      window.ga = () => {}
     }
   }
 }
