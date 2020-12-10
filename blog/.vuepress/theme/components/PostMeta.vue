@@ -141,13 +141,13 @@ export default {
         margin-bottom 10px
 
   .post-author
-    color $grayLight
+    color #3C4858
     display flex
     align-items center
 
   .post-date,
   .post-tag
-    color $grayLight
+    color #3C4858
 
   .post-githubUser
     border-radius 9999px
