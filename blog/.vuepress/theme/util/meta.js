@@ -241,8 +241,10 @@ const getDefaultDescription = ($page, options) => {
       break
     }
   }
-
+  
+  if (out === "") {
     out = getDefaultTitle($page, options)
+  }
 
   return out
 }
