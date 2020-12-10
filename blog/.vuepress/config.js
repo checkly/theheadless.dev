@@ -126,7 +126,8 @@ module.exports = {
     ['meta', { name: 'twitter:image', content: shareImage }],
     ['meta', { name: 'twitter:title', content: 'theheadless.dev - Learn Puppeteer & Playwright' }],
     ['meta', { name: 'twitter:url', content: 'https://theheadless.dev' }],
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }]
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'description', content: 'theheadless.dev - Learn Puppeteer & Playwright' }],
   ],
   patterns: [
     '**/*.md',
