@@ -5,27 +5,22 @@ const { chromium } = require("playwright");
   const amazonUser = process.env.AMAZON_USER;
   const amazonPassword = process.env.AMAZON_PASSWORD;
 
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ headless: false });
   const page = await browser.newPage();
 
   await page.goto(amazonUrl);
 
   await page.setViewportSize({ width: 1200, height: 1822 });
 
-  await page.waitForSelector(
-    "#nav-signin-tooltip > .nav-action-button > .nav-action-inner"
-  );
   await page.click(
     " #nav-signin-tooltip > .nav-action-button > .nav-action-inner"
   );
 
-  await page.waitForSelector(".a-section #ap_email");
-  await page.click(".a-section #ap_email");
+  await page.click("#ap_email");
   await page.type("#ap_email", amazonUser);
 
   await page.click("#continue");
 
-  await page.waitForSelector("#ap_password");
   await page.click("#ap_password");
   await page.type("#ap_password", amazonPassword);
 
