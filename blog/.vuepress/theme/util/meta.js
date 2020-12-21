@@ -359,7 +359,7 @@ defaultMetas.twitter = ($page, defaultValues) => {
 
   out.push({
     name: 'twitter:image',
-    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?md=1&subTitle=${encodeURI(defaultValues.description || '')}${getAuthors($page)}`
+    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?md=1&subTitle=${encodeURI($page.frontmatter.subTitle || '')}${getAuthors($page)}`
   })
 
   if (defaultValues.canonicalUrl) {
@@ -455,7 +455,7 @@ defaultMetas.og = ($page, defaultValues) => {
     // @TODO review if there's a better way
     out.push({
       property: 'og:image',
-      content: `${ogImageURL}/**${encodeURI(getDefaultTitle($page) || '')}**.png?md=1&subTitle=${encodeURI(defaultValues.description | '')}${getAuthors($page)}`
+      content: `${ogImageURL}/**${encodeURI(getDefaultTitle($page) || '')}**.png?md=1&subTitle=${encodeURI($page.frontmatter.subTitle | '')}${getAuthors($page)}`
     })
   }
 
