@@ -324,7 +324,7 @@ const getAuthors = ($page) => {
   const { frontmatter } = $page
   const authors = Array.isArray(frontmatter.author) ? frontmatter.author : [frontmatter.author]
   const avatars = Array.isArray(frontmatter.githubUser) ? frontmatter.githubUser : [frontmatter.githubUser]
-  let qs = authors.map(author => `&authors=${author}`)
+  let qs = authors.map(author => `&authors=${encodeURI(author)}`)
   qs += avatars.map(avatar => `&authorsImg=${avatar}`)
   return qs
 }
@@ -359,7 +359,7 @@ defaultMetas.twitter = ($page, defaultValues) => {
 
   out.push({
     name: 'twitter:image',
-    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?md=1&subTitle=${encodeURI(defaultValues.description | '')}${getAuthors($page)}`
+    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?md=1&subTitle=${encodeURI(defaultValues.description || '')}${getAuthors($page)}`
   })
 
   if (defaultValues.canonicalUrl) {
