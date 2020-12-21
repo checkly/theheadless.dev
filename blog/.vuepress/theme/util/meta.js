@@ -324,6 +324,11 @@ const getAuthors = ($page) => {
   const { frontmatter } = $page
   const authors = Array.isArray(frontmatter.author) ? frontmatter.author : [frontmatter.author]
   const avatars = Array.isArray(frontmatter.githubUser) ? frontmatter.githubUser : [frontmatter.githubUser]
+
+  if (!authors.length) {
+    return ''
+  }
+
   let qs = authors.map(author => `&authors=${encodeURI(author)}`)
   qs += avatars.map(avatar => `&authorsImg=https://github.com/${avatar}.png?size=50`)
   return qs

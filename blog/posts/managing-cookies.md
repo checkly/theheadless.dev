@@ -1,5 +1,6 @@
 ---
 title: Setting state using cookies
+subTitle: 
 date: 2020-10-14
 author: Giovanni Rago
 githubUser: ragog

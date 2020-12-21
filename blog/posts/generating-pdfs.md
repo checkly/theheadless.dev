@@ -1,6 +1,6 @@
 ---
 title: Generating PDFs
-subTitle: testing how this will work!
+subTitle: 
 date: 2020-11-19
 author: Giovanni Rago
 githubUser: ragog

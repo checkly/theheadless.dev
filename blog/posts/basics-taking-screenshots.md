@@ -1,5 +1,6 @@
 ---
 title: Taking screenshots
+subTitle: 
 date: 2020-06-23
 author: Giovanni Rago
 githubUser: ragog
