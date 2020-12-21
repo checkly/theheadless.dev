@@ -1,5 +1,5 @@
 ---
-title: Scraping example: online shopping expenses
+title: Scraping example - online shopping expenses
 date: 2020-12-23
 author: Giovanni Rago
 githubUser: ragog
