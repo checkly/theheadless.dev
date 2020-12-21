@@ -9,7 +9,7 @@ const resolveURL = (base, path) => {
   return tempURL.replace('.html', '/')
 }
 
-const ogImageURL = 'https://og-image.theheadless.dev'
+const ogImageURL = 'https://og-image-git-feat-add-subtitle-authors.checkly.vercel.app'
 
 const getOptionDefaults = () => {
   return {
@@ -320,6 +320,15 @@ const getDefaultSite = ($page, options) => {
   return options.site
 }
 
+const getAuthors = ($page) => {
+  const { frontmatter } = $page
+  const authors = Array.isArray(frontmatter.author) ? frontmatter.author : [frontmatter.author]
+  const avatars = Array.isArray(frontmatter.githubUser) ? frontmatter.githubUser : [frontmatter.githubUser]
+  let qs = authors.map(author => `&authors=${author}`)
+  qs += avatars.map(avatar => `&authorsImg=${avatar}`)
+  return qs
+}
+
 defaultMetas.image = ($page, defaultValues) => {
   const out = []
   if (defaultValues.image) {
@@ -350,7 +359,7 @@ defaultMetas.twitter = ($page, defaultValues) => {
 
   out.push({
     name: 'twitter:image',
-    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?theme=light&md=1&fontSize=120px`
+    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?md=1&subTitle=${encodeURI(defaultValues.description | '')}${getAuthors($page)}`
   })
 
   if (defaultValues.canonicalUrl) {
@@ -446,7 +455,7 @@ defaultMetas.og = ($page, defaultValues) => {
     // @TODO review if there's a better way
     out.push({
       property: 'og:image',
-      content: `${ogImageURL}/**${encodeURI(getDefaultTitle($page) || '')}**.png?theme=light&md=1&fontSize=120px`
+      content: `${ogImageURL}/**${encodeURI(getDefaultTitle($page) || '')}**.png?md=1&subTitle=${encodeURI(defaultValues.description | '')}${getAuthors($page)}`
     })
   }
 
