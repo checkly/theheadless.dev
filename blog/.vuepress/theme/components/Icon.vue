@@ -1,8 +1,10 @@
 <template>
-  <div
-    class="icon"
-    v-html="getSvg()"
-  />
+  <client-only>
+    <div
+      class="icon"
+      v-html="getSvg()"
+    />
+  </client-only>
 </template>
 
 <script>

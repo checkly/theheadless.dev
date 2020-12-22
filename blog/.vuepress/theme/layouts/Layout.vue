@@ -40,12 +40,13 @@
         </header>
 
         <!-- eslint-disable vue/no-v-html -->
-        <p
-          v-if="page.excerpt"
-          class="ui-post-summary"
-          itemprop="description"
-          v-html="page.excerpt"
-        />
+        <client-only v-if="page.excerpt">
+          <p
+            class="ui-post-summary"
+            itemprop="description"
+            v-html="page.excerpt"
+          />
+        </client-only>
         <!-- eslint-enable vue/no-v-html -->
         <p
           v-else
