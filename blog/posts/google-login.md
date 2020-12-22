@@ -1,6 +1,6 @@
 ---
 title: Login with Google
-subTitle: 
+subTitle: An example of social login
 date: 2020-06-22
 author: Tim Nolet
 githubUser: tnolet

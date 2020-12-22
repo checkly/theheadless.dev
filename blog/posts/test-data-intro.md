@@ -1,6 +1,6 @@
 ---
 title: Handling test data
-subTitle: 
+subTitle: Introduction to fixture handling
 date: 2020-07-16
 author: Giovanni Rago
 githubUser: ragog

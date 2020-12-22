@@ -1,6 +1,6 @@
 ---
 title: Measuring page performance
-subTitle: 
+subTitle: Explaining why it matters and how to assess it
 date: 2020-09-30
 author: Giovanni Rago
 githubUser: ragog

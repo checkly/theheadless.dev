@@ -1,6 +1,6 @@
 ---
 title: Setting state using cookies
-subTitle: 
+subTitle: Speeding up tests by skipping login, and more
 date: 2020-10-14
 author: Giovanni Rago
 githubUser: ragog

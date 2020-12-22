@@ -1,6 +1,6 @@
 ---
 title: Clicking and typing
-subTitle: 
+subTitle: Basic page interactions
 date: 2020-06-15
 author:
   - Giovanni Rago

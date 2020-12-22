@@ -1,6 +1,6 @@
 ---
 title: E2E Checkout
-subTitle: 
+subTitle: Filling a basket and completing the transaction
 date: 2020-07-02
 author: Giovanni Rago
 githubUser: ragog

@@ -1,6 +1,6 @@
 ---
 title: Working with selectors
-subTitle: 
+subTitle: Techniques and pointers
 date: 2020-06-22
 author: Giovanni Rago
 githubUser: ragog

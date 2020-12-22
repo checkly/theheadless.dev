@@ -1,6 +1,6 @@
 ---
 title: E2E Coupon
-subTitle: 
+subTitle: Applying and verifying a discount
 date: 2020-07-13
 author: Giovanni Rago
 githubUser: ragog

@@ -1,6 +1,6 @@
 ---
 title: Generating PDFs
-subTitle: 
+subTitle: Creating invoices, books and more from a web page
 date: 2020-11-19
 author: Giovanni Rago
 githubUser: ragog

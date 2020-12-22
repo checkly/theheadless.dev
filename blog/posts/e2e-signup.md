@@ -1,6 +1,6 @@
 ---
 title: E2E Signup
-subTitle: 
+subTitle: Handling signups flows
 date: 2020-06-30
 author: Giovanni Rago
 githubUser: ragog

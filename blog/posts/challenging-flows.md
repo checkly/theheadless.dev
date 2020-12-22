@@ -1,6 +1,6 @@
 ---
 title: Challenging automation flows
-subTitle: 
+subTitle: Automation countermeasures and shortcomings
 date: 2020-07-23
 author: Giovanni Rago
 githubUser: ragog

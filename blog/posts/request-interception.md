@@ -1,6 +1,6 @@
 ---
 title: Intercepting requests
-subTitle: 
+subTitle: Monitoring and manipulating web traffic
 date: 2020-09-03
 author: Giovanni Rago
 githubUser: ragog

@@ -1,6 +1,6 @@
 ---
 title: Navigating & waiting
-subTitle: 
+subTitle: How to ensure elements are ready for interaction
 date: 2020-06-15
 author: Tim Nolet
 githubUser: tnolet

@@ -1,6 +1,6 @@
 ---
 title: Taking screenshots
-subTitle: 
+subTitle: Leveraging images for troubleshooting and more
 date: 2020-06-23
 author: Giovanni Rago
 githubUser: ragog
