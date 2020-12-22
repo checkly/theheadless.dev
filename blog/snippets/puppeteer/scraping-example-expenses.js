@@ -60,7 +60,6 @@ const puppeteer = require('puppeteer');
   const pages = await page.$$('.a-normal')
 
   for (const singlePage of pages) {
-    console.log(singlePage)
     await page.waitForSelector('.a-last')
     prices = await page.$$eval(
       '.a-column:nth-child(2) .a-color-secondary.value',
