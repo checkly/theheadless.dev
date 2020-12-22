@@ -1,5 +1,6 @@
 ---
-title: Scraping example - online shopping expenses
+title: Scraping behind login
+subTitle: An example in accessing account-specific information
 date: 2020-12-23
 author: Giovanni Rago
 githubUser: ragog
@@ -15,10 +16,6 @@ Puppeteer and Playwright can be particularly useful when scraping data accessibl
 
 For our example, we will be logging in to our Amazon account and scraping the price off each order in the previous year, then adding them all up to show us our total Amazon expense over that period of time.
 
-::: warning
-This example is only intended for learning purposes. Always make sure the website you are planning to scrape allows such behaviour.
-:::
-
 A combination of UI automation and scraping will allow us to first log in to the platform, and then to retrieve the information about all our orders.
 
 :::: tabs :options="{ useUrlFragment: false }"
@@ -29,6 +26,10 @@ A combination of UI automation and scraping will allow us to first log in to the
 <<< @/blog/snippets/playwright/scraping-example-expenses.js
 :::
 ::::
+
+::: warning
+This example is only intended for learning purposes. Always make sure the website you are planning to scrape allows such behaviour.
+:::
 
 Run the above examples as follows, making sure to choose the right Amazon URL and currency:
 
