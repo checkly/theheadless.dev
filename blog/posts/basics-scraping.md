@@ -1,5 +1,6 @@
 ---
 title: Scraping pages
+subTitle: Extracting valuable information through automation
 date: 2020-08-26
 author: Giovanni Rago
 githubUser: ragog

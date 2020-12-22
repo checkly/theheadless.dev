@@ -1,5 +1,6 @@
 ---
 title: Using script recorders
+subTitle: Generating scripts for beginners and pros
 date: 2020-09-16
 author: Hannes Lenke
 githubUser: hlenke

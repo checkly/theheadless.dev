@@ -1,5 +1,6 @@
 ---
 title: Keeping tests valuable
+subTitle: Principles for sustainable automated testing
 date: 2020-07-16
 author: Giovanni Rago
 githubUser: ragog
