@@ -5,7 +5,7 @@ const { chromium } = require('playwright');
   const amazonUser = process.env.AMAZON_USER
   const amazonPassword = process.env.AMAZON_PASSWORD
 
-  const browser = await chromium.launch({ headless: false })
+  const browser = await chromium.launch()
   const page = await browser.newPage()
 
   await page.goto(amazonUrl)
@@ -20,13 +20,10 @@ const { chromium } = require('playwright');
   await page.click('#continue')
   await page.type('#ap_password', amazonPassword)
 
-  await page.waitForSelector('#signInSubmit')
   await page.click('#signInSubmit')
 
-  await page.waitForSelector('#nav-link-accountList > .nav-long-width')
   await page.click('#nav-link-accountList > .nav-long-width')
 
-  await page.waitForSelector('.ya-card__whole-card-link > .a-box > .a-box-inner > .a-row > .a-column > div')
   await page.click('.ya-card__whole-card-link > .a-box > .a-box-inner > .a-row > .a-column > div')
 
   await page.click('#a-autoid-1-announce > .a-dropdown-prompt')
