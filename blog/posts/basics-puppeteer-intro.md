@@ -1,6 +1,5 @@
 ---
 title: What is Puppeteer?
-subTitle: 
 date: 2020-06-19
 author: Giovanni Rago
 githubUser: ragog
