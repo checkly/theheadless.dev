@@ -334,6 +334,11 @@ const getAuthors = ($page) => {
   return qs
 }
 
+const getDefaultSubTitle = ($page) => {
+  const { frontmatter } = $page
+  return frontmatter.subTitle ? `&subTitle=${encodeURI(frontmatter.subTitle)}` : ''
+}
+
 defaultMetas.image = ($page, defaultValues) => {
   const out = []
   if (defaultValues.image) {
@@ -364,7 +369,7 @@ defaultMetas.twitter = ($page, defaultValues) => {
 
   out.push({
     name: 'twitter:image',
-    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?md=1&subTitle=${encodeURI($page.frontmatter.subTitle || '')}${getAuthors($page)}`
+    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?md=1${getDefaultSubTitle($page)}${getAuthors($page)}`
   })
 
   if (defaultValues.canonicalUrl) {
@@ -460,7 +465,7 @@ defaultMetas.og = ($page, defaultValues) => {
     // @TODO review if there's a better way
     out.push({
       property: 'og:image',
-      content: `${ogImageURL}/**${encodeURI(getDefaultTitle($page) || '')}**.png?md=1&subTitle=${encodeURI($page.frontmatter.subTitle | '')}${getAuthors($page)}`
+      content: `${ogImageURL}/**${encodeURI(getDefaultTitle($page) || '')}**.png?md=1${getDefaultSubTitle($page)}${getAuthors($page)}`
     })
   }
 
