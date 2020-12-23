@@ -9,7 +9,7 @@ const resolveURL = (base, path) => {
   return tempURL.replace('.html', '/')
 }
 
-const ogImageURL = 'https://og-image-git-feat-add-subtitle-authors.checkly.vercel.app'
+const ogImageURL = 'https://og-image.theheadless.dev'
 
 const getOptionDefaults = () => {
   return {

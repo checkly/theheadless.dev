@@ -75,7 +75,7 @@ const vuePressBlogConfig = {
   }
 }
 
-const shareImage = 'https://og-image-git-feat-add-subtitle-authors.checkly.vercel.app/intro.png?intro=true'
+const shareImage = 'https://og-image.theheadless.dev/intro.png?intro=true'
 
 module.exports = {
   title: 'Learn Puppeteer & Playwright - theheadless.dev',
