@@ -320,6 +320,25 @@ const getDefaultSite = ($page, options) => {
   return options.site
 }
 
+const getAuthors = ($page) => {
+  const { frontmatter } = $page
+  const authors = Array.isArray(frontmatter.author) ? frontmatter.author : [frontmatter.author]
+  const avatars = Array.isArray(frontmatter.githubUser) ? frontmatter.githubUser : [frontmatter.githubUser]
+
+  if (!authors.length) {
+    return ''
+  }
+
+  let qs = authors.map(author => `&authors=${encodeURI(author)}`).join('')
+  qs += avatars.map(avatar => `&authorsImg=https://github.com/${avatar}.png?size=50`).join('')
+  return qs
+}
+
+const getDefaultSubTitle = ($page) => {
+  const { frontmatter } = $page
+  return frontmatter.subTitle ? `&subTitle=${encodeURI(frontmatter.subTitle)}` : ''
+}
+
 defaultMetas.image = ($page, defaultValues) => {
   const out = []
   if (defaultValues.image) {
@@ -350,7 +369,7 @@ defaultMetas.twitter = ($page, defaultValues) => {
 
   out.push({
     name: 'twitter:image',
-    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?theme=light&md=1&fontSize=120px`
+    content: `${ogImageURL}/**${encodeURI(defaultValues.title || '')}**.png?md=1${getDefaultSubTitle($page)}${getAuthors($page)}`
   })
 
   if (defaultValues.canonicalUrl) {
@@ -446,7 +465,7 @@ defaultMetas.og = ($page, defaultValues) => {
     // @TODO review if there's a better way
     out.push({
       property: 'og:image',
-      content: `${ogImageURL}/**${encodeURI(getDefaultTitle($page) || '')}**.png?theme=light&md=1&fontSize=120px`
+      content: `${ogImageURL}/**${encodeURI(getDefaultTitle($page) || '')}**.png?md=1${getDefaultSubTitle($page)}${getAuthors($page)}`
     })
   }
 
