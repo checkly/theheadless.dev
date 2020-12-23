@@ -12,12 +12,8 @@ const puppeteer = require('puppeteer');
 
   await page.setViewport({ width: 1200, height: 1822 })
 
-  await page.waitForSelector(
-    '#nav-signin-tooltip > .nav-action-button > .nav-action-inner'
-  )
-  await page.click(
-    ' #nav-signin-tooltip > .nav-action-button > .nav-action-inner'
-  )
+  await page.waitForSelector('#nav-signin-tooltip > .nav-action-button > .nav-action-inner')
+  await page.click(' #nav-signin-tooltip > .nav-action-button > .nav-action-inner')
 
   await page.waitForSelector('#ap_email')
   await page.type('#ap_email', amazonUser)
@@ -29,26 +25,14 @@ const puppeteer = require('puppeteer');
 
   await page.click('#signInSubmit')
 
-  await page.waitForSelector(
-    '#nav-link-accountList > .nav-long-width'
-  )
-  await page.click(
-    '#nav-link-accountList > .nav-long-width'
-  )
+  await page.waitForSelector('#nav-link-accountList > .nav-long-width')
+  await page.click('#nav-link-accountList > .nav-long-width')
 
-  await page.waitForSelector(
-    '.ya-card__whole-card-link > .a-box > .a-box-inner > .a-row > .a-column > div'
-  )
-  await page.click(
-    '.ya-card__whole-card-link > .a-box > .a-box-inner > .a-row > .a-column > div'
-  )
+  await page.waitForSelector('.ya-card__whole-card-link > .a-box > .a-box-inner > .a-row > .a-column > div')
+  await page.click('.ya-card__whole-card-link > .a-box > .a-box-inner > .a-row > .a-column > div')
 
-  await page.waitForSelector(
-    '#a-autoid-1-announce > .a-dropdown-prompt'
-  )
-  await page.click(
-    '#a-autoid-1-announce > .a-dropdown-prompt'
-  )
+  await page.waitForSelector('#a-autoid-1-announce > .a-dropdown-prompt')
+  await page.click('#a-autoid-1-announce > .a-dropdown-prompt')
 
   await page.waitForSelector('#orderFilter_2')
   await page.click('#orderFilter_2')
@@ -73,7 +57,7 @@ const puppeteer = require('puppeteer');
     await page.click('li.a-last')
   }
 
-  const cleanPrices = filteredPrices.map(function (x) {
+  const cleanPrices = filteredPrices.map((x) => {
     return x.replace(',', '.').replace(/[^\d.,-]/g, '')
   })
 

@@ -50,7 +50,7 @@ const { chromium } = require('playwright');
     await page.click('li.a-last')
   }
 
-  const cleanPrices = filteredPrices.map(function (x) {
+  const cleanPrices = filteredPrices.map((x) => {
     return x.replace(',', '.').replace(/[^\d.,-]/g, '')
   })
 
