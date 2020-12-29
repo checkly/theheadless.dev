@@ -10,6 +10,8 @@ tags:
 
 While automation tools are fundamental to modern software development, they also have the innate potential to be used for malicious purposes. This applies to Puppeteer and Playwright, too.
 
+<!-- more -->
+
 As a consequence, some user flows are made purposely hard to automate to defend against threat actors. Some examples:
 1. New user signup
 2. Social login through providers like Google, Facebook etc.

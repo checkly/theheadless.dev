@@ -41,7 +41,11 @@ CURRENCY=EUR AMAZON_URL=https://www.amazon.de AMAZON_USER=<YOUR_AMAZON_USERNAME>
 :::
 ::: tab Windows
 ```sh
-CURRENCY=EUR AMAZON_URL=https://www.amazon.de AMAZON_USER=<YOUR_AMAZON_USERNAME> AMAZON_PASSWORD=<YOUR_AMAZON_PASSWORD> node scraping-example-purchases.js
+SET CURRENCY=EUR
+SET AMAZON_URL=https://www.amazon.de
+SET AMAZON_USER=<YOUR_AMAZON_USERNAME>
+SET AMAZON_PASSWORD=<YOUR_AMAZON_PASSWORD>
+node scraping-example-purchases.js
 ```
 :::
 ::::

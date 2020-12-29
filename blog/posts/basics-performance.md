@@ -104,6 +104,20 @@ Lighthouse can easily be used programmatically with Playwright and Puppeteer to 
 :::
 ::::
 
+All above examples can be run as follows:
+:::: tabs :options="{ useUrlFragment: false }"
+::: tab MacOS
+```sh
+node measure-performance.js
+```
+:::
+::: tab Windows
+```sh
+node measure-performance.js
+```
+:::
+::::
+
 ## Further reading
 1. The comprehensive [MDN Web Performance documentation](https://developer.mozilla.org/en-US/docs/Web/Performance)
 2. [web.dev's performance section](https://web.dev/learn/#performance)

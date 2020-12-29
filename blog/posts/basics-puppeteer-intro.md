@@ -15,7 +15,6 @@ Let's break that down:
 
 <!-- more -->
 
-
 1. **node library**: Node.js and Javascript are the backbone of most web applications and will be familiar to most developers already
 2. **high-level API:** a human-readable interface for interacting with webpages through the browser (Chrome or Chromium) using...
 3. **...the DevTools Protocol:** the standard protocol used to expose Chrome functionality up to various development-oriented tools

@@ -20,10 +20,10 @@ After loading a page, we use the `page.pdf()` command to convert it to a PDF.
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/pdf-minimal.js
+<<< @/blog/snippets/puppeteer/pdf-minimal.js{7}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/pdf-minimal.js
+<<< @/blog/snippets/playwright/pdf-minimal.js{7}
 :::
 ::::
 
@@ -50,10 +50,10 @@ We can also have custom headers and footers added to our pages, displaying value
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/pdf-hd.js
+<<< @/blog/snippets/puppeteer/pdf-hd.js{10-11,13,23-33}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/pdf-hd.js
+<<< @/blog/snippets/playwright/pdf-hd.js{10-11,21-31}
 :::
 ::::
 
@@ -133,6 +133,20 @@ The first page of the generated PDF looks as follows:
 ::: tip
 Chromium sets a default padding for header and footer. You will need to [override it](https://github.com/puppeteer/puppeteer/issues/4132#issuecomment-475110167) in your CSS.</style>
 :::
+
+Run the above examples as follows:
+:::: tabs :options="{ useUrlFragment: false }"
+::: tab MacOS
+```sh
+node generate-pdf.js
+```
+:::
+::: tab Windows
+```sh
+node generate-pdf.js
+```
+:::
+::::
 
 ## Further considerations
 

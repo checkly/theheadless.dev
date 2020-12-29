@@ -23,10 +23,10 @@ Below is an example running against our [test site](https://danube-webshop.herok
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/basic-get-href-value.js
+<<< @/blog/snippets/puppeteer/basic-get-href-value.js{7}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/basic-get-href-value.js
+<<< @/blog/snippets/playwright/basic-get-href-value.js{7}
 :::
 ::::
 
@@ -34,10 +34,10 @@ As an alternative, it is also possible to retrieve an [ElementHandle](https://pp
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/basic-get-href-handle.js
+<<< @/blog/snippets/puppeteer/basic-get-href-handle.js{7,8}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/basic-get-href-handle.js
+<<< @/blog/snippets/playwright/basic-get-href-handle.js{7,8}
 :::
 ::::
 
@@ -51,10 +51,10 @@ Scraping element lists is just as easy. For example, let's grab the `innerText` 
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/basic-get-text-values.js
+<<< @/blog/snippets/puppeteer/basic-get-text-values.js{7-9}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/basic-get-text-values.js
+<<< @/blog/snippets/playwright/basic-get-text-values.js{7-9}
 :::
 ::::
 
@@ -64,10 +64,10 @@ Scraping images from a page is also possible. For example, we can easily get the
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/basic-get-image.js
+<<< @/blog/snippets/puppeteer/basic-get-image.js{9,11,12}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/basic-get-image.js
+<<< @/blog/snippets/playwright/basic-get-image.js{9,11,12}
 :::
 ::::
 

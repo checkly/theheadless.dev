@@ -12,6 +12,8 @@ With Puppeteer and Playwright, writing scripts by hand is not the only option. S
 
 Recorders can be used to quickly generate code for a scenario, saving time users would otherwise have to spend inspecting the various pages to find valid selectors. When creating multiple scripts, this adds up to a noticeable amount of time saved.
 
+<!-- more -->
+
 ## Extensions vs libraries
 
 In the world of headless automation, most open-source recorders are available in one of two formats:

@@ -22,10 +22,10 @@ The following examples show how we can save existing cookies after logging in to
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/cookies-reading.js
+<<< @/blog/snippets/puppeteer/cookies-reading.js{18,19,21}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/cookies-reading.js
+<<< @/blog/snippets/playwright/cookies-reading.js{20,21,23}
 :::
 ::::
 
@@ -67,10 +67,10 @@ We are now able to read the file later and load the cookies into our new browser
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/cookies-writing.js
+<<< @/blog/snippets/puppeteer/cookies-writing.js{8,10,11}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/cookies-writing.js
+<<< @/blog/snippets/playwright/cookies-writing.js{8,10,11}
 :::
 ::::
 
@@ -96,10 +96,10 @@ We will first fill the cart by adding three items, then we will copy the content
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/localstorage-reading.js
+<<< @/blog/snippets/puppeteer/localstorage-reading.js{21,22}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/localstorage-reading.js
+<<< @/blog/snippets/playwright/localstorage-reading.js{16,17}
 :::
 ::::
 
@@ -115,10 +115,10 @@ We can use the content of this file to set localStorage in a separate session. T
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/localstorage-writing.js
+<<< @/blog/snippets/puppeteer/localstorage-writing.js{10,12-17}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/localstorage-writing.js
+<<< @/blog/snippets/playwright/localstorage-writing.js{10,12-17}
 :::
 ::::
 
