@@ -33,7 +33,8 @@
     "sass-loader": "^8.0.2",
     "striptags": "^3.1.1",
     "vue-feather-icons": "^5.0.0",
-    "vuepress": "^1.7.1"
+    "vuepress": "^1.7.1",
+    "vuepress-plugin-social-share": "^1.0.0"
   },
   "dependencies": {
     "@primer/octicons": "^10.0.0",

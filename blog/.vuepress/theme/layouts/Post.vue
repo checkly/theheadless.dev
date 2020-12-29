@@ -21,6 +21,7 @@
         />
       </header>
       <Content itemprop="articleBody" />
+      <social-share />
       <footer>
         <Newsletter v-if="$service.email.enabled" />
         <PostEdit />
