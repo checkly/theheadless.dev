@@ -120,7 +120,7 @@ module.exports = {
     [
       'social-share',
       {
-        networks: ['twitter', 'facebook', 'reddit', 'telegram', 'email'],
+        networks: ['twitter', 'reddit', 'email', 'facebook', 'telegram', 'whatsapp'],
         email: 'giovanni@checklyhq.com',
         twitterUser: 'checklyhq',
         fallbackImage: '/social-share.png',
