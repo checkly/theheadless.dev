@@ -11,6 +11,8 @@ tags:
 
 Websites might expose files for users to download and then access from their local machine. Common cases are downloading tickets, receipts and itineraries.
 
+<!-- more -->
+
 ## Steps
 
 This example runs against our [test webshop](https://danube-webshop.herokuapp.com/) and proceeds to download a receipt for a previous purchase. It includes the following steps:

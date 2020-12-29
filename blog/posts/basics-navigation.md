@@ -16,6 +16,8 @@ Every useful script that we will write will almost certainly do three key things
 Both frameworks handle these scenarios in very similar ways but Playwright explicitly differentiates itself from Puppeteer
 by having a "built in" waiting mechanism that covers a lot of common scenarios.
 
+<!-- more -->
+
 ## Navigating
 
 Initial navigation to any page is pretty much the same for both frameworks and can happen in multiple ways.

@@ -13,7 +13,6 @@ Most services allow users to manage their account settings. These oftentimes hav
 
 <!-- more -->
 
-
 ## Steps
 
 Account properties to verify can run the gamut from simple text to connected third party services. In this example, we will focus on a popular case: changing a profile image by uploading one of our own. 

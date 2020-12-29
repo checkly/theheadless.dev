@@ -11,6 +11,8 @@ tags:
 
 Puppeteer and Playwright also allow us to automate logging in to a Microsoft Live account.
 
+<!-- more -->
+
 ## Steps
 
 1. We start at `https://login.live.com`

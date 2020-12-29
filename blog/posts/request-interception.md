@@ -10,6 +10,8 @@ tags:
 
 When we browse the web, a series of HTTP requests and responses are exchanged between our browser and the pages we are visiting. There are scenarios in which it is useful to monitor or manipulate this traffic, instead of letting it happen as-is.
 
+<!-- more -->
+
 ## Request interception
 
 Request interception enables us to observe which requests and responses are being exchanged as part of our script's execution. For example, this is how we could print them out when we load our [test website](https://danube-webshop.herokuapp.com):

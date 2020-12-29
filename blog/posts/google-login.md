@@ -11,6 +11,8 @@ tags:
 
 Social login using your personal Google or Google Gsuite account is a common use case for many login scenarios.
 
+<!-- more -->
+
 ## Steps
 
 1. We start at a site that offers Google as an authentication provider. In this case we use [Stack Overflow](https://stackoverflow.com/).
@@ -18,8 +20,6 @@ Social login using your personal Google or Google Gsuite account is a common use
 3. We are redirect to Google.
 4. We provide the username and password, injected by using environment variables.
 5. We are redirected back to the starting.
-
-<!-- more -->
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer 
