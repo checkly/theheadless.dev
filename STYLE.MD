@@ -18,6 +18,7 @@ Below are the style requirements for theheadless.dev posts.
 - Keep tips short (2 sentences max)
 - Use numbered lists instead of unordered
 - Stay consistend with header format. The post title is rendered automatically as `h1`. The subsections should be h2, i.e. `## subsection-title`. They will show in the right hand table of contents.
+- Use code block line highlights only in non-example posts, and only when they add in clarity.
 
 ## Front matter
 - In title, capitalise only first letter + names

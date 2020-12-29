@@ -20,10 +20,10 @@ After loading a page, we use the `page.pdf()` command to convert it to a PDF.
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/pdf-minimal.js
+<<< @/blog/snippets/puppeteer/pdf-minimal.js{7}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/pdf-minimal.js
+<<< @/blog/snippets/playwright/pdf-minimal.js{7}
 :::
 ::::
 
@@ -50,10 +50,10 @@ We can also have custom headers and footers added to our pages, displaying value
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/pdf-hd.js
+<<< @/blog/snippets/puppeteer/pdf-hd.js{10-11,13,23-33}
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/pdf-hd.js
+<<< @/blog/snippets/playwright/pdf-hd.js{10-11,21-31}
 :::
 ::::
 

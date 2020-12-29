@@ -40,7 +40,7 @@ Note that in this case, we need to enable downloads in the browser context befor
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Playwright
-<<< @/blog/snippets/playwright/file-download-alt.js{7}
+<<< @/blog/snippets/playwright/file-download-alt.js{7,22-25,27}
 :::
 ::::
 

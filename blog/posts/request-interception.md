@@ -18,10 +18,10 @@ Request interception enables us to observe which requests and responses are bein
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/request-interception-read.js{9-18}
+<<< @/blog/snippets/puppeteer/request-interception-read.js
 :::
 ::: tab Playwright
-<<< @/blog/snippets/playwright/request-interception-read.js{9-12}
+<<< @/blog/snippets/playwright/request-interception-read.js
 :::
 ::::
 
@@ -31,7 +31,7 @@ In the following snippet we are going to abort all requests for images on our te
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
-<<< @/blog/snippets/puppeteer/request-interception-block.js{9-13}
+<<< @/blog/snippets/puppeteer/request-interception-block.js{9-14}
 :::
 ::: tab Playwright
 <<< @/blog/snippets/playwright/request-interception-block.js{9-13}
