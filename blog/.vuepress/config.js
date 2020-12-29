@@ -116,7 +116,18 @@ module.exports = {
     }],
     ['plausible', {
       domain: 'theheadless.dev'
-    }]
+    }],
+    [
+      'social-share',
+      {
+        networks: ['twitter', 'reddit', 'email', 'facebook', 'telegram', 'whatsapp'],
+        email: 'giovanni@checklyhq.com',
+        twitterUser: 'checklyhq',
+        fallbackImage: '/social-share.png',
+        autoQuote: true,
+        isPlain: true
+      }
+    ]
   ],
   themeConfig,
   head: [
