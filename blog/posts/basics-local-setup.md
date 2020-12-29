@@ -76,3 +76,6 @@ const browser = await chromium.launch({ headless: false });
 ::::
 
 After executing the updated file, you will see Chromium starting up, only to shut down after an instant. Everything is working as expected! Our script is just so short, it runs almost instantaneously.
+
+## Further reading
+1. Getting started guides for [Puppeteer](https://pptr.dev) and [Playwright](https://playwright.dev/docs/intro#installation)
