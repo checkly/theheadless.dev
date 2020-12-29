@@ -25,20 +25,6 @@ The `page.screenshot` command is consistent across Puppeteer and Playwright, and
 :::
 ::::
 
-Run this example as follows:
-:::: tabs :options="{ useUrlFragment: false }"
-::: tab MacOS
-```shell script
-node basic-screenshot.js
-```
-:::
-::: tab Windows
-```shell script
-node basic-screenshot.js
-```
-:::
-::::
-
 ## Full page screenshots
 
 Adding the `fullPage: true` option allows for the capture of full page screenshots, overriding the `height` parameter specified for our viewport: 
@@ -60,16 +46,16 @@ Having our screenshot limited to a smaller portion of the viewport is also possi
 :::
 ::::
 
-Run this example as follows:
+The above examples can be run as follows:
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab MacOS
 ```shell script
-node basic-screenshot-clipped.js
+node basic-screenshots.js
 ```
 :::
 ::: tab Windows
 ```shell script
-node basic-screenshot-clipped.js
+node basic-screenshots.js
 ```
 :::
 ::::

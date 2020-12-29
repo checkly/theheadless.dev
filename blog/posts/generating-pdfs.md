@@ -134,6 +134,20 @@ The first page of the generated PDF looks as follows:
 Chromium sets a default padding for header and footer. You will need to [override it](https://github.com/puppeteer/puppeteer/issues/4132#issuecomment-475110167) in your CSS.</style>
 :::
 
+Run the above examples as follows:
+:::: tabs :options="{ useUrlFragment: false }"
+::: tab MacOS
+```sh
+node generate-pdf.js
+```
+:::
+::: tab Windows
+```sh
+node generate-pdf.js
+```
+:::
+::::
+
 ## Further considerations
 
 We can easily transform existing web pages into PDF format, just as we have shown in our example. An even more interesting use case is about generating a brand new document: now we can use our existing HTML and CSS skills to produce high-quality PDFs, often eliminating the need for LaTeX or similar tools.
