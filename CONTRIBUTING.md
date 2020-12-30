@@ -1,4 +1,4 @@
-# Contributing a guide or article to theheadless.dev
+# Contributing to theheadless.dev
 
 Thanks contributing to The Headless Dev!
 
@@ -11,7 +11,7 @@ Thanks contributing to The Headless Dev!
 If you have found a spelling mistake, missing info, or anything that you feel is an issue that should be reported,
 [please create a new issue here on GitHub](https://github.com/checkly/theheadless.dev/issues/new).
 
-## Contributing Content
+## Contributing a guide or article
 
 We welcome new articles on a range of topics surrounding headless browser frameworks and more specifically Puppeteer and Playwright.
 Articles should cover any topic related to practical, day-to-day usage of these frameworks. Here are our guidelines
@@ -25,14 +25,6 @@ Articles should cover any topic related to practical, day-to-day usage of these 
 
 You can find additional styling guidelines in this [dedicated file](https://github.com/checkly/theheadless.dev/blob/master/STYLE.MD). Our team will gladly help you apply these after the initial review.
 
-### How to contribute
-
-1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device.
-2. Create a new branch `git checkout -b MY_BRANCH_NAME`
-3. Install the dependencies: `npm install`
-5. Run `npm run dev` to build and watch for code changes
-6. The development branch is `canary` (this is the branch pull requests should be made against). On a release, the relevant parts of the changes in the `canary` branch are rebased into `master`.
-
 ## Editorial workflow
 
 The maintainers of this repo will review your contribution. During a review we will check for:
@@ -43,3 +35,11 @@ The maintainers of this repo will review your contribution. During a review we w
 
 The maintainer reserve the right to not merge your PR if we find it does not meet the standards we like to set for the community.
 We will work with you, provide feedback and learn together: but we still might not merge.
+
+## Contribution- & local development workflow
+
+1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device.
+2. Create a new branch `git checkout -b MY_BRANCH_NAME`
+3. Install the dependencies: `npm install`
+5. Run `npm run dev` to build and watch for code changes
+6. Pull requests should be made against `master`.
