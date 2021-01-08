@@ -23,7 +23,9 @@
 
     <div class="checkly-navbar__link">
       <a
-        href="#"
+        href="https://checklyhq.com/?utm_source=headless-dev&utm_campaign=headless-dev"
+        target="_blank"
+        rel="noopener"
       >
         👉
         <span class="desktop">Run Puppeteer & Playwright for global monitoring</span>
