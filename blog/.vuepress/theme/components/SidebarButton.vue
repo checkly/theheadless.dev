@@ -2,6 +2,7 @@
   <div
     class="sidebar-button"
     @click="$emit('toggle-sidebar')"
+    :class="{'sidebar-button__home': $page.frontmatter.home}"
   >
     <svg
       class="icon"
@@ -33,6 +34,10 @@
     display block
     width 1.25rem
     height 1.25rem
+
+.sidebar-button__home {
+  top 4rem
+}
 
 @media (max-width: $MQMobile)
   .sidebar-button
