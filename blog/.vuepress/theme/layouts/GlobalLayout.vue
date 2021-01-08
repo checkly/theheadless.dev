@@ -5,6 +5,10 @@
     @touchstart="onTouchStart"
     @touchend="onTouchEnd"
   >
+    <ChecklyNavbar
+      v-if="$page.frontmatter.home"
+    />
+
     <Navbar
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
@@ -51,6 +55,7 @@ import MobileHeader from '@theme/components/MobileHeader.vue'
 import Footer from '@theme/components/Footer.vue'
 import Home from '@theme/components/Home.vue'
 import { resolveSidebarItems } from '../util'
+import ChecklyNavbar from '@theme/components/ChecklyNavbar.vue'
 
 export default {
   components: {
@@ -59,7 +64,8 @@ export default {
     Sidebar,
     MobileHeader,
     Footer,
-    Home
+    Home,
+    ChecklyNavbar
   },
 
   data () {
