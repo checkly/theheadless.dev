@@ -58,7 +58,7 @@ export default {
 
 .post-article
   @extend $wrapper
-  padding-top: 25px
+  padding-top $navbarHeight + 2rem
   font-size 16px
   letter-spacing 0
   color $textColor
