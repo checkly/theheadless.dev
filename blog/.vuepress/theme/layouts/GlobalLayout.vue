@@ -5,9 +5,7 @@
     @touchstart="onTouchStart"
     @touchend="onTouchEnd"
   >
-    <ChecklyNavbar
-      v-if="$page.frontmatter.home"
-    />
+    <ChecklyNavbar />
 
     <Navbar
       v-if="shouldShowNavbar"

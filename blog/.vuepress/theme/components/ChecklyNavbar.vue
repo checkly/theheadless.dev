@@ -1,5 +1,8 @@
 <template>
-  <div class="checkly-navbar">
+  <div
+    class="checkly-navbar"
+    :class="{'checkly-navbar--sticky': !$page.frontmatter.home}"
+  >
     <a
       href="https://checklyhq.com/?utm_source=headless-dev&utm_campaign=headless-dev"
       target="_blank"
@@ -57,6 +60,11 @@ export default {
   justify-content: space-between;
   box-sizing: border-box;
 
+  &--sticky {
+    position: fixed;
+    z-index: 1000;
+  }
+
   .mobile {
     display: none;
   }
@@ -78,6 +86,11 @@ export default {
     span {
       border-bottom: 4px solid #E0E6ED;
       margin-left: 5px;
+      transition: border-bottom .25s;
+
+      &:hover {
+        border-bottom: 4px solid #ff4949;
+      }
     }
 
     &--icon {

@@ -110,7 +110,7 @@ $navbar-horizontal-padding = 1.5rem
     margin: 40px auto 0
   &.stick
     position: fixed
-    top: 0
+    top: 55px
     background-color: #fff
     width: 100%
     z-index 1000
