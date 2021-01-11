@@ -86,6 +86,11 @@ export default {
     span {
       border-bottom: 4px solid #E0E6ED;
       margin-left: 5px;
+      transition: border-bottom .25s;
+
+      &:hover {
+        border-bottom: 4px solid #ff4949;
+      }
     }
 
     &--icon {
