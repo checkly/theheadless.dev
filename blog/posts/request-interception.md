@@ -2,8 +2,8 @@
 title: Intercepting requests
 subTitle: Monitoring and manipulating web traffic
 date: 2020-09-03
-author: Giovanni Rago
-githubUser: ragog
+author: Giovanni Rago | Jonathan Thompson
+githubUser: ragog | thompsonjonm
 tags:
   - network
 ---
@@ -50,13 +50,15 @@ In the following snippet we are going to abort all requests for images on our te
 
 Isolating one or more software components from their dependencies makes them easier to test. We can do so by substituting interactions with such dependencies with simulated, simplified ones. This is also known as _stubbing_.
 
-Puppeteer makes it easy for us, as for every request we can intercept we also can stub a response. This functionality is [not yet available in Playwright](https://github.com/microsoft/playwright/issues/1774).
+Both Playwright and Puppeteer make it easy for us, as for every request we can intercept we also can stub a response.
 
 Every time we load it, our test website is sending a request to its backend to fetch a list of best selling books. For our example, we are going to intercept this response and modify it to return a single book we define on the fly.
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
 <<< @/blog/snippets/puppeteer/response-interception.js{19-28}
+::: tab Playwright
+<<< @/blog/snippets/playwright/response-interception.js{19-24}
 :::
 ::::
 
@@ -81,7 +83,7 @@ node request-interception.js
 ## Takeaways
 
 1. Puppeteer and Playwright give us control over outgoing HTTP requests.
-2. With Puppeteer we can easily stub HTTP responses.
+2. Puppeteer and Playwright can easily stub HTTP responses.
 
 ## Further reading
 
