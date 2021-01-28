@@ -61,6 +61,7 @@ Every time we load it, our test website is sending a request to its backend to f
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab Puppeteer
 <<< @/blog/snippets/puppeteer/response-interception.js{19-28}
+:::
 ::: tab Playwright
 <<< @/blog/snippets/playwright/response-interception.js{19-24}
 :::
