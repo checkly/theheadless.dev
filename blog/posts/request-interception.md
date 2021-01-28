@@ -2,8 +2,12 @@
 title: Intercepting requests
 subTitle: Monitoring and manipulating web traffic
 date: 2020-09-03
-author: Giovanni Rago | Jonathan Thompson
-githubUser: ragog | thompsonjonm
+author:
+  - Giovanni Rago
+  - Jonathan Thompson
+githubUser:
+  - ragog
+  - thompsonjonm
 tags:
   - network
 ---
