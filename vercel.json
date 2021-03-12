@@ -1,14 +1,93 @@
 {
   "version": 2,
-  "routes": [
+  "redirects": [
     {
-      "src": "/posts/(.*).html",
-      "dest": "/posts/$1"
+      "source": "/posts/basics-puppeteer-intro/",
+      "destination": "https://www.checklyhq.com/learn/headless/basics-puppeteer-intro/"
     },
     {
-      "src": "/assets/(.*)",
-      "headers": { "cache-control": "max-age=315360000, s-maxage=315360000" },
-      "dest": "/assets/$1"
+      "source": "/posts/basics-playwright-intro/",
+      "destination": "https://www.checklyhq.com/learn/headless/basics-playwright-intro/"
+    },
+    {
+      "source": "/posts/basics-local-setup/",
+      "destination": "https://www.checklyhq.com/learn/headless/basics-local-setup/"
+    },
+    {
+      "source": "/posts/basics-navigation/",
+      "destination": "https://www.checklyhq.com/learn/headless/basics-navigation/"
+    },
+    {
+      "source": "/posts/basics-selectors/",
+      "destination": "https://www.checklyhq.com/learn/headless/basics-selectors/"
+    },
+    {
+      "source": "/posts/basics-clicking-typing/",
+      "destination": "https://www.checklyhq.com/learn/headless/basics-clicking-typing/"
+    },
+    {
+      "source": "/posts/basics-scraping/",
+      "destination": "https://www.checklyhq.com/learn/headless/basics-scraping/"
+    },
+    {
+      "source": "/posts/basics-taking-screenshots/",
+      "destination": "https://www.checklyhq.com/learn/headless/basics-taking-screenshots/"
+    },
+    {
+      "source": "/posts/basics-performance/",
+      "destination": "https://www.checklyhq.com/learn/headless/basics-performance/"
+    },
+    {
+      "source": "/posts/scraping-example-purchases/",
+      "destination": "https://www.checklyhq.com/learn/headless/scraping-example-purchases/"
+    },
+    {
+      "source": "/posts/generating-pdfs/",
+      "destination": "https://www.checklyhq.com/learn/headless/generating-pdfs/"
+    },
+    {
+      "source": "/posts/managing-cookies/",
+      "destination": "https://www.checklyhq.com/learn/headless/managing-cookies/"
+    },
+    {
+      "source": "/posts/script-recorders/",
+      "destination": "https://www.checklyhq.com/learn/headless/script-recorders/"
+    },
+    {
+      "source": "/posts/e2e-file-download/",
+      "destination": "https://www.checklyhq.com/learn/headless/e2e-file-download/"
+    },
+    {
+      "source": "/posts/request-interception/",
+      "destination": "https://www.checklyhq.com/learn/headless/request-interception/"
+    },
+    {
+      "source": "/posts/challenging-flows/",
+      "destination": "https://www.checklyhq.com/learn/headless/challenging-flows/"
+    },
+    {
+      "source": "/posts/e2e-account-settings/",
+      "destination": "https://www.checklyhq.com/learn/headless/e2e-account-settings/"
+    },
+    {
+      "source": "/posts/test-data-intro/",
+      "destination": "https://www.checklyhq.com/learn/headless/test-data-intro/"
+    },
+    {
+      "source": "/posts/valuable-tests/",
+      "destination": "https://www.checklyhq.com/learn/headless/valuable-tests/"
+    },
+    {
+      "source": "/posts/e2e-search/",
+      "destination": "https://www.checklyhq.com/learn/headless/e2e-search/"
+    },
+    {
+      "source": "/posts/e2e-coupon/",
+      "destination": "https://www.checklyhq.com/learn/headless/e2e-coupon/"
+    },
+    {
+      "source": "/posts/e2e-checkout/",
+      "destination": "https://www.checklyhq.com/learn/headless/e2e-checkout/"
     }
   ]
 }
