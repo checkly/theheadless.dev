@@ -2,6 +2,14 @@
   "version": 2,
   "redirects": [
     {
+      "source": "/",
+      "destination": "https://www.checklyhq.com/learn/headless/"
+    },
+    {
+      "source": "/posts/",
+      "destination": "https://www.checklyhq.com/learn/headless/"
+    },
+    {
       "source": "/posts/basics-puppeteer-intro/",
       "destination": "https://www.checklyhq.com/learn/headless/basics-puppeteer-intro/"
     },
