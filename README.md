@@ -1,3 +1,5 @@
+> 🚨 We gave theheadless.dev a new home! This content was moved to [Checkly Public WebSite](https://www.checklyhq.com/learn/headless/), will remain OSS and we will publish fresh content around Puppeteer & Playwright there. Feel free to contribute, submit issues or open PR's in the [new repository](https://github.com/checkly/checklyhq.com#-docs-learn--guides)
+
 <p align="center">
   <a href="https://theheadless.dev">
     <img src="./hd.png" />
