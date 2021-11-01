@@ -96,6 +96,10 @@
     {
       "source": "/posts/e2e-checkout/",
       "destination": "https://www.checklyhq.com/learn/headless/e2e-checkout/"
+    },
+    {
+      "source": "/posts/microsoft-live-login/",
+      "destination": "https://theheadless.dev/posts/microsoft-live-login/"
     }
   ]
 }
