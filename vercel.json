@@ -31,7 +31,7 @@
     },
     {
       "source": "/posts/basics-clicking-typing/",
-      "destination": "https://www.checklyhq.com/learn/headless/microsoft-live-login/"
+      "destination": "https://www.checklyhq.com/learn/headless/basics-clicking-typing/"
     },
     {
       "source": "/posts/basics-scraping/",
@@ -99,7 +99,7 @@
     },
     {
       "source": "/posts/microsoft-live-login/",
-      "destination": "https://theheadless.dev/posts/microsoft-live-login/"
+      "destination": "https://www.checklyhq.com/learn/headless/microsoft-live-login/"
     }
   ]
 }
