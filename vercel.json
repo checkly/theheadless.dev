@@ -50,7 +50,7 @@
       "destination": "https://www.checklyhq.com/learn/headless/scraping-example-purchases/"
     },
     {
-      "source": "/posts/generating-pdfs*",
+      "source": "/posts/generating-pdfs(.*)",
       "destination": "https://www.checklyhq.com/learn/headless/generating-pdfs/"
     },
     {
@@ -107,7 +107,7 @@
     },
     
     {
-      "source": "/tag*",
+      "source": "/tag/:tag",
       "destination": "https://www.checklyhq.com/learn/headless/"
     }
   ]
