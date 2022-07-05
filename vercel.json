@@ -2,11 +2,11 @@
   "version": 2,
   "redirects": [
     {
-      "source": "(.*)",
+      "source": "/",
       "destination": "https://www.checklyhq.com/learn/headless/"
     },
     {
-      "source": "/posts(.*)",
+      "source": "/posts/",
       "destination": "https://www.checklyhq.com/learn/headless/"
     },
     {
