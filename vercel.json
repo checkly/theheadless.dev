@@ -106,6 +106,14 @@
       "destination": "https://www.checklyhq.com/learn/headless/e2e-login/"
     },
     {
+      "source": "/posts/e2e-signup(.*)",
+      "destination": "https://www.checklyhq.com/learn/headless/e2e-signup/"
+    },
+    {
+      "source": "/posts/google-login(.*)",
+      "destination": "https://www.checklyhq.com/learn/headless/google-login/"
+    },
+    {
       "source": "/tag(.*)",
       "destination": "https://www.checklyhq.com/learn/headless/"
     }
