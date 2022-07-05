@@ -109,6 +109,6 @@
     {
       "source": "/tag*",
       "destination": "https://www.checklyhq.com/learn/headless/"
-    },
+    }
   ]
 }
