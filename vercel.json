@@ -111,7 +111,7 @@
     },
     {
       "source": "/posts/google-login(.*)",
-      "destination": "https://www.checklyhq.com/learn/headless/google-login/"
+      "destination": "https://www.checklyhq.com/learn/headless/e2e-google-login/"
     },
     {
       "source": "/tag(.*)",
