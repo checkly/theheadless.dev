@@ -50,7 +50,7 @@
       "destination": "https://www.checklyhq.com/learn/headless/scraping-example-purchases/"
     },
     {
-      "source": "/posts/generating-pdfs/",
+      "source": "/posts/generating-pdfs*",
       "destination": "https://www.checklyhq.com/learn/headless/generating-pdfs/"
     },
     {
@@ -100,6 +100,15 @@
     {
       "source": "/posts/microsoft-live-login/",
       "destination": "https://www.checklyhq.com/learn/headless/microsoft-live-login/"
-    }
+    },
+    {
+      "source": "/posts/e2e-login/",
+      "destination": "https://www.checklyhq.com/learn/headless/e2e-login/"
+    },
+    
+    {
+      "source": "/tag*",
+      "destination": "https://www.checklyhq.com/learn/headless/"
+    },
   ]
 }
